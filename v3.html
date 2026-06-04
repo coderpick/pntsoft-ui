@@ -7,13 +7,41 @@
   <title>PeopleNTech - Digital Agency</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    @import "tailwindcss";
+    @custom-variant dark (&:where(.dark, .dark *));
+
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0%);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes fup {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 
 <body class="antialiased font-['Inter',sans-serif] bg-[#f5f7fa] text-[#0f172a]">
   <div class="min-h-screen bg-[#f5f7fa] text-[#0f172a]">
-    
+
     <header class="sticky top-0 z-50 bg-[#f5f7fa]/90 backdrop-blur-md border-b border-[#e2e8f0]">
       <div class="container mx-auto px-4 lg:px-8 h-20 flex items-center justify-between">
         <div class="flex items-center gap-2">
@@ -27,12 +55,15 @@
           <a href="#contact" class="text-[#64748b] hover:text-[#0f172a] transition-colors">Contact</a>
         </nav>
         <div class="hidden md:block">
-          <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 hover:-translate-y-0.5 active:translate-y-0 py-2 bg-[#0f172a] text-white hover:bg-[#0f172a]/90 font-semibold px-6 rounded-full cursor-pointer">
-            Get Started
+          <button
+            class="inline-flex items-center uppercase justify-center gap-2 whitespace-nowrap text-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 hover:-translate-y-0.5 active:translate-y-0 py-2 bg-[#0f172a] text-white hover:bg-[#0f172a]/90 font-semibold px-6 rounded-full cursor-pointer">
+            Start a Project
           </button>
         </div>
-        <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 h-9 w-9 md:hidden cursor-pointer">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+        <button
+          class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 h-9 w-9 md:hidden cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
             <line x1="4" x2="20" y1="12" y2="12"></line>
             <line x1="4" x2="20" y1="6" y2="6"></line>
             <line x1="4" x2="20" y1="18" y2="18"></line>
@@ -47,24 +78,27 @@
           Transforming Ideas Into<br><span class="text-[#ff5a00]">Digital</span> Reality.
         </h1>
         <p class="text-xl text-[#64748b] max-w-2xl mx-auto leading-relaxed">
-          We build high-performance software, mobile apps, and digital experiences that drive growth. Your vision, engineered to perfection.
+          We build high-performance software, mobile apps, and digital experiences that drive growth. Your vision,
+          engineered to perfection.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-          <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 hover:-translate-y-0.5 active:translate-y-0 bg-[#0f172a] text-white hover:bg-[#0f172a]/90 font-semibold px-8 h-14 rounded-full text-base w-full sm:w-auto cursor-pointer">
+          <button
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 hover:-translate-y-0.5 active:translate-y-0 bg-[#0f172a] text-white hover:bg-[#0f172a]/90 font-semibold px-8 h-14 rounded-full text-base w-full sm:w-auto cursor-pointer">
             Explore Services
           </button>
-          <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 hover:-translate-y-0.5 active:translate-y-0 font-semibold px-8 h-14 rounded-full text-base border-2 border-[#e2e8f0] bg-transparent text-[#0f172a] hover:bg-[#f1f5f9] w-full sm:w-auto cursor-pointer">
+          <button
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 hover:-translate-y-0.5 active:translate-y-0 font-semibold px-8 h-14 rounded-full text-base border-2 border-[#e2e8f0] bg-transparent text-[#0f172a] hover:bg-[#f1f5f9] w-full sm:w-auto cursor-pointer">
             Watch Showreel
           </button>
         </div>
         <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto pt-16 border-t border-[#e2e8f0] mt-16">
           <div>
-            <div class="text-4xl font-black text-[#0f172a] mb-1">200+</div>
-            <div class="text-sm font-medium text-[#64748b] uppercase tracking-wider">Clients</div>
+            <div class="text-4xl font-black text-[#0f172a] mb-1">150+</div>
+            <div class="text-sm font-medium text-[#64748b] uppercase tracking-wider">Projects</div>
           </div>
           <div>
-            <div class="text-4xl font-black text-[#0f172a] mb-1">98%</div>
-            <div class="text-sm font-medium text-[#64748b] uppercase tracking-wider">Satisfaction</div>
+            <div class="text-4xl font-black text-[#0f172a] mb-1">90%</div>
+            <div class="text-sm font-medium text-[#64748b] uppercase tracking-wider">Success Rate</div>
           </div>
           <div>
             <div class="text-4xl font-black text-[#0f172a] mb-1">10yr</div>
@@ -74,62 +108,43 @@
       </div>
     </section>
 
+    <!--marquee start -->
+
     <div class="border-y border-[#e2e8f0] bg-white py-8 overflow-hidden relative">
-      <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10"></div>
-      <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10"></div>
-      <div class="flex items-center gap-16 whitespace-nowrap animate-[marquee_30s_linear_infinite] hover:[animation-play-state:paused]">
-        <div class="flex items-center gap-16 text-[#64748b]">
-          <div class="flex items-center gap-3 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all cursor-default group">
-            <svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img" viewBox="0 0 24 24" class="w-8 h-8 group-hover:text-[#ff5a00] transition-colors" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z"></path>
-            </svg>
-            <span class="text-xl font-bold">React</span>
-          </div>
-          <div class="w-1.5 h-1.5 rounded-full bg-[#e2e8f0]"></div>
-          
-          <div class="flex items-center gap-3 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all cursor-default group">
-            <svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img" viewBox="0 0 24 24" class="w-8 h-8 group-hover:text-[#ff5a00] transition-colors" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383 c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076 c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0 L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392 c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021 c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921 c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082c0.57,0.329,0.924,0.944,0.924,1.603 v10.15c0,0.659-0.354,1.273-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24z M19.099,13.993 c0-1.9-1.284-2.406-3.987-2.763c-2.731-0.361-3.009-0.548-3.009-1.187c0-0.528,0.235-1.233,2.258-1.233 c1.807,0,2.473,0.389,2.747,1.607c0.024,0.115,0.129,0.199,0.247,0.199h1.141c0.071,0,0.138-0.031,0.186-0.081 c0.048-0.054,0.074-0.123,0.067-0.196c-0.177-2.098-1.571-3.076-4.388-3.076c-2.508,0-4.004,1.058-4.004,2.833 c0,1.925,1.488,2.457,3.895,2.695c2.88,0.282,3.103,0.703,3.103,1.269c0,0.983-0.789,1.402-2.642,1.402 c-2.327,0-2.839-0.584-3.011-1.742c-0.02-0.124-0.126-0.215-0.253-0.215h-1.137c-0.141,0-0.254,0.112-0.254,0.253 c0,1.482,0.806,3.248,4.655,3.248C17.501,17.007,19.099,15.91,19.099,13.993z"></path>
-            </svg>
-            <span class="text-xl font-bold">Node.js</span>
-          </div>
-          <div class="w-1.5 h-1.5 rounded-full bg-[#e2e8f0]"></div>
-
-          <div class="flex items-center gap-3 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all cursor-default group">
-            <svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img" viewBox="0 0 24 24" class="w-8 h-8 group-hover:text-[#ff5a00] transition-colors" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"></path>
-            </svg>
-            <span class="text-xl font-bold">TypeScript</span>
-          </div>
-          <div class="w-1.5 h-1.5 rounded-full bg-[#e2e8f0]"></div>
-
-          <div class="flex items-center gap-3 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all cursor-default group">
-            <svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img" viewBox="0 0 24 24" class="w-8 h-8 group-hover:text-[#ff5a00] transition-colors" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-              <path d="M19.455 8.369c-.538-.748-1.778-2.285-3.681-4.569-.826-.991-1.535-1.832-1.884-2.245a146 146 0 0 0-.488-.576l-.207-.245-.113-.133-.022-.032-.01-.005L12.57 0l-.609.488c-1.555 1.246-2.828 2.851-3.681 4.64-.523 1.064-.864 2.105-1.043 3.176-.047.241-.088.489-.121.738-.209-.017-.421-.028-.632-.033-.018-.001-.035-.002-.059-.003a7.46 7.46 0 0 0-2.28.274l-.317.089-.163.286c-.765 1.342-1.198 2.869-1.252 4.416-.07 2.01.477 3.954 1.583 5.625 1.082 1.633 2.61 2.882 4.42 3.611l.236.095.071.025.003-.001a9.59 9.59 0 0 0 2.941.568q.171.006.342.006c1.273 0 2.513-.249 3.69-.742l.008.004.313-.145a9.63 9.63 0 0 0 3.927-3.335c1.01-1.49 1.577-3.234 1.641-5.042.075-2.161-.643-4.304-2.133-6.371m-7.083 6.695c.328 1.244.264 2.44-.191 3.558-1.135-1.12-1.967-2.352-2.475-3.665-.543-1.404-.87-2.74-.974-3.975.48.157.922.366 1.315.622 1.132.737 1.914 1.902 2.325 3.461zm.207 6.022c.482.368.99.712 1.513 1.028-.771.21-1.565.302-2.369.273a8 8 0 0 1-.373-.022c.458-.394.869-.823 1.228-1.279zm1.347-6.431c-.516-1.957-1.527-3.437-3.002-4.398-.647-.421-1.385-.741-2.194-.95.011-.134.026-.268.043-.4.014-.113.03-.216.046-.313.133-.689.332-1.37.589-2.025.099-.25.206-.499.321-.74l.004-.008c.177-.358.376-.719.61-1.105l.092-.152-.003-.001c.544-.851 1.197-1.627 1.942-2.311l.288.341c.672.796 1.304 1.548 1.878 2.237 1.291 1.549 2.966 3.583 3.612 4.48 1.277 1.771 1.893 3.579 1.83 5.375-.049 1.395-.461 2.755-1.195 3.933-.694 1.116-1.661 2.05-2.8 2.708-.636-.318-1.559-.839-2.539-1.599.79-1.575.952-3.28.479-5.072zm-2.575 5.397c-.725.939-1.587 1.55-2.09 1.856-.081-.029-.163-.06-.243-.093l-.065-.026c-1.49-.616-2.747-1.656-3.635-3.01-.907-1.384-1.356-2.993-1.298-4.653.041-1.19.338-2.327.882-3.379.316-.07.638-.114.96-.131l.084-.002c.162-.003.324-.003.478 0 .227.011.454.035.677.07.073 1.513.445 3.145 1.105 4.852.637 1.644 1.694 3.162 3.144 4.515z"></path>
-            </svg>
-            <span class="text-xl font-bold">Firebase</span>
-          </div>
-          <div class="w-1.5 h-1.5 rounded-full bg-[#e2e8f0]"></div>
-
-          <div class="flex items-center gap-3 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all cursor-default group">
-            <svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img" viewBox="0 0 24 24" class="w-8 h-8 group-hover:text-[#ff5a00] transition-colors" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.357zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.37z"></path>
-            </svg>
-            <span class="text-xl font-bold">Flutter</span>
-          </div>
-          <div class="w-1.5 h-1.5 rounded-full bg-[#e2e8f0]"></div>
-
-          <div class="flex items-center gap-3 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all cursor-default group">
-            <svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img" viewBox="0 0 24 24" class="w-8 h-8 group-hover:text-[#ff5a00] transition-colors" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15.337 23.979l7.216-1.561s-2.604-17.613-2.625-17.73c-.018-.116-.114-.192-.211-.192s-1.929-.136-1.929-.136-1.275-1.274-1.439-1.411c-.045-.037-.075-.057-.121-.074l-.914 21.104h.023zM11.71 11.305s-.81-.424-1.774-.424c-1.447 0-1.504.906-1.504 1.141 0 1.232 3.24 1.715 3.24 4.629 0 2.295-1.44 3.76-3.406 3.76-2.354 0-3.54-1.465-3.54-1.465l.646-2.086s1.245 1.066 2.28 1.066c.675 0 .975-.545.975-.932 0-1.619-2.654-1.694-2.654-4.359-.034-2.237 1.571-4.416 4.827-4.416 1.257 0 1.875.361 1.875.361l-.945 2.715-.02.01zM11.17.83c.136 0 .271.038.405.135-.984.465-2.064 1.639-2.508 3.992-.656.213-1.293.405-1.889.578C7.697 3.75 8.951.84 11.17.84V.83zm1.235 2.949v.135c-.754.232-1.583.484-2.394.736.466-1.777 1.333-2.645 2.085-2.971.193.501.309 1.176.309 2.1zm.539-2.234c.694.074 1.141.867 1.429 1.755-.349.114-.735.231-1.158.366v-.252c0-.752-.096-1.371-.271-1.871v.002zm2.992 1.289c-.02 0-.06.021-.078.021s-.289.075-.714.21c-.423-1.233-1.176-2.37-2.508-2.37h-.115C12.135.209 11.669 0 11.265 0 8.159 0 6.675 3.877 6.21 5.846c-1.194.365-2.063.636-2.16.674-.675.213-.694.232-.772.87-.075.462-1.83 14.063-1.83 14.063L15.009 24l.927-21.166z"></path>
-            </svg>
-            <span class="text-xl font-bold">Shopify</span>
-          </div>
-          <div class="w-1.5 h-1.5 rounded-full bg-[#e2e8f0]"></div>
+      <div class="flex overflow-hidden">
+        <div class="flex gap-12 whitespace-nowrap items-center animate-[marquee_25s_linear_infinite]">
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">TechVenture</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">InnovateCorp</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">DigitalWave</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">NexaGroup</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">CloudPeak</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">SkyBridge</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">OrbitSystems</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">TechVenture</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">InnovateCorp</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">DigitalWave</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">NexaGroup</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">CloudPeak</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">SkyBridge</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">OrbitSystems</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
         </div>
       </div>
     </div>
-
+    <!-- marquee end -->
     <section id="services" class="py-24 px-4 lg:px-8 container mx-auto">
       <div class="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
         <div class="max-w-2xl">
@@ -142,117 +157,167 @@
         </div>
         <div class="max-w-md">
           <p class="text-[#64748b] mb-6">
-            We provide end-to-end digital services to help ambitious companies scale. From concept to deployment, we build software that matters.
+            We provide end-to-end digital services to help ambitious companies scale. From concept to deployment, we
+            build software that matters.
           </p>
-          <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 py-2 bg-[#ff5a00] text-white hover:bg-[#ff5a00]/90 font-semibold rounded-full px-6 cursor-pointer">
+          <button
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 py-2 bg-[#ff5a00] text-white hover:bg-[#ff5a00]/90 font-semibold rounded-full px-6 cursor-pointer">
             Browse Services
           </button>
         </div>
       </div>
-      
+
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white p-8 rounded-2xl border border-[#e2e8f0] hover:shadow-xl hover:border-[#ff5a00]/20 transition-all group hover:-translate-y-1 duration-300">
-          <div class="w-14 h-14 bg-[#f1f5f9] rounded-xl flex items-center justify-center text-[#0f172a] group-hover:bg-[#ff5a00] group-hover:text-white transition-colors mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div
+          class="bg-white p-8 rounded-2xl border border-[#e2e8f0] hover:shadow-xl hover:border-[#ff5a00]/20 transition-all group hover:-translate-y-1 duration-300">
+          <div
+            class="w-14 h-14 bg-[#f1f5f9] rounded-xl flex items-center justify-center text-[#0f172a] group-hover:bg-[#ff5a00] group-hover:text-white transition-colors mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="16 18 22 12 16 6"></polyline>
               <polyline points="8 6 2 12 8 18"></polyline>
             </svg>
           </div>
           <h3 class="text-xl font-bold text-[#0f172a] mb-3">Custom Software Development</h3>
-          <p class="text-[#64748b] mb-6 leading-relaxed">Tailored enterprise solutions designed for your specific business requirements and workflow.</p>
-          <a href="#" class="inline-flex items-center text-sm font-bold text-[#0f172a] group-hover:text-[#ff5a00] transition-colors">
-            Learn More 
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+          <p class="text-[#64748b] mb-6 leading-relaxed">Tailored enterprise solutions designed for your specific
+            business requirements and workflow.</p>
+          <a href="#"
+            class="inline-flex items-center text-sm font-bold text-[#0f172a] group-hover:text-[#ff5a00] transition-colors">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
               <path d="M5 12h14"></path>
               <path d="m12 5 7 7-7 7"></path>
             </svg>
           </a>
         </div>
-        <div class="bg-white p-8 rounded-2xl border border-[#e2e8f0] hover:shadow-xl hover:border-[#ff5a00]/20 transition-all group hover:-translate-y-1 duration-300">
-          <div class="w-14 h-14 bg-[#f1f5f9] rounded-xl flex items-center justify-center text-[#0f172a] group-hover:bg-[#ff5a00] group-hover:text-white transition-colors mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div
+          class="bg-white p-8 rounded-2xl border border-[#e2e8f0] hover:shadow-xl hover:border-[#ff5a00]/20 transition-all group hover:-translate-y-1 duration-300">
+          <div
+            class="w-14 h-14 bg-[#f1f5f9] rounded-xl flex items-center justify-center text-[#0f172a] group-hover:bg-[#ff5a00] group-hover:text-white transition-colors mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect width="18" height="18" x="3" y="3" rx="2"></rect>
               <path d="M3 9h18"></path>
               <path d="M9 21V9"></path>
             </svg>
           </div>
           <h3 class="text-xl font-bold text-[#0f172a] mb-3">Web Application Development</h3>
-          <p class="text-[#64748b] mb-6 leading-relaxed">Scalable, high-performance web apps built with modern React frameworks.</p>
-          <a href="#" class="inline-flex items-center text-sm font-bold text-[#0f172a] group-hover:text-[#ff5a00] transition-colors">
-            Learn More 
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+          <p class="text-[#64748b] mb-6 leading-relaxed">Scalable, high-performance web apps built with modern React
+            frameworks.</p>
+          <a href="#"
+            class="inline-flex items-center text-sm font-bold text-[#0f172a] group-hover:text-[#ff5a00] transition-colors">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
               <path d="M5 12h14"></path>
               <path d="m12 5 7 7-7 7"></path>
             </svg>
           </a>
         </div>
-        <div class="bg-white p-8 rounded-2xl border border-[#e2e8f0] hover:shadow-xl hover:border-[#ff5a00]/20 transition-all group hover:-translate-y-1 duration-300">
-          <div class="w-14 h-14 bg-[#f1f5f9] rounded-xl flex items-center justify-center text-[#0f172a] group-hover:bg-[#ff5a00] group-hover:text-white transition-colors mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div
+          class="bg-white p-8 rounded-2xl border border-[#e2e8f0] hover:shadow-xl hover:border-[#ff5a00]/20 transition-all group hover:-translate-y-1 duration-300">
+          <div
+            class="w-14 h-14 bg-[#f1f5f9] rounded-xl flex items-center justify-center text-[#0f172a] group-hover:bg-[#ff5a00] group-hover:text-white transition-colors mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="8" cy="21" r="1"></circle>
               <circle cx="19" cy="21" r="1"></circle>
               <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
             </svg>
           </div>
           <h3 class="text-xl font-bold text-[#0f172a] mb-3">eCommerce Development</h3>
-          <p class="text-[#64748b] mb-6 leading-relaxed">Conversion-optimized storefronts using Shopify and custom headless architectures.</p>
-          <a href="#" class="inline-flex items-center text-sm font-bold text-[#0f172a] group-hover:text-[#ff5a00] transition-colors">
-            Learn More 
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+          <p class="text-[#64748b] mb-6 leading-relaxed">Conversion-optimized storefronts using Shopify and custom
+            headless architectures.</p>
+          <a href="#"
+            class="inline-flex items-center text-sm font-bold text-[#0f172a] group-hover:text-[#ff5a00] transition-colors">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
               <path d="M5 12h14"></path>
               <path d="m12 5 7 7-7 7"></path>
             </svg>
           </a>
         </div>
-        <div class="bg-white p-8 rounded-2xl border border-[#e2e8f0] hover:shadow-xl hover:border-[#ff5a00]/20 transition-all group hover:-translate-y-1 duration-300">
-          <div class="w-14 h-14 bg-[#f1f5f9] rounded-xl flex items-center justify-center text-[#0f172a] group-hover:bg-[#ff5a00] group-hover:text-white transition-colors mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div
+          class="bg-white p-8 rounded-2xl border border-[#e2e8f0] hover:shadow-xl hover:border-[#ff5a00]/20 transition-all group hover:-translate-y-1 duration-300">
+          <div
+            class="w-14 h-14 bg-[#f1f5f9] rounded-xl flex items-center justify-center text-[#0f172a] group-hover:bg-[#ff5a00] group-hover:text-white transition-colors mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
               <path d="M12 18h.01"></path>
             </svg>
           </div>
           <h3 class="text-xl font-bold text-[#0f172a] mb-3">Mobile Application Development</h3>
-          <p class="text-[#64748b] mb-6 leading-relaxed">Native-feeling iOS and Android experiences built with Flutter and React Native.</p>
-          <a href="#" class="inline-flex items-center text-sm font-bold text-[#0f172a] group-hover:text-[#ff5a00] transition-colors">
-            Learn More 
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+          <p class="text-[#64748b] mb-6 leading-relaxed">Native-feeling iOS and Android experiences built with Flutter
+            and React Native.</p>
+          <a href="#"
+            class="inline-flex items-center text-sm font-bold text-[#0f172a] group-hover:text-[#ff5a00] transition-colors">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
               <path d="M5 12h14"></path>
               <path d="m12 5 7 7-7 7"></path>
             </svg>
           </a>
         </div>
-        <div class="bg-white p-8 rounded-2xl border border-[#e2e8f0] hover:shadow-xl hover:border-[#ff5a00]/20 transition-all group hover:-translate-y-1 duration-300">
-          <div class="w-14 h-14 bg-[#f1f5f9] rounded-xl flex items-center justify-center text-[#0f172a] group-hover:bg-[#ff5a00] group-hover:text-white transition-colors mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"></path>
-              <path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"></path>
+        <div
+          class="bg-white p-8 rounded-2xl border border-[#e2e8f0] hover:shadow-xl hover:border-[#ff5a00]/20 transition-all group hover:-translate-y-1 duration-300">
+          <div
+            class="w-14 h-14 bg-[#f1f5f9] rounded-xl flex items-center justify-center text-[#0f172a] group-hover:bg-[#ff5a00] group-hover:text-white transition-colors mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z">
+              </path>
+              <path
+                d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18">
+              </path>
               <path d="m2.3 2.3 7.286 7.286"></path>
               <circle cx="11" cy="11" r="2"></circle>
             </svg>
           </div>
           <h3 class="text-xl font-bold text-[#0f172a] mb-3">UI/UX Design</h3>
-          <p class="text-[#64748b] mb-6 leading-relaxed">User-centric interface design that looks beautiful and drives engagement.</p>
-          <a href="#" class="inline-flex items-center text-sm font-bold text-[#0f172a] group-hover:text-[#ff5a00] transition-colors">
-            Learn More 
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+          <p class="text-[#64748b] mb-6 leading-relaxed">User-centric interface design that looks beautiful and drives
+            engagement.</p>
+          <a href="#"
+            class="inline-flex items-center text-sm font-bold text-[#0f172a] group-hover:text-[#ff5a00] transition-colors">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
               <path d="M5 12h14"></path>
               <path d="m12 5 7 7-7 7"></path>
             </svg>
           </a>
         </div>
-        <div class="bg-white p-8 rounded-2xl border border-[#e2e8f0] hover:shadow-xl hover:border-[#ff5a00]/20 transition-all group hover:-translate-y-1 duration-300">
-          <div class="w-14 h-14 bg-[#f1f5f9] rounded-xl flex items-center justify-center text-[#0f172a] group-hover:bg-[#ff5a00] group-hover:text-white transition-colors mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path>
+        <div
+          class="bg-white p-8 rounded-2xl border border-[#e2e8f0] hover:shadow-xl hover:border-[#ff5a00]/20 transition-all group hover:-translate-y-1 duration-300">
+          <div
+            class="w-14 h-14 bg-[#f1f5f9] rounded-xl flex items-center justify-center text-[#0f172a] group-hover:bg-[#ff5a00] group-hover:text-white transition-colors mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z">
+              </path>
               <path d="M22 10v6"></path>
               <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
             </svg>
           </div>
           <h3 class="text-xl font-bold text-[#0f172a] mb-3">IT Training &amp; Consultancy</h3>
-          <p class="text-[#64748b] mb-6 leading-relaxed">Strategic technical guidance and team upskilling for modern engineering.</p>
-          <a href="#" class="inline-flex items-center text-sm font-bold text-[#0f172a] group-hover:text-[#ff5a00] transition-colors">
-            Learn More 
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+          <p class="text-[#64748b] mb-6 leading-relaxed">Strategic technical guidance and team upskilling for modern
+            engineering.</p>
+          <a href="#"
+            class="inline-flex items-center text-sm font-bold text-[#0f172a] group-hover:text-[#ff5a00] transition-colors">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
               <path d="M5 12h14"></path>
               <path d="m12 5 7 7-7 7"></path>
             </svg>
@@ -263,59 +328,79 @@
 
     <section class="py-24 px-4 lg:px-8 container mx-auto bg-white rounded-[3rem] border border-[#e2e8f0]">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="text-[#ff5a00] font-bold text-sm tracking-widest uppercase mb-4 flex items-center justify-center gap-2">
+        <div
+          class="text-[#ff5a00] font-bold text-sm tracking-widest uppercase mb-4 flex items-center justify-center gap-2">
           <span class="w-8 h-[2px] bg-[#ff5a00]"></span>Our Approach<span class="w-8 h-[2px] bg-[#ff5a00]"></span>
         </div>
         <h2 class="text-4xl md:text-5xl font-black text-[#0f172a] mb-6">
           Tailored Engagement <br class="hidden md:block"> <span class="text-[#ff5a00]">For Every Stage</span>
         </h2>
         <p class="text-[#64748b] text-lg">
-          We adapt to how you work. Whether you need a full product team or specialized experts to augment your staff, we have a model that fits.
+          We adapt to how you work. Whether you need a full product team or specialized experts to augment your staff,
+          we have a model that fits.
         </p>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="text-center p-6">
-          <div class="w-20 h-20 mx-auto bg-[#ff5a00]/10 text-[#ff5a00] rounded-full flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+          <div
+            class="w-20 h-20 mx-auto bg-[#ff5a00]/10 text-[#ff5a00] rounded-full flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z">
+              </path>
               <circle cx="12" cy="12" r="3"></circle>
             </svg>
           </div>
           <h3 class="text-2xl font-bold text-[#0f172a] mb-4">Managed Services</h3>
-          <p class="text-[#64748b] leading-relaxed">End-to-end product development and maintenance. We act as your entire technical arm.</p>
+          <p class="text-[#64748b] leading-relaxed">End-to-end product development and maintenance. We act as your
+            entire technical arm.</p>
         </div>
         <div class="text-center p-6">
-          <div class="w-20 h-20 mx-auto bg-[#ff5a00]/10 text-[#ff5a00] rounded-full flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z"></path>
+          <div
+            class="w-20 h-20 mx-auto bg-[#ff5a00]/10 text-[#ff5a00] rounded-full flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z">
+              </path>
             </svg>
           </div>
           <h3 class="text-2xl font-bold text-[#0f172a] mb-4">Custom Solutions</h3>
-          <p class="text-[#64748b] leading-relaxed">Specific problem solving and discrete project delivery with clear scope and boundaries.</p>
+          <p class="text-[#64748b] leading-relaxed">Specific problem solving and discrete project delivery with clear
+            scope and boundaries.</p>
         </div>
         <div class="text-center p-6">
-          <div class="w-20 h-20 mx-auto bg-[#ff5a00]/10 text-[#ff5a00] rounded-full flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
-              <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+          <div
+            class="w-20 h-20 mx-auto bg-[#ff5a00]/10 text-[#ff5a00] rounded-full flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
+              </path>
+              <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
+              </path>
               <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
               <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
             </svg>
           </div>
           <h3 class="text-2xl font-bold text-[#0f172a] mb-4">Launchpad</h3>
-          <p class="text-[#64748b] leading-relaxed">Rapid prototyping and MVP development for startups looking to find market fit quickly.</p>
+          <p class="text-[#64748b] leading-relaxed">Rapid prototyping and MVP development for startups looking to find
+            market fit quickly.</p>
         </div>
       </div>
     </section>
 
-    <section class="py-20 px-4 lg:px-8 mt-24 bg-gradient-to-br from-[#ff5a00]/10 to-transparent border-y border-[#e2e8f0]">
+    <section
+      class="py-20 px-4 lg:px-8 mt-24 bg-gradient-to-br from-[#ff5a00]/10 to-transparent border-y border-[#e2e8f0]">
       <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
         <h2 class="text-4xl md:text-5xl font-black text-[#0f172a] max-w-xl">
           Do you have any idea? <span class="text-[#ff5a00]">Let's talk.</span>
         </h2>
-        <button class="justify-center whitespace-nowrap transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 hover:-translate-y-0.5 active:translate-y-0 bg-[#0f172a] text-white hover:bg-[#0f172a]/90 font-bold px-8 h-16 rounded-full text-lg w-full md:w-auto flex items-center gap-2 cursor-pointer">
-          Let's Talk Now 
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+        <button
+          class="justify-center whitespace-nowrap transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 hover:-translate-y-0.5 active:translate-y-0 bg-[#0f172a] text-white hover:bg-[#0f172a]/90 font-bold px-8 h-16 rounded-full text-lg w-full md:w-auto flex items-center gap-2 cursor-pointer">
+          Let's Talk Now
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
             <path d="M5 12h14"></path>
             <path d="m12 5 7 7-7 7"></path>
           </svg>
@@ -333,43 +418,53 @@
             Our <span class="text-[#ff5a00]">Expertise</span>
           </h2>
           <p class="text-[#64748b] text-lg mb-8 leading-relaxed">
-            We leverage the latest technologies and frameworks to build scalable, secure, and high-performance digital solutions that stand the test of time.
+            We leverage the latest technologies and frameworks to build scalable, secure, and high-performance digital
+            solutions that stand the test of time.
           </p>
-          <a href="#" class="inline-flex items-center font-bold text-[#0f172a] hover:text-[#ff5a00] transition-colors border-b-2 border-[#0f172a] hover:border-[#ff5a00] pb-1">
+          <a href="#"
+            class="inline-flex items-center font-bold text-[#0f172a] hover:text-[#ff5a00] transition-colors border-b-2 border-[#0f172a] hover:border-[#ff5a00] pb-1">
             View All Skills
           </a>
         </div>
-        
+
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
-          <div class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
+          <div
+            class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
             <div class="text-4xl text-[#0f172a] mb-3 opacity-80">🐘</div>
             <span class="text-sm font-semibold text-[#0f172a]">PHP</span>
           </div>
-          <div class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
+          <div
+            class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
             <div class="text-4xl text-[#0f172a] mb-3 opacity-80">⚙️</div>
             <span class="text-sm font-semibold text-[#0f172a]">Laravel</span>
           </div>
-          <div class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
+          <div
+            class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
             <div class="text-4xl text-[#0f172a] mb-3 opacity-80">🐍</div>
             <span class="text-sm font-semibold text-[#0f172a]">Python</span>
           </div>
-          <div class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
+          <div
+            class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
             <div class="text-4xl text-[#0f172a] mb-3 opacity-80">📜</div>
             <span class="text-sm font-semibold text-[#0f172a]">TypeScript</span>
           </div>
-          <div class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
+          <div
+            class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
             <div class="text-4xl text-[#0f172a] mb-3 opacity-80">🦋</div>
             <span class="text-sm font-semibold text-[#0f172a]">Flutter</span>
           </div>
-          <div class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
+          <div
+            class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
             <div class="text-4xl text-[#0f172a] mb-3 opacity-80">🍃</div>
             <span class="text-sm font-semibold text-[#0f172a]">MongoDB</span>
           </div>
-          <div class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
+          <div
+            class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
             <div class="text-4xl text-[#0f172a] mb-3 opacity-80">🐬</div>
             <span class="text-sm font-semibold text-[#0f172a]">PostgreSQL</span>
           </div>
-          <div class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
+          <div
+            class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
             <div class="text-4xl text-[#0f172a] mb-3 opacity-80">🐳</div>
             <span class="text-sm font-semibold text-[#0f172a]">Docker</span>
           </div>
@@ -377,54 +472,65 @@
       </div>
     </section>
 
-    <section class="py-24 px-4 lg:px-8 container mx-auto bg-white rounded-[3rem] border border-[#e2e8f0] overflow-hidden">
+    <section
+      class="py-24 px-4 lg:px-8 container mx-auto bg-white rounded-[3rem] border border-[#e2e8f0] overflow-hidden">
       <div class="text-center max-w-3xl mx-auto mb-20">
-        <div class="text-[#ff5a00] font-bold text-sm tracking-widest uppercase mb-4 flex items-center justify-center gap-2">
+        <div
+          class="text-[#ff5a00] font-bold text-sm tracking-widest uppercase mb-4 flex items-center justify-center gap-2">
           <span class="w-8 h-[2px] bg-[#ff5a00]"></span>How We Work<span class="w-8 h-[2px] bg-[#ff5a00]"></span>
         </div>
-        <h2 class="text-4xl md:text-5xl font-black text-[#0f172a]">Our Work <span class="text-[#ff5a00]">Flow</span></h2>
+        <h2 class="text-4xl md:text-5xl font-black text-[#0f172a]">Our Work <span class="text-[#ff5a00]">Flow</span>
+        </h2>
       </div>
       <div class="relative max-w-5xl mx-auto">
-        <div class="absolute top-8 left-10 right-10 h-0.5 border-t-2 border-dashed border-[#e2e8f0] hidden md:block"></div>
+        <div class="absolute top-8 left-10 right-10 h-0.5 border-t-2 border-dashed border-[#e2e8f0] hidden md:block">
+        </div>
         <div class="grid grid-cols-2 md:grid-cols-4 lg:flex lg:flex-row lg:justify-between gap-8 relative z-10">
           <div class="flex flex-col items-center text-center">
-            <div class="w-16 h-16 bg-[#f5f7fa] rounded-full border-4 border-white flex items-center justify-center mb-4 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] text-[#ff5a00] font-black text-xl">
+            <div
+              class="w-16 h-16 bg-[#f5f7fa] rounded-full border-4 border-white flex items-center justify-center mb-4 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] text-[#ff5a00] font-black text-xl">
               01
             </div>
             <h4 class="font-bold text-[#0f172a] text-sm uppercase tracking-wide">Discovery</h4>
           </div>
           <div class="flex flex-col items-center text-center">
-            <div class="w-16 h-16 bg-[#f5f7fa] rounded-full border-4 border-white flex items-center justify-center mb-4 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] text-[#ff5a00] font-black text-xl">
+            <div
+              class="w-16 h-16 bg-[#f5f7fa] rounded-full border-4 border-white flex items-center justify-center mb-4 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] text-[#ff5a00] font-black text-xl">
               02
             </div>
             <h4 class="font-bold text-[#0f172a] text-sm uppercase tracking-wide">Strategy</h4>
           </div>
           <div class="flex flex-col items-center text-center">
-            <div class="w-16 h-16 bg-[#f5f7fa] rounded-full border-4 border-white flex items-center justify-center mb-4 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] text-[#ff5a00] font-black text-xl">
+            <div
+              class="w-16 h-16 bg-[#f5f7fa] rounded-full border-4 border-white flex items-center justify-center mb-4 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] text-[#ff5a00] font-black text-xl">
               03
             </div>
             <h4 class="font-bold text-[#0f172a] text-sm uppercase tracking-wide">Design</h4>
           </div>
           <div class="flex flex-col items-center text-center">
-            <div class="w-16 h-16 bg-[#f5f7fa] rounded-full border-4 border-white flex items-center justify-center mb-4 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] text-[#ff5a00] font-black text-xl">
+            <div
+              class="w-16 h-16 bg-[#f5f7fa] rounded-full border-4 border-white flex items-center justify-center mb-4 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] text-[#ff5a00] font-black text-xl">
               04
             </div>
             <h4 class="font-bold text-[#0f172a] text-sm uppercase tracking-wide">Dev</h4>
           </div>
           <div class="flex flex-col items-center text-center">
-            <div class="w-16 h-16 bg-[#f5f7fa] rounded-full border-4 border-white flex items-center justify-center mb-4 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] text-[#ff5a00] font-black text-xl">
+            <div
+              class="w-16 h-16 bg-[#f5f7fa] rounded-full border-4 border-white flex items-center justify-center mb-4 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] text-[#ff5a00] font-black text-xl">
               05
             </div>
             <h4 class="font-bold text-[#0f172a] text-sm uppercase tracking-wide">Testing</h4>
           </div>
           <div class="flex flex-col items-center text-center">
-            <div class="w-16 h-16 bg-[#f5f7fa] rounded-full border-4 border-white flex items-center justify-center mb-4 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] text-[#ff5a00] font-black text-xl">
+            <div
+              class="w-16 h-16 bg-[#f5f7fa] rounded-full border-4 border-white flex items-center justify-center mb-4 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] text-[#ff5a00] font-black text-xl">
               06
             </div>
             <h4 class="font-bold text-[#0f172a] text-sm uppercase tracking-wide">Launch</h4>
           </div>
           <div class="flex flex-col items-center text-center">
-            <div class="w-16 h-16 bg-[#f5f7fa] rounded-full border-4 border-white flex items-center justify-center mb-4 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] text-[#ff5a00] font-black text-xl">
+            <div
+              class="w-16 h-16 bg-[#f5f7fa] rounded-full border-4 border-white flex items-center justify-center mb-4 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] text-[#ff5a00] font-black text-xl">
               07
             </div>
             <h4 class="font-bold text-[#0f172a] text-sm uppercase tracking-wide">Support</h4>
@@ -443,8 +549,10 @@
             <h2 class="text-4xl md:text-5xl font-black text-white">Our <span class="text-[#ff5a00]">Products</span></h2>
           </div>
           <a href="#" class="inline-flex items-center font-bold text-white hover:text-[#ff5a00] transition-colors">
-            View All Projects 
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-2">
+            View All Projects
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="w-4 h-4 ml-2">
               <path d="M5 12h14"></path>
               <path d="m12 5 7 7-7 7"></path>
             </svg>
@@ -452,15 +560,20 @@
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden group">
-            <div class="aspect-video bg-gradient-to-br from-blue-500/20 to-indigo-600/20 p-6 flex items-center justify-center relative overflow-hidden">
-              <img src="img/1.avif" alt="Inventory Management System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="aspect-video bg-gradient-to-br from-blue-500/20 to-indigo-600/20  flex items-center justify-center relative overflow-hidden">
+              <img src="img/inventory.webp" alt="Inventory Management System"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
             <div class="p-8">
               <h3 class="text-2xl font-bold text-white mb-3">Inventory Management System</h3>
               <p class="text-white/70 mb-6">Complete warehouse and stock tracking solution.</p>
-              <a href="#" class="inline-flex items-center text-sm font-bold text-[#ff5a00] hover:text-white transition-colors">
-                View Project 
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-2">
+              <a href="#"
+                class="inline-flex items-center text-sm font-bold text-[#ff5a00] hover:text-white transition-colors">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 ml-2">
                   <path d="M5 12h14"></path>
                   <path d="m12 5 7 7-7 7"></path>
                 </svg>
@@ -468,15 +581,20 @@
             </div>
           </div>
           <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden group">
-            <div class="aspect-video bg-gradient-to-br from-purple-500/20 to-pink-600/20 p-6 flex items-center justify-center relative overflow-hidden">
-              <img src="img/2.avif" alt="Virtual Management Software" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="aspect-video bg-gradient-to-br from-purple-500/20 to-pink-600/20 flex items-center justify-center relative overflow-hidden">
+              <img src="img/school.webp" alt="Virtual Management Software"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
             <div class="p-8">
-              <h3 class="text-2xl font-bold text-white mb-3">Virtual Management Software</h3>
-              <p class="text-white/70 mb-6">Remote team orchestration and time tracking.</p>
-              <a href="#" class="inline-flex items-center text-sm font-bold text-[#ff5a00] hover:text-white transition-colors">
-                View Project 
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-2">
+              <h3 class="text-2xl font-bold text-white mb-3">School Management Software</h3>
+              <p class="text-white/70 mb-6">Complete school and class management.</p>
+              <a href="#"
+                class="inline-flex items-center text-sm font-bold text-[#ff5a00] hover:text-white transition-colors">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 ml-2">
                   <path d="M5 12h14"></path>
                   <path d="m12 5 7 7-7 7"></path>
                 </svg>
@@ -484,15 +602,20 @@
             </div>
           </div>
           <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden group">
-            <div class="aspect-video bg-gradient-to-br from-amber-500/20 to-red-600/20 p-6 flex items-center justify-center relative overflow-hidden">
-              <img src="img/3.avif" alt="NextERP Software" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="aspect-video bg-gradient-to-br from-amber-500/20 to-red-600/20  flex items-center justify-center relative overflow-hidden">
+              <img src="img/pos.webp" alt="Retail POS Software"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
             <div class="p-8">
-              <h3 class="text-2xl font-bold text-white mb-3">NextERP Software</h3>
-              <p class="text-white/70 mb-6">Enterprise resource planning for manufacturing.</p>
-              <a href="#" class="inline-flex items-center text-sm font-bold text-[#ff5a00] hover:text-white transition-colors">
-                View Project 
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-2">
+              <h3 class="text-2xl font-bold text-white mb-3">Retail POS Software</h3>
+              <p class="text-white/70 mb-6">Complete retail and shop management.</p>
+              <a href="#"
+                class="inline-flex items-center text-sm font-bold text-[#ff5a00] hover:text-white transition-colors">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 ml-2">
                   <path d="M5 12h14"></path>
                   <path d="m12 5 7 7-7 7"></path>
                 </svg>
@@ -500,15 +623,20 @@
             </div>
           </div>
           <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden group">
-            <div class="aspect-video bg-gradient-to-br from-emerald-500/20 to-teal-600/20 p-6 flex items-center justify-center relative overflow-hidden">
-              <img src="img/4.avif" alt="E-commerce Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="aspect-video bg-gradient-to-br from-emerald-500/20 to-teal-600/20  flex items-center justify-center relative overflow-hidden">
+              <img src="img/ecommerce.webp" alt="E-commerce Platform"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
             <div class="p-8">
               <h3 class="text-2xl font-bold text-white mb-3">E-commerce Platform</h3>
               <p class="text-white/70 mb-6">High-volume retail storefront engine.</p>
-              <a href="#" class="inline-flex items-center text-sm font-bold text-[#ff5a00] hover:text-white transition-colors">
-                View Project 
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-2">
+              <a href="#"
+                class="inline-flex items-center text-sm font-bold text-[#ff5a00] hover:text-white transition-colors">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 ml-2">
                   <path d="M5 12h14"></path>
                   <path d="m12 5 7 7-7 7"></path>
                 </svg>
@@ -516,15 +644,20 @@
             </div>
           </div>
           <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden group">
-            <div class="aspect-video bg-gradient-to-br from-cyan-500/20 to-blue-600/20 p-6 flex items-center justify-center relative overflow-hidden">
-              <img src="img/5.avif" alt="CRM System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="aspect-video bg-gradient-to-br from-cyan-500/20 to-blue-600/20  flex items-center justify-center relative overflow-hidden">
+              <img src="img/crm.webp" alt="CRM System"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
             <div class="p-8">
               <h3 class="text-2xl font-bold text-white mb-3">CRM System</h3>
               <p class="text-white/70 mb-6">Customer relationship and sales pipeline.</p>
-              <a href="#" class="inline-flex items-center text-sm font-bold text-[#ff5a00] hover:text-white transition-colors">
-                View Project 
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-2">
+              <a href="#"
+                class="inline-flex items-center text-sm font-bold text-[#ff5a00] hover:text-white transition-colors">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 ml-2">
                   <path d="M5 12h14"></path>
                   <path d="m12 5 7 7-7 7"></path>
                 </svg>
@@ -532,15 +665,20 @@
             </div>
           </div>
           <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden group">
-            <div class="aspect-video bg-gradient-to-br from-rose-500/20 to-red-600/20 p-6 flex items-center justify-center relative overflow-hidden">
-              <img src="img/6.avif" alt="Learning Management" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="aspect-video bg-gradient-to-br from-rose-500/20 to-red-600/20 flex items-center justify-center relative overflow-hidden">
+              <img src="img/lms.webp" alt="Learning Management"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
             <div class="p-8">
               <h3 class="text-2xl font-bold text-white mb-3">Learning Management</h3>
               <p class="text-white/70 mb-6">Course delivery and student tracking.</p>
-              <a href="#" class="inline-flex items-center text-sm font-bold text-[#ff5a00] hover:text-white transition-colors">
-                View Project 
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-2">
+              <a href="#"
+                class="inline-flex items-center text-sm font-bold text-[#ff5a00] hover:text-white transition-colors">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 ml-2">
                   <path d="M5 12h14"></path>
                   <path d="m12 5 7 7-7 7"></path>
                 </svg>
@@ -557,29 +695,38 @@
           <div class="text-[#ff5a00] font-bold text-sm tracking-widest uppercase mb-4 flex items-center gap-2">
             <span class="w-8 h-[2px] bg-[#ff5a00]"></span>Testimonials
           </div>
-          <h2 class="text-4xl md:text-5xl font-black text-[#0f172a]">What Our Clients <br><span class="text-[#ff5a00]">Say</span></h2>
+          <h2 class="text-4xl md:text-5xl font-black text-[#0f172a]">What Our Clients <br><span
+              class="text-[#ff5a00]">Say</span></h2>
         </div>
         <div class="flex gap-4">
-          <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-full w-12 h-12 border border-[#e2e8f0] text-[#0f172a] hover:bg-[#ff5a00] hover:text-white hover:border-[#ff5a00] transition-all cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+          <button
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-full w-12 h-12 border border-[#e2e8f0] text-[#0f172a] hover:bg-[#ff5a00] hover:text-white hover:border-[#ff5a00] transition-all cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
               <path d="m15 18-6-6 6-6"></path>
             </svg>
           </button>
-          <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-full w-12 h-12 border border-[#e2e8f0] text-[#0f172a] hover:bg-[#ff5a00] hover:text-white hover:border-[#ff5a00] transition-all cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+          <button
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-full w-12 h-12 border border-[#e2e8f0] text-[#0f172a] hover:bg-[#ff5a00] hover:text-white hover:border-[#ff5a00] transition-all cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
               <path d="m9 18 6-6-6-6"></path>
             </svg>
           </button>
         </div>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-2xl border transition-all duration-300 ring-2 ring-[#ff5a00] border-transparent">
+        <div
+          class="bg-white p-8 rounded-2xl border transition-all duration-300 ring-2 ring-[#ff5a00] border-transparent">
           <div class="flex gap-1 text-[#ff5a00] mb-6">
             <span class="text-xl font-bold leading-none select-none">★★★★★</span>
           </div>
-          <p class="text-[#0f172a] text-lg mb-8 italic">"PeopleNTech transformed our vision into a stunning digital reality. Their attention to detail and technical expertise is unmatched in the industry."</p>
+          <p class="text-[#0f172a] text-lg mb-8 italic">"PeopleNTech transformed our vision into a stunning digital
+            reality. Their attention to detail and technical expertise is unmatched in the industry."</p>
           <div class="flex items-center gap-4">
-            <div class="w-12 h-12 rounded-full bg-[#ff5a00]/10 text-[#ff5a00] font-bold flex items-center justify-center text-xl">S</div>
+            <div
+              class="w-12 h-12 rounded-full bg-[#ff5a00]/10 text-[#ff5a00] font-bold flex items-center justify-center text-xl">
+              S</div>
             <div>
               <h4 class="font-bold text-[#0f172a]">Sarah Johnson</h4>
               <p class="text-sm text-[#64748b]">CEO, TechNova</p>
@@ -590,9 +737,12 @@
           <div class="flex gap-1 text-[#ff5a00] mb-6">
             <span class="text-xl font-bold leading-none select-none">★★★★★</span>
           </div>
-          <p class="text-[#0f172a] text-lg mb-8 italic">"Working with the PeopleNTech team was a breeze. They delivered our eCommerce platform on time and exceeded our expectations."</p>
+          <p class="text-[#0f172a] text-lg mb-8 italic">"Working with the PeopleNTech team was a breeze. They delivered
+            our eCommerce platform on time and exceeded our expectations."</p>
           <div class="flex items-center gap-4">
-            <div class="w-12 h-12 rounded-full bg-[#ff5a00]/10 text-[#ff5a00] font-bold flex items-center justify-center text-xl">M</div>
+            <div
+              class="w-12 h-12 rounded-full bg-[#ff5a00]/10 text-[#ff5a00] font-bold flex items-center justify-center text-xl">
+              M</div>
             <div>
               <h4 class="font-bold text-[#0f172a]">Michael Chen</h4>
               <p class="text-sm text-[#64748b]">Founder, RetailFlow</p>
@@ -603,9 +753,12 @@
           <div class="flex gap-1 text-[#ff5a00] mb-6">
             <span class="text-xl font-bold leading-none select-none">★★★★★</span>
           </div>
-          <p class="text-[#0f172a] text-lg mb-8 italic">"The custom software they built for our operations has saved us hundreds of hours. A truly professional and capable agency."</p>
+          <p class="text-[#0f172a] text-lg mb-8 italic">"The custom software they built for our operations has saved us
+            hundreds of hours. A truly professional and capable agency."</p>
           <div class="flex items-center gap-4">
-            <div class="w-12 h-12 rounded-full bg-[#ff5a00]/10 text-[#ff5a00] font-bold flex items-center justify-center text-xl">E</div>
+            <div
+              class="w-12 h-12 rounded-full bg-[#ff5a00]/10 text-[#ff5a00] font-bold flex items-center justify-center text-xl">
+              E</div>
             <div>
               <h4 class="font-bold text-[#0f172a]">Emma Williams</h4>
               <p class="text-sm text-[#64748b]">Director, GlobalLogistics</p>
@@ -621,12 +774,16 @@
           <div class="text-[#ff5a00] font-bold text-sm tracking-widest uppercase mb-4 flex items-center gap-2">
             <span class="w-8 h-[2px] bg-[#ff5a00]"></span>Get In Touch
           </div>
-          <h2 class="text-4xl md:text-5xl font-black text-[#0f172a] mb-6">Let's Talk <br><span class="text-[#ff5a00]">About Your Project</span></h2>
-          <p class="text-[#64748b] text-lg mb-12">Ready to start your next digital transformation? Send us a message and our team will get back to you within 24 hours.</p>
+          <h2 class="text-4xl md:text-5xl font-black text-[#0f172a] mb-6">Let's Talk <br><span
+              class="text-[#ff5a00]">About Your Project</span></h2>
+          <p class="text-[#64748b] text-lg mb-12">Ready to start your next digital transformation? Send us a message and
+            our team will get back to you within 24 hours.</p>
           <div class="space-y-8">
             <div class="flex items-start gap-4">
-              <div class="w-12 h-12 bg-[#ff5a00]/10 text-[#ff5a00] rounded-full flex items-center justify-center shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+              <div
+                class="w-12 h-12 bg-[#ff5a00]/10 text-[#ff5a00] rounded-full flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                   <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                 </svg>
@@ -637,9 +794,13 @@
               </div>
             </div>
             <div class="flex items-start gap-4">
-              <div class="w-12 h-12 bg-[#ff5a00]/10 text-[#ff5a00] rounded-full flex items-center justify-center shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              <div
+                class="w-12 h-12 bg-[#ff5a00]/10 text-[#ff5a00] rounded-full flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
                 </svg>
               </div>
               <div>
@@ -648,9 +809,13 @@
               </div>
             </div>
             <div class="flex items-start gap-4">
-              <div class="w-12 h-12 bg-[#ff5a00]/10 text-[#ff5a00] rounded-full flex items-center justify-center shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                  <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+              <div
+                class="w-12 h-12 bg-[#ff5a00]/10 text-[#ff5a00] rounded-full flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <path
+                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                  </path>
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
               </div>
@@ -666,22 +831,29 @@
             <div class="grid md:grid-cols-2 gap-6">
               <div class="space-y-2">
                 <label class="text-sm font-bold text-[#0f172a]">Name</label>
-                <input class="flex w-full rounded-md border px-3 py-1 text-base shadow-xs transition-colors placeholder:text-[#64748b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 md:text-sm bg-[#f5f7fa] border-[#e2e8f0] h-12" placeholder="John Doe">
+                <input
+                  class="flex w-full rounded-md border px-3 py-1 text-base shadow-xs transition-colors placeholder:text-[#64748b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 md:text-sm bg-[#f5f7fa] border-[#e2e8f0] h-12"
+                  placeholder="John Doe">
               </div>
               <div class="space-y-2">
                 <label class="text-sm font-bold text-[#0f172a]">Email</label>
-                <input type="email" class="flex w-full rounded-md border px-3 py-1 text-base shadow-xs transition-colors placeholder:text-[#64748b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 md:text-sm bg-[#f5f7fa] border-[#e2e8f0] h-12" placeholder="john@example.com">
+                <input type="email"
+                  class="flex w-full rounded-md border px-3 py-1 text-base shadow-xs transition-colors placeholder:text-[#64748b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 md:text-sm bg-[#f5f7fa] border-[#e2e8f0] h-12"
+                  placeholder="john@example.com">
               </div>
             </div>
             <div class="grid md:grid-cols-2 gap-6">
               <div class="space-y-2">
                 <label class="text-sm font-bold text-[#0f172a]">Phone</label>
-                <input type="tel" class="flex w-full rounded-md border px-3 py-1 text-base shadow-xs transition-colors placeholder:text-[#64748b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 md:text-sm bg-[#f5f7fa] border-[#e2e8f0] h-12" placeholder="+1 (555) 000-0000">
+                <input type="tel"
+                  class="flex w-full rounded-md border px-3 py-1 text-base shadow-xs transition-colors placeholder:text-[#64748b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 md:text-sm bg-[#f5f7fa] border-[#e2e8f0] h-12"
+                  placeholder="+1 (555) 000-0000">
               </div>
               <div class="space-y-2">
                 <label class="text-sm font-bold text-[#0f172a]">Service</label>
                 <div class="relative">
-                  <select class="appearance-none flex w-full items-center justify-between rounded-md border px-3 py-2 text-sm shadow-xs focus:outline-none focus:ring-2 focus:ring-orange-500 bg-[#f5f7fa] border-[#e2e8f0] h-12 text-[#0f172a] pr-10 cursor-pointer">
+                  <select
+                    class="appearance-none flex w-full items-center justify-between rounded-md border px-3 py-2 text-sm shadow-xs focus:outline-none focus:ring-2 focus:ring-orange-500 bg-[#f5f7fa] border-[#e2e8f0] h-12 text-[#0f172a] pr-10 cursor-pointer">
                     <option value="" disabled selected>Select Service</option>
                     <option value="software">Software Dev</option>
                     <option value="web">Web Dev</option>
@@ -690,7 +862,9 @@
                     <option value="other">Other</option>
                   </select>
                   <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-[#0f172a]/50">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="h-4 w-4">
                       <path d="m6 9 6 6 6-6"></path>
                     </svg>
                   </div>
@@ -699,9 +873,12 @@
             </div>
             <div class="space-y-2">
               <label class="text-sm font-bold text-[#0f172a]">Message</label>
-              <textarea class="flex w-full rounded-md border px-3 py-2 text-base shadow-xs placeholder:text-[#64748b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 md:text-sm bg-[#f5f7fa] border-[#e2e8f0] min-h-[150px] resize-none" placeholder="Tell us about your project..."></textarea>
+              <textarea
+                class="flex w-full rounded-md border px-3 py-2 text-base shadow-xs placeholder:text-[#64748b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 md:text-sm bg-[#f5f7fa] border-[#e2e8f0] min-h-[150px] resize-none"
+                placeholder="Tell us about your project..."></textarea>
             </div>
-            <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 border border-transparent min-h-9 px-4 py-2 w-full h-14 bg-[#ff5a00] text-white hover:bg-[#ff5a00]/90 font-bold text-lg rounded-xl cursor-pointer">
+            <button
+              class="inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 border border-transparent min-h-9 px-4 py-2 w-full h-14 bg-[#ff5a00] text-white hover:bg-[#ff5a00]/90 font-bold text-lg rounded-xl cursor-pointer">
               Send Message
             </button>
           </form>
@@ -714,31 +891,42 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           <div class="lg:col-span-2">
             <div class="flex items-center gap-2 mb-6">
-              <img class="w-36" src="img/logo.png" alt="Logo">
+              <img class="w-36 bg-white py-2 px-4 rounded-full" src="img/logo.png" alt="Logo">
             </div>
             <p class="text-white/70 max-w-sm mb-8 leading-relaxed">
-              We are a digital agency specializing in custom software development, web applications, and digital experiences.
+              We are a digital agency specializing in custom software development, web applications, and digital
+              experiences.
             </p>
             <div class="flex items-center gap-4">
-              <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff5a00] hover:text-white transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+              <a href="#"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff5a00] hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                 </svg>
               </a>
-              <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff5a00] hover:text-white transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+              <a href="#"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff5a00] hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <path
+                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+                  </path>
                 </svg>
               </a>
-              <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff5a00] hover:text-white transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+              <a href="#"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff5a00] hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                   <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                   <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
                 </svg>
               </a>
-              <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff5a00] hover:text-white transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+              <a href="#"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff5a00] hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                   <rect width="4" height="12" x="2" y="9"></rect>
                   <circle cx="4" cy="4" r="2"></circle>
@@ -770,18 +958,28 @@
             <h4 class="font-bold text-lg mb-6">Contact</h4>
             <ul class="space-y-4">
               <li class="text-white/70 flex items-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#ff5a00] shrink-0">
-                  <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 text-[#ff5a00] shrink-0">
+                  <path
+                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                  </path>
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg> SF, CA 94107
               </li>
               <li class="text-white/70 flex items-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#ff5a00] shrink-0">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 text-[#ff5a00] shrink-0">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
                 </svg> +1 555 123 4567
               </li>
               <li class="text-white/70 flex items-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#ff5a00] shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 text-[#ff5a00] shrink-0">
                   <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                 </svg> hello@PeopleNTech.agency
@@ -789,7 +987,8 @@
             </ul>
           </div>
         </div>
-        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/50">
+        <div
+          class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/50">
           <p>© 2026 PeopleNTech Agency. All rights reserved.</p>
           <div class="flex items-center gap-6">
             <a href="#" class="hover:text-[#ff5a00] transition-colors">Privacy Policy</a>
@@ -806,7 +1005,7 @@
 
     // Vanilla JS to handle Testimonial Slider Update System
     document.addEventListener('DOMContentLoaded', () => {
-      const testimonialSection = document.querySelectorAll('section')[4]; 
+      const testimonialSection = document.querySelectorAll('section')[4];
       if (testimonialSection) {
         const buttons = testimonialSection.querySelectorAll('button');
         const testimonials = testimonialSection.querySelectorAll('.grid > div');
