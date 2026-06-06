@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex">
+
+  <title>PeopleNTech - Software Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="antialiased bg-[#fafafa] font-['Inter',sans-serif]">
+
+  <div class="min-h-screen flex justify-center w-full pb-10">
+    <div class="w-full max-w-[1400px] bg-white border-x border-gray-200 shadow-xs flex flex-col">
+
+      <div
+        class="flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs border-b border-gray-200 px-4 sm:px-8 py-2 tracking-widest text-gray-500 uppercase font-semibold">
+        <span>Software Agency - Est. 2014</span>
+        <span class="flex items-center gap-2 mt-2 sm:mt-0">
+          <span class="w-2 h-2 rounded-full bg-orange-600 animate-pulse"></span>
+          Available for new projects
+        </span>
+      </div>
+
+      <header
+        class="flex items-center justify-between border-b border-gray-200 px-4 sm:px-8 py-4 sticky top-0 bg-white/90 backdrop-blur-md z-50">
+        <div class="flex items-center gap-2 font-black text-xl tracking-tighter">
+          <i data-lucide="square" class="w-6 h-6 fill-black"></i> PeopleNTech
+        </div>
+
+        <nav class="hidden lg:flex gap-8 text-[11px] font-bold tracking-widest uppercase text-gray-900">
+          <a href="#" class="hover:text-orange-600 transition-colors">Services</a>
+          <a href="#" class="hover:text-orange-600 transition-colors">Expertise</a>
+          <a href="#" class="hover:text-orange-600 transition-colors">Products</a>
+          <a href="#" class="hover:text-orange-600 transition-colors">Process</a>
+          <a href="#" class="hover:text-orange-600 transition-colors">Contact</a>
+        </nav>
+
+        <div class="hidden lg:flex items-center gap-4">
+          <button
+            class="bg-black text-white text-[11px] font-bold uppercase tracking-widest px-6 py-3 hover:bg-gray-800 transition-colors cursor-pointer">
+            Start a Project
+          </button>
+          <button class="p-2.5 border border-gray-200 rounded-xs hover:bg-gray-50 transition-colors cursor-pointer">
+            <i data-lucide="sun" class="w-4 h-4 text-gray-600"></i>
+          </button>
+        </div>
+
+        <button id="menu-btn" class="lg:hidden p-2 cursor-pointer">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </header>
+
+      <div id="mobile-menu" class="hidden flex-col border-b border-gray-200 p-4 bg-gray-50 lg:hidden">
+        <a href="#" class="py-3 text-sm font-bold uppercase tracking-widest border-b border-gray-200">Services</a>
+        <a href="#" class="py-3 text-sm font-bold uppercase tracking-widest border-b border-gray-200">Expertise</a>
+        <a href="#" class="py-3 text-sm font-bold uppercase tracking-widest border-b border-gray-200">Products</a>
+        <a href="#" class="py-3 text-sm font-bold uppercase tracking-widest border-b border-gray-200">Process</a>
+        <a href="#" class="py-3 text-sm font-bold uppercase tracking-widest">Contact</a>
+        <button
+          class="mt-4 bg-black text-white text-xs font-bold uppercase tracking-widest px-6 py-4 w-full cursor-pointer">
+          Start a Project
+        </button>
+      </div>
+
+      <section
+        class="relative px-4 sm:px-8 py-20 lg:py-32 border-b border-gray-200 flex flex-col justify-center overflow-hidden">
+        <div class="hidden md:block absolute top-4 left-4 w-3 h-3 border-t-2 border-l-2 border-black"></div>
+        <div class="hidden md:block absolute top-4 right-4 w-3 h-3 border-t-2 border-r-2 border-black"></div>
+        <div class="hidden md:block absolute bottom-4 left-4 w-3 h-3 border-b-2 border-l-2 border-black"></div>
+        <div class="hidden md:block absolute bottom-4 right-4 w-3 h-3 border-b-2 border-r-2 border-black"></div>
+
+        <div class="max-w-4xl">
+          <p class="text-[11px] font-bold tracking-[0.2em] text-gray-400 mb-6 uppercase flex items-center gap-2">
+            <span class="text-gray-300">//</span> We empower your business
+          </p>
+          <h1
+            class="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight text-gray-900 mb-8 leading-[1.05]">
+            Transforming Ideas Into <span class="text-orange-600">Digital</span> Reality.
+          </h1>
+          <p class="text-gray-500 text-lg sm:text-xl max-w-2xl mb-10 leading-relaxed font-light">
+            PeopleTech accelerates your digital transformation with cutting-edge software solutions, mobile apps, and
+            enterprise-grade development services.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
+            <button
+              class="bg-black text-white text-[11px] font-bold uppercase tracking-widest px-8 py-4 hover:bg-gray-800 transition-colors flex items-center justify-center gap-3 cursor-pointer">
+              Start a Project <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+            <button
+              class="bg-transparent text-black text-[11px] font-bold uppercase tracking-widest px-8 py-4 hover:bg-gray-50 transition-colors border border-gray-200 flex items-center justify-center cursor-pointer">
+              Explore Services
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-gray-200 border-b border-gray-200">
+        <div class="bg-white p-8 flex items-center gap-4">
+          <i data-lucide="square" class="w-8 h-8 fill-gray-200 text-gray-200"></i>
+          <div>
+            <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400">PeopleTech</div>
+            <div class="text-sm font-bold uppercase tracking-widest">By Numbers</div>
+          </div>
+        </div>
+        <div class="bg-white p-8 flex flex-col justify-center">
+          <div class="text-4xl sm:text-5xl font-black mb-1 tracking-tighter">200+</div>
+          <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Projects Delivered</div>
+        </div>
+        <div class="bg-white p-8 flex flex-col justify-center">
+          <div class="text-4xl sm:text-5xl font-black mb-1 tracking-tighter">98%</div>
+          <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Client Satisfaction</div>
+        </div>
+        <div class="bg-white p-8 flex flex-col justify-center">
+          <div class="text-4xl sm:text-5xl font-black mb-1 tracking-tighter">10yr</div>
+          <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Years Experience</div>
+        </div>
+      </div>
+
+      <div class="overflow-hidden bg-white border-b border-gray-200 py-5">
+        <div
+          class="whitespace-nowrap flex w-[200%] animate-[marquee_30s_linear_infinite] hover:[animation-play-state:paused]">
+          <div class="flex items-center gap-8 px-4 w-1/2 justify-around">
+            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">TechVenture <span
+                class="text-orange-500 font-bold">+</span></span>
+            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">InnovateCorp <span
+                class="text-orange-500 font-bold">+</span></span>
+            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">DigitalWave <span
+                class="text-orange-500 font-bold">+</span></span>
+            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">NexaGroup <span
+                class="text-orange-500 font-bold">+</span></span>
+            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">CloudPeak <span
+                class="text-orange-500 font-bold">+</span></span>
+            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">SkyBridge <span
+                class="text-orange-500 font-bold">+</span></span>
+            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">OrbitSystems <span
+                class="text-orange-500 font-bold">+</span></span>
+          </div>
+          <div class="flex items-center gap-8 px-4 w-1/2 justify-around">
+            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">TechVenture <span
+                class="text-orange-500 font-bold">+</span></span>
+            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">InnovateCorp <span
+                class="text-orange-500 font-bold">+</span></span>
+            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">DigitalWave <span
+                class="text-orange-500 font-bold">+</span></span>
+            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">NexaGroup <span
+                class="text-orange-500 font-bold">+</span></span>
+            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">CloudPeak <span
+                class="text-orange-500 font-bold">+</span></span>
+            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">SkyBridge <span
+                class="text-orange-500 font-bold">+</span></span>
+            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">OrbitSystems <span
+                class="text-orange-500 font-bold">+</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-[1px] bg-gray-200 border-b border-gray-200">
+        <div class="bg-white p-8 lg:p-12 xl:p-16">
+          <p class="text-[10px] font-bold tracking-[0.2em] text-gray-400 mb-6 uppercase flex items-center gap-2">
+            <span class="text-gray-300">//</span> What We Do
+          </p>
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 leading-[1.1]">
+            Digital <span class="text-orange-600">Services</span> <br /> & Smart Solutions
+          </h2>
+        </div>
+        <div
+          class="bg-white p-8 lg:p-12 xl:p-16 flex flex-col justify-center items-start lg:items-end text-left lg:text-right border-t lg:border-t-0 border-gray-200">
+          <p class="text-gray-500 max-w-md mb-8 leading-relaxed font-light">
+            Full-spectrum digital services that transform ideas into scalable products your users love.
+          </p>
+          <button
+            class="bg-black text-white text-[11px] font-bold uppercase tracking-widest px-8 py-4 hover:bg-gray-800 transition-colors flex items-center justify-center gap-3 cursor-pointer">
+            Start a Project <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-gray-200 border-b border-gray-200">
+        <div class="bg-white p-8 sm:p-10 flex flex-col group hover:bg-gray-50 transition-colors">
+          <div
+            class="w-12 h-12 bg-gray-50 border border-gray-200 flex items-center justify-center mb-8 rounded-sm group-hover:scale-110 transition-transform">
+            <i data-lucide="code" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-3">Custom Software Development</h3>
+          <p class="text-gray-500 text-sm mb-8 leading-relaxed font-light flex-grow">Tailored, robust, and scalable
+            software built to solve your unique business challenges and streamline complex operations.</p>
+          <a href="#"
+            class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
+            Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i>
+          </a>
+        </div>
+        <div class="bg-white p-8 sm:p-10 flex flex-col group hover:bg-gray-50 transition-colors">
+          <div
+            class="w-12 h-12 bg-gray-50 border border-gray-200 flex items-center justify-center mb-8 rounded-sm group-hover:scale-110 transition-transform">
+            <i data-lucide="layout" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-3">Web Application Development</h3>
+          <p class="text-gray-500 text-sm mb-8 leading-relaxed font-light flex-grow">High-performance, secure, and
+            accessible web apps built with modern frameworks to deliver seamless user experiences.</p>
+          <a href="#"
+            class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
+            Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i>
+          </a>
+        </div>
+        <div class="bg-white p-8 sm:p-10 flex flex-col group hover:bg-gray-50 transition-colors">
+          <div
+            class="w-12 h-12 bg-gray-50 border border-gray-200 flex items-center justify-center mb-8 rounded-sm group-hover:scale-110 transition-transform">
+            <i data-lucide="shopping-cart" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-3">eCommerce Development</h3>
+          <p class="text-gray-500 text-sm mb-8 leading-relaxed font-light flex-grow">Scalable online stores with
+            conversion-optimized checkouts, smooth inventory sync, and secure payment integrations.</p>
+          <a href="#"
+            class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
+            Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i>
+          </a>
+        </div>
+        <div class="bg-white p-8 sm:p-10 flex flex-col group hover:bg-gray-50 transition-colors">
+          <div
+            class="w-12 h-12 bg-gray-50 border border-gray-200 flex items-center justify-center mb-8 rounded-sm group-hover:scale-110 transition-transform">
+            <i data-lucide="smartphone" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-3">Mobile Application Development</h3>
+          <p class="text-gray-500 text-sm mb-8 leading-relaxed font-light flex-grow">Stunning native and cross-platform
+            mobile apps for iOS and Android that engage users and drive business growth.</p>
+          <a href="#"
+            class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
+            Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i>
+          </a>
+        </div>
+        <div class="bg-white p-8 sm:p-10 flex flex-col group hover:bg-gray-50 transition-colors">
+          <div
+            class="w-12 h-12 bg-gray-50 border border-gray-200 flex items-center justify-center mb-8 rounded-sm group-hover:scale-110 transition-transform">
+            <i data-lucide="rocket" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-3">Minimum Viable Product (MVP) Design</h3>
+          <p class="text-gray-500 text-sm mb-8 leading-relaxed font-light flex-grow">Validate your concept and launch
+            fast with a functional prototype optimized for user feedback and early traction.</p>
+          <a href="#"
+            class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
+            Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i>
+          </a>
+        </div>
+        <div class="bg-white p-8 sm:p-10 flex flex-col group hover:bg-gray-50 transition-colors">
+          <div
+            class="w-12 h-12 bg-gray-50 border border-gray-200 flex items-center justify-center mb-8 rounded-sm group-hover:scale-110 transition-transform">
+            <i data-lucide="graduation-cap" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-3">IT Training & Consultancy</h3>
+          <p class="text-gray-500 text-sm mb-8 leading-relaxed font-light flex-grow">Expert strategic guidance, tech
+            stack selection advice, and corporate training programs to elevate team capabilities.</p>
+          <a href="#"
+            class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
+            Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-[1px] bg-gray-200 border-b border-gray-200">
+        <div class="bg-white p-8 lg:p-12 xl:p-16">
+          <p class="text-[10px] font-bold tracking-[0.2em] text-gray-400 mb-6 uppercase flex items-center gap-2">
+            <span class="text-gray-300">//</span> Featured Client Solutions
+          </p>
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 leading-[1.1]">
+            Tailored <span class="text-orange-600">Engagement</span> <br /> For Every Stage
+          </h2>
+        </div>
+        <div class="bg-white p-8 lg:p-12 xl:p-16 flex flex-col justify-center border-t lg:border-t-0 border-gray-200">
+          <p class="text-gray-500 max-w-md leading-relaxed font-light">
+            Whether you are scaling an enterprise, expanding a growing business, or launching a new startup.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-[1px] bg-gray-200 border-b border-gray-200">
+        <div class="bg-white p-8 sm:p-10 relative flex flex-col">
+          <div class="w-12 h-12 bg-gray-50 border border-gray-200 flex items-center justify-center mb-8 rounded-sm">
+            <i data-lucide="box" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <div class="text-[10px] font-bold text-orange-600 uppercase tracking-widest mb-2">ENTERPRISE</div>
+          <h3 class="text-2xl font-bold mb-8">Managed Services</h3>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start gap-3 text-sm text-gray-600 font-medium">
+              <i data-lucide="check-circle" class="w-4 h-4 text-orange-500 mt-0.5 shrink-0"></i> Managed IT Services
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600 font-medium">
+              <i data-lucide="check-circle" class="w-4 h-4 text-orange-500 mt-0.5 shrink-0"></i> Application
+              Modernization
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600 font-medium">
+              <i data-lucide="check-circle" class="w-4 h-4 text-orange-500 mt-0.5 shrink-0"></i> Dedicated Dev Team
+            </li>
+          </ul>
+        </div>
+        <div class="bg-white p-8 sm:p-10 relative flex flex-col">
+          <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-orange-100 text-orange-600 border border-orange-200 text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded-full z-10">
+            Popular Focus
+          </div>
+          <div class="w-12 h-12 bg-gray-50 border border-gray-200 flex items-center justify-center mb-8 rounded-sm">
+            <i data-lucide="monitor-play" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <div class="text-[10px] font-bold text-orange-600 uppercase tracking-widest mb-2">SME</div>
+          <h3 class="text-2xl font-bold mb-8">Custom Solutions</h3>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start gap-3 text-sm text-gray-600 font-medium">
+              <i data-lucide="check-circle" class="w-4 h-4 text-orange-500 mt-0.5 shrink-0"></i> IT Consulting
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600 font-medium">
+              <i data-lucide="check-circle" class="w-4 h-4 text-orange-500 mt-0.5 shrink-0"></i> IT Infrastructure
+              Services
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600 font-medium">
+              <i data-lucide="check-circle" class="w-4 h-4 text-orange-500 mt-0.5 shrink-0"></i> Custom Software Dev
+            </li>
+          </ul>
+        </div>
+        <div class="bg-white p-8 sm:p-10 relative flex flex-col">
+          <div class="w-12 h-12 bg-gray-50 border border-gray-200 flex items-center justify-center mb-8 rounded-sm">
+            <i data-lucide="rocket" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <div class="text-[10px] font-bold text-orange-600 uppercase tracking-widest mb-2">STARTUP</div>
+          <h3 class="text-2xl font-bold mb-8">Launchpad</h3>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start gap-3 text-sm text-gray-600 font-medium">
+              <i data-lucide="check-circle" class="w-4 h-4 text-orange-500 mt-0.5 shrink-0"></i> Discovery Phase
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600 font-medium">
+              <i data-lucide="check-circle" class="w-4 h-4 text-orange-500 mt-0.5 shrink-0"></i> MVP Development
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600 font-medium">
+              <i data-lucide="check-circle" class="w-4 h-4 text-orange-500 mt-0.5 shrink-0"></i> UI/UX Services
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="bg-white border-b border-gray-200 px-8 py-16 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+        <div>
+          <p class="text-[10px] font-bold tracking-[0.2em] text-gray-400 mb-3 uppercase flex items-center gap-2">
+            <span class="text-gray-300">//</span> Free Consultation
+          </p>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
+            Do you have any idea? Let's talk.
+          </h2>
+        </div>
+        <button
+          class="bg-black text-white text-[11px] font-bold uppercase tracking-widest px-8 py-4 hover:bg-gray-800 transition-colors flex items-center justify-center gap-3 shrink-0 cursor-pointer">
+          Book Free Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-[1px] bg-gray-200 border-b border-gray-200">
+        <div class="bg-white p-8 lg:p-12 xl:p-16 flex flex-col justify-center">
+          <p class="text-[10px] font-bold tracking-[0.2em] text-gray-400 mb-6 uppercase flex items-center gap-2">
+            <span class="text-gray-300">//</span> Technology Stack
+          </p>
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 mb-6 leading-[1.1]">
+            Our <span class="text-orange-600">Expertise</span>
+          </h2>
+          <p class="text-gray-500 leading-relaxed font-light">
+            We work with the most powerful technologies to build scalable, performant products.
+          </p>
+        </div>
+        <div class="bg-gray-200 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-[1px]">
+          <div
+            class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
+            <i data-lucide="file-text"
+              class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">PHP</span>
+          </div>
+          <div
+            class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
+            <i data-lucide="box"
+              class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">LARAVEL</span>
+          </div>
+          <div
+            class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
+            <i data-lucide="terminal"
+              class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">PYTHON</span>
+          </div>
+          <div
+            class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
+            <i data-lucide="monitor-play"
+              class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">DJANGO</span>
+          </div>
+          <div
+            class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
+            <i data-lucide="database"
+              class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">POSTGRESQL</span>
+          </div>
+          <div
+            class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
+            <i data-lucide="atom"
+              class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">REACT</span>
+          </div>
+          <div
+            class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
+            <i data-lucide="triangle"
+              class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">VUE</span>
+          </div>
+          <div
+            class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
+            <i data-lucide="database"
+              class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">MYSQL</span>
+          </div>
+          <div
+            class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
+            <i data-lucide="hexagon"
+              class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">NEXT.JS</span>
+          </div>
+          <div
+            class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
+            <i data-lucide="wind"
+              class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">TAILWIND CSS</span>
+          </div>
+          <div
+            class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
+            <i data-lucide="container"
+              class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">DOCKER</span>
+          </div>
+          <div
+            class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
+            <i data-lucide="smartphone"
+              class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">FLUTTER</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-8 lg:p-12 xl:p-16 border-b border-gray-200">
+        <p class="text-[10px] font-bold tracking-[0.2em] text-gray-400 mb-6 uppercase flex items-center gap-2">
+          <span class="text-gray-300">//</span> How We Work
+        </p>
+        <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 leading-[1.1]">
+          Our Work <span class="text-orange-600">Flow</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-[1px] bg-gray-200 border-b border-gray-200">
+        <div class="bg-white p-6 flex flex-col items-center text-center group relative overflow-hidden cursor-pointer">
+          <div
+            class="text-[10px] font-bold text-gray-300 mb-4 bg-gray-50 w-8 h-8 flex items-center justify-center rounded-full">
+            01</div>
+          <i data-lucide="file-text"
+            class="w-5 h-5 text-orange-600 mb-4 group-hover:scale-110 transition-transform"></i>
+          <h4 class="text-[11px] font-bold uppercase tracking-widest mb-3">INITIAL PLANNING</h4>
+          <p class="text-xs text-gray-500 leading-relaxed">Defining goals and mapping strategy.</p>
+        </div>
+        <div class="bg-white p-6 flex flex-col items-center text-center group relative overflow-hidden cursor-pointer">
+          <div
+            class="text-[10px] font-bold text-gray-300 mb-4 bg-gray-50 w-8 h-8 flex items-center justify-center rounded-full">
+            02</div>
+          <i data-lucide="layout-template"
+            class="w-5 h-5 text-orange-600 mb-4 group-hover:scale-110 transition-transform"></i>
+          <h4 class="text-[11px] font-bold uppercase tracking-widest mb-3">WIRE-FRAMING</h4>
+          <p class="text-xs text-gray-500 leading-relaxed">UX blueprinting and layout architecture.</p>
+        </div>
+        <div class="bg-white p-6 flex flex-col items-center text-center group relative overflow-hidden cursor-pointer">
+          <div
+            class="text-[10px] font-bold text-gray-300 mb-4 bg-gray-50 w-8 h-8 flex items-center justify-center rounded-full">
+            03</div>
+          <i data-lucide="pen-tool" class="w-5 h-5 text-orange-600 mb-4 group-hover:scale-110 transition-transform"></i>
+          <h4 class="text-[11px] font-bold uppercase tracking-widest mb-3">COPY & DESIGN</h4>
+          <p class="text-xs text-gray-500 leading-relaxed">High-fidelity UI and creative styling.</p>
+        </div>
+        <div class="bg-white p-6 flex flex-col items-center text-center group relative overflow-hidden cursor-pointer">
+          <div
+            class="text-[10px] font-bold text-gray-300 mb-4 bg-gray-50 w-8 h-8 flex items-center justify-center rounded-full">
+            04</div>
+          <i data-lucide="code" class="w-5 h-5 text-orange-600 mb-4 group-hover:scale-110 transition-transform"></i>
+          <h4 class="text-[11px] font-bold uppercase tracking-widest mb-3">DEVELOPMENT</h4>
+          <p class="text-xs text-gray-500 leading-relaxed">Writing clean, scalable code components.</p>
+        </div>
+        <div class="bg-white p-6 flex flex-col items-center text-center group relative overflow-hidden cursor-pointer">
+          <div
+            class="text-[10px] font-bold text-gray-300 mb-4 bg-gray-50 w-8 h-8 flex items-center justify-center rounded-full">
+            05</div>
+          <i data-lucide="bug" class="w-5 h-5 text-orange-600 mb-4 group-hover:scale-110 transition-transform"></i>
+          <h4 class="text-[11px] font-bold uppercase tracking-widest mb-3">TESTING</h4>
+          <p class="text-xs text-gray-500 leading-relaxed">Rigorous QA checks and bug-fixing.</p>
+        </div>
+        <div class="bg-white p-6 flex flex-col items-center text-center group relative overflow-hidden cursor-pointer">
+          <div
+            class="text-[10px] font-bold text-gray-300 mb-4 bg-gray-50 w-8 h-8 flex items-center justify-center rounded-full">
+            06</div>
+          <i data-lucide="rocket" class="w-5 h-5 text-orange-600 mb-4 group-hover:scale-110 transition-transform"></i>
+          <h4 class="text-[11px] font-bold uppercase tracking-widest mb-3">DEPLOYMENT</h4>
+          <p class="text-xs text-gray-500 leading-relaxed">Secure launching and server setup.</p>
+        </div>
+        <div class="bg-white p-6 flex flex-col items-center text-center group relative overflow-hidden cursor-pointer">
+          <div
+            class="text-[10px] font-bold text-gray-300 mb-4 bg-gray-50 w-8 h-8 flex items-center justify-center rounded-full">
+            07</div>
+          <i data-lucide="headphones"
+            class="w-5 h-5 text-orange-600 mb-4 group-hover:scale-110 transition-transform"></i>
+          <h4 class="text-[11px] font-bold uppercase tracking-widest mb-3">SUPPORT</h4>
+          <p class="text-xs text-gray-500 leading-relaxed">Continuous monitoring and upgrades.</p>
+        </div>
+      </div>
+
+      <div
+        class="bg-white border-b border-gray-200 px-8 py-16 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+        <div>
+          <p class="text-[10px] font-bold tracking-[0.2em] text-gray-400 mb-3 uppercase flex items-center gap-2">
+            <span class="text-gray-300">//</span> Ready-Made Solutions
+          </p>
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 leading-[1.1]">
+            Our <span class="text-orange-600">Products</span>
+          </h2>
+        </div>
+        <button
+          class="bg-transparent text-black text-[11px] font-bold uppercase tracking-widest px-8 py-4 hover:bg-gray-50 transition-colors border border-gray-200 flex items-center justify-center gap-2 shrink-0 cursor-pointer">
+          View All Products <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[1px] bg-gray-200 border-b border-gray-200">
+        <div class="bg-white p-6 group flex flex-col">
+          <div class="relative aspect-[16/10] mb-6 overflow-hidden bg-gray-100 rounded-sm">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600"
+              alt="Inventory"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <h3 class="text-lg font-bold mb-3">Inventory Management System</h3>
+          <p class="text-sm text-gray-500 mb-6 leading-relaxed flex-grow">Powerful tool for easy management of
+            inventory, stock control, and supply chain operations in real time.</p>
+          <a href="#"
+            class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
+            Explore More <i data-lucide="arrow-right" class="w-3 h-3"></i>
+          </a>
+        </div>
+        <div class="bg-white p-6 group flex flex-col">
+          <div class="relative aspect-[16/10] mb-6 overflow-hidden bg-gray-100 rounded-sm">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600"
+              alt="School" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <h3 class="text-lg font-bold mb-3">School Management Software</h3>
+          <p class="text-sm text-gray-500 mb-6 leading-relaxed flex-grow">Manage all academic, administrative, and
+            official activities of a school with a single intuitive dashboard.</p>
+          <a href="#"
+            class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
+            Explore More <i data-lucide="arrow-right" class="w-3 h-3"></i>
+          </a>
+        </div>
+        <div class="bg-white p-6 group flex flex-col">
+          <div class="relative aspect-[16/10] mb-6 overflow-hidden bg-gray-100 rounded-sm">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=600"
+              alt="POS" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <h3 class="text-lg font-bold mb-3">Retail POS Software</h3>
+          <p class="text-sm text-gray-500 mb-6 leading-relaxed flex-grow">Impressive point-of-sale software for retail
+            stores. Revolutionize how you process sales and manage bills.</p>
+          <a href="#"
+            class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
+            Explore More <i data-lucide="arrow-right" class="w-3 h-3"></i>
+          </a>
+        </div>
+        <div class="bg-white p-6 group flex flex-col">
+          <div class="relative aspect-[16/10] mb-6 overflow-hidden bg-gray-100 rounded-sm">
+            <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=600"
+              alt="eCommerce"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <h3 class="text-lg font-bold mb-3">eCommerce Platform</h3>
+          <p class="text-sm text-gray-500 mb-6 leading-relaxed flex-grow">All-in-one scalable commerce platform to list
+            products, manage customer orders, and process payments online.</p>
+          <a href="#"
+            class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
+            Explore More <i data-lucide="arrow-right" class="w-3 h-3"></i>
+          </a>
+        </div>
+        <div class="bg-white p-6 group flex flex-col">
+          <div class="relative aspect-[16/10] mb-6 overflow-hidden bg-gray-100 rounded-sm">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600"
+              alt="CRM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <h3 class="text-lg font-bold mb-3">CRM System</h3>
+          <p class="text-sm text-gray-500 mb-6 leading-relaxed flex-grow">Intelligent customer relationship management
+            to track customer leads, automate sales, and boost client satisfaction.</p>
+          <a href="#"
+            class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
+            Explore More <i data-lucide="arrow-right" class="w-3 h-3"></i>
+          </a>
+        </div>
+        <div class="bg-white p-6 group flex flex-col">
+          <div class="relative aspect-[16/10] mb-6 overflow-hidden bg-gray-100 rounded-sm">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600"
+              alt="LMS" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <h3 class="text-lg font-bold mb-3">Learning Management System (LMS)</h3>
+          <p class="text-sm text-gray-500 mb-6 leading-relaxed flex-grow">Comprehensive educational portal for hosting
+            courses, managing student enrollments, assessments, and tracking progress.</p>
+          <a href="#"
+            class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
+            Explore More <i data-lucide="arrow-right" class="w-3 h-3"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white border-b border-gray-200 px-8 py-16 flex justify-between items-center">
+        <div>
+          <p class="text-[10px] font-bold tracking-[0.2em] text-gray-400 mb-3 uppercase flex items-center gap-2">
+            <span class="text-gray-300">//</span> Client Stories
+          </p>
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 leading-[1.1]">
+            What Our <span class="text-orange-600">Clients</span> <br /> Say
+          </h2>
+        </div>
+        <div class="hidden sm:flex gap-2">
+          <button
+            class="w-12 h-12 border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors cursor-pointer">
+            <i data-lucide="arrow-right" class="w-5 h-5 rotate-180"></i>
+          </button>
+          <button
+            class="w-12 h-12 border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors cursor-pointer">
+            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-gray-200 border-b border-gray-200">
+        <div class="bg-white p-8 sm:p-10 flex flex-col">
+          <div class="text-orange-500 text-6xl font-serif leading-none h-8 mb-4">“</div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-8 flex-grow">
+            Our MVP was shipped in 8 weeks and investors loved the demo. PeopleTech's team understood our product vision
+            perfectly and translated it into a polished, scalable prototype.
+          </p>
+          <div class="flex text-orange-400 mb-6">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <div class="flex items-center gap-4">
+            <div
+              class="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold text-sm">
+              LK</div>
+            <div>
+              <div class="text-sm font-bold">Leon Kader</div>
+              <div class="text-[10px] text-gray-500 uppercase tracking-wider mt-0.5">Co-founder, StartupBridge</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-8 sm:p-10 flex flex-col">
+          <div class="text-orange-500 text-6xl font-serif leading-none h-8 mb-4">“</div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-8 flex-grow">
+            I have just expressed my idea and they came up with the best solution. It seems like my dream comes true.
+            They are very professional, I consider them all-time tech support for my company.
+          </p>
+          <div class="flex text-orange-400 mb-6">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <div class="flex items-center gap-4">
+            <div
+              class="w-10 h-10 rounded-full bg-gray-800 text-white flex items-center justify-center font-bold text-sm">
+              SM</div>
+            <div>
+              <div class="text-sm font-bold">Safat Mishu</div>
+              <div class="text-[10px] text-gray-500 uppercase tracking-wider mt-0.5">Founder, BD Ltd</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-8 sm:p-10 flex flex-col">
+          <div class="text-orange-500 text-6xl font-serif leading-none h-8 mb-4">“</div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-8 flex-grow">
+            PeopleTech built our inventory system from scratch in record time. Their team is responsive, talented, and
+            truly cares about the outcome. We couldn't be happier with the final result.
+          </p>
+          <div class="flex text-orange-400 mb-6">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <div class="flex items-center gap-4">
+            <div
+              class="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-sm">
+              AK</div>
+            <div>
+              <div class="text-sm font-bold">Alex Karimi</div>
+              <div class="text-[10px] text-gray-500 uppercase tracking-wider mt-0.5">Project Manager, Alpha Stores</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white border-b border-gray-200 py-6 flex justify-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+        <span class="h-2 rounded-full bg-orange-500 w-4"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-[1px] bg-gray-200 border-b border-gray-200">
+        <div class="bg-white p-8 lg:p-12 xl:p-16">
+          <p class="text-[10px] font-bold tracking-[0.2em] text-gray-400 mb-6 uppercase flex items-center gap-2">
+            <span class="text-gray-300">//</span> Get In Touch
+          </p>
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 mb-6 leading-[1.1]">
+            Let's <span class="text-orange-600">Talk</span> <br /> About Your Project
+          </h2>
+          <p class="text-gray-500 mb-12 max-w-md leading-relaxed">
+            Every idea has the power to change the world. We'd love to hear yours and help you build something
+            extraordinary.
+          </p>
+
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-gray-50 border border-gray-200 flex items-center justify-center shrink-0">
+                <i data-lucide="map-pin" class="w-4 h-4 text-orange-600"></i>
+              </div>
+              <div>
+                <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1">Bangladesh Office</div>
+                <div class="text-sm font-semibold">Dhaka, Bangladesh</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-gray-50 border border-gray-200 flex items-center justify-center shrink-0">
+                <i data-lucide="mail" class="w-4 h-4 text-orange-600"></i>
+              </div>
+              <div>
+                <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1">Email</div>
+                <div class="text-sm font-semibold">hello@PeopleNTech.com</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-gray-50 border border-gray-200 flex items-center justify-center shrink-0">
+                <i data-lucide="phone" class="w-4 h-4 text-orange-600"></i>
+              </div>
+              <div>
+                <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1">Phone</div>
+                <div class="text-sm font-semibold">+1 (800) 123-4567</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 lg:p-12 xl:p-16">
+          <form class="flex flex-col gap-8 h-full justify-center max-w-lg mx-auto lg:mx-0 w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Name</label>
+                <input type="text" placeholder="John Doe"
+                  class="w-full border-b border-gray-200 py-2 focus:outline-none focus:border-orange-500 transition-colors text-sm bg-transparent" />
+              </div>
+              <div>
+                <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Email</label>
+                <input type="email" placeholder="john@company.com"
+                  class="w-full border-b border-gray-200 py-2 focus:outline-none focus:border-orange-500 transition-colors text-sm bg-transparent" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Phone</label>
+              <input type="tel" placeholder="+1 (555) 000-0000"
+                class="w-full border-b border-gray-200 py-2 focus:outline-none focus:border-orange-500 transition-colors text-sm bg-transparent" />
+            </div>
+            <div>
+              <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">About
+                Project</label>
+              <textarea rows="4" placeholder="Tell us about your project..."
+                class="w-full border-b border-gray-200 py-2 focus:outline-none focus:border-orange-500 transition-colors text-sm resize-none bg-transparent"></textarea>
+            </div>
+            <div class="flex items-center justify-between mt-4">
+              <button type="button"
+                class="bg-black text-white text-[11px] font-bold uppercase tracking-widest px-8 py-4 hover:bg-gray-800 transition-colors flex items-center justify-center gap-3 cursor-pointer">
+                Send Message <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+              <span class="text-[10px] text-gray-400 font-medium">We reply within 24 hours</span>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <footer
+        class="bg-white px-8 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 border-b border-gray-200">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2 font-black text-xl tracking-tighter mb-6">
+            <i data-lucide="square" class="w-6 h-6 fill-black"></i> PeopleNTech
+          </div>
+          <p class="text-sm text-gray-500 mb-8 max-w-sm leading-relaxed">
+            Get Smart Solutions that solve problems, empowering businesses through technology since 2014.
+          </p>
+          <div class="flex gap-3">
+            <a href="#"
+              class="w-10 h-10 border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors rounded-sm text-sm font-bold text-gray-600">f</a>
+            <a href="#"
+              class="w-10 h-10 border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors rounded-sm text-sm font-bold text-gray-600">in</a>
+            <a href="#"
+              class="w-10 h-10 border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors rounded-sm text-sm font-bold text-gray-600">X</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-[11px] font-bold uppercase tracking-widest mb-6">Other Services</h4>
+          <ul class="space-y-4 text-sm text-gray-500">
+            <li><a href="#" class="hover:text-orange-600 transition-colors">IT Training</a></li>
+            <li><a href="#" class="hover:text-orange-600 transition-colors">Branding & Marketing</a></li>
+            <li><a href="#" class="hover:text-orange-600 transition-colors">Managed IT</a></li>
+            <li><a href="#" class="hover:text-orange-600 transition-colors">DevOps</a></li>
+            <li><a href="#" class="hover:text-orange-600 transition-colors">QA Testing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-[11px] font-bold uppercase tracking-widest mb-6">Company</h4>
+          <ul class="space-y-4 text-sm text-gray-500">
+            <li><a href="#" class="hover:text-orange-600 transition-colors">About Us</a></li>
+            <li><a href="#" class="hover:text-orange-600 transition-colors">Blog</a></li>
+            <li><a href="#" class="hover:text-orange-600 transition-colors">Careers</a></li>
+            <li><a href="#" class="hover:text-orange-600 transition-colors">Contact Us</a></li>
+            <li><a href="#" class="hover:text-orange-600 transition-colors">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-[11px] font-bold uppercase tracking-widest mb-6">Offices</h4>
+          <ul class="space-y-4 text-sm text-gray-500">
+            <li class="flex items-center gap-2">
+              <span class="w-4 h-3 bg-green-600 inline-block rounded-sm relative">
+                <span
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-red-500 rounded-full"></span>
+              </span>
+              Dhaka, Bangladesh
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-4 h-3 bg-blue-800 inline-block rounded-sm relative overflow-hidden">
+                <span class="absolute top-0 left-0 w-1/2 h-1/2 bg-white"></span>
+                <span class="absolute top-0 right-0 w-1/2 h-1/2 bg-red-600"></span>
+                <span class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-white"></span>
+                <span class="absolute bottom-0 right-0 w-1/2 h-1/2 bg-red-600"></span>
+              </span>
+              Virginia, USA
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-4 h-3 bg-blue-800 inline-block rounded-sm relative overflow-hidden">
+                <span class="absolute top-0 left-0 w-1/2 h-1/2 bg-white"></span>
+                <span class="absolute top-0 right-0 w-1/2 h-1/2 bg-red-600"></span>
+                <span class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-white"></span>
+                <span class="absolute bottom-0 right-0 w-1/2 h-1/2 bg-red-600"></span>
+              </span>
+              New York, USA
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-4 h-3 bg-blue-800 inline-block rounded-sm relative overflow-hidden">
+                <span class="absolute top-0 left-0 w-1/2 h-1/2 bg-white"></span>
+                <span class="absolute top-0 right-0 w-1/2 h-1/2 bg-red-600"></span>
+                <span class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-white"></span>
+                <span class="absolute bottom-0 right-0 w-1/2 h-1/2 bg-red-600"></span>
+              </span>
+              New Jersey, USA
+            </li>
+          </ul>
+        </div>
+      </footer>
+
+      <div
+        class="bg-white px-8 py-6 flex flex-col md:flex-row justify-between items-center text-[10px] font-medium text-gray-400 uppercase tracking-widest gap-4">
+        <p>© 2026 PeopleNTech. All Rights Reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-gray-600 transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-gray-600 transition-colors">Terms of Service</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+
+    document.getElementById('menu-btn').addEventListener('click', function () {
+      var menu = document.getElementById('mobile-menu');
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        menu.classList.add('flex');
+      } else {
+        menu.classList.add('hidden');
+        menu.classList.remove('flex');
+      }
+    });
+  </script>
+  <!-- Theme variations switch btn -->
+  <div class="fixed top-1/2 -translate-y-1/2 right-4 flex flex-col gap-2 z-50">
+    <span class="text-[.68rem] text-[#475569] dark:text-[#94a3b8] tracking-wider uppercase">Theme
+      variations</span>
+    <a href="v1.html"
+      class="inline-flex items-center justify-center border border-[#e2e8f0] dark:border-[#334155] bg-white dark:bg-[#111827] text-[#475569] dark:text-[#94a3b8] text-[.65rem] font-medium tracking-wider uppercase px-4 py-2 rounded-lg shadow-sm hover:bg-[#f1f5f9] dark:hover:bg-[#1e293b]">Version-1</a>
+    <a href="v2.html"
+      class="inline-flex items-center justify-center border border-[#e2e8f0] dark:border-[#334155] bg-white dark:bg-[#111827] text-[#475569] dark:text-[#94a3b8] text-[.65rem] font-medium tracking-wider uppercase px-4 py-2 rounded-lg shadow-sm hover:bg-[#f1f5f9] dark:hover:bg-[#1e293b]">Version-2</a>
+    <a href="v3.html"
+      class="inline-flex items-center justify-center border border-[#e2e8f0] dark:border-[#334155] bg-white dark:bg-[#111827] text-[#475569] dark:text-[#94a3b8] text-[.65rem] font-medium tracking-wider uppercase px-4 py-2 rounded-lg shadow-sm hover:bg-[#f1f5f9] dark:hover:bg-[#1e293b]">Version-3</a>
+    <a href="v4.html"
+      class="inline-flex items-center justify-center border border-[#e2e8f0] dark:border-[#334155] bg-white dark:bg-[#111827] text-[#475569] dark:text-[#94a3b8] text-[.65rem] font-medium tracking-wider uppercase px-4 py-2 rounded-lg shadow-sm hover:bg-[#f1f5f9] dark:hover:bg-[#1e293b]">Version-4</a>
+  </div>
+</body>
+
+</html>

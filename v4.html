@@ -1,769 +1,1058 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PeopleNTech - Software Agency</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>PeopleNTech - Digital Agency</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    @import "tailwindcss";
+    @custom-variant dark (&:where(.dark, .dark *));
+
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0%);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes fup {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
-<body class="antialiased bg-[#fafafa] font-['Inter',sans-serif]">
 
-  <div class="min-h-screen flex justify-center w-full pb-10">
-    <div class="w-full max-w-[1400px] bg-white border-x border-gray-200 shadow-xs flex flex-col">
-      
-      <div class="flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs border-b border-gray-200 px-4 sm:px-8 py-2 tracking-widest text-gray-500 uppercase font-semibold">
-        <span>Software Agency - Est. 2014</span>
-        <span class="flex items-center gap-2 mt-2 sm:mt-0">
-          <span class="w-2 h-2 rounded-full bg-orange-600 animate-pulse"></span> 
-          Available for new projects
-        </span>
-      </div>
+<body class="antialiased font-['Inter',sans-serif] bg-[#f5f7fa] text-[#0f172a]">
+  <div class="min-h-screen bg-[#f5f7fa] text-[#0f172a]">
 
-      <header class="flex items-center justify-between border-b border-gray-200 px-4 sm:px-8 py-4 sticky top-0 bg-white/90 backdrop-blur-md z-50">
-        <div class="flex items-center gap-2 font-black text-xl tracking-tighter">
-          <i data-lucide="square" class="w-6 h-6 fill-black"></i> PeopleNTech
+    <header class="sticky top-0 z-50 bg-[#f5f7fa]/90 backdrop-blur-md border-b border-[#e2e8f0]">
+      <div class="container mx-auto px-4 lg:px-8 h-20 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <img class="w-36" src="img/logo.png" alt="PeopleNTech Logo">
         </div>
-        
-        <nav class="hidden lg:flex gap-8 text-[11px] font-bold tracking-widest uppercase text-gray-900">
-          <a href="#" class="hover:text-orange-600 transition-colors">Services</a>
-          <a href="#" class="hover:text-orange-600 transition-colors">Expertise</a>
-          <a href="#" class="hover:text-orange-600 transition-colors">Products</a>
-          <a href="#" class="hover:text-orange-600 transition-colors">Process</a>
-          <a href="#" class="hover:text-orange-600 transition-colors">Contact</a>
+        <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+          <a href="/" class="text-[#0f172a] hover:text-[#ff5a00] transition-colors">Home</a>
+          <a href="#services" class="text-[#64748b] hover:text-[#0f172a] transition-colors">Services</a>
+          <a href="#portfolio" class="text-[#64748b] hover:text-[#0f172a] transition-colors">Portfolio</a>
+          <a href="#about" class="text-[#64748b] hover:text-[#0f172a] transition-colors">About</a>
+          <a href="#contact" class="text-[#64748b] hover:text-[#0f172a] transition-colors">Contact</a>
         </nav>
-
-        <div class="hidden lg:flex items-center gap-4">
-          <button class="bg-black text-white text-[11px] font-bold uppercase tracking-widest px-6 py-3 hover:bg-gray-800 transition-colors cursor-pointer">
+        <div class="hidden md:block">
+          <button
+            class="inline-flex items-center uppercase justify-center gap-2 whitespace-nowrap text-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 hover:-translate-y-0.5 active:translate-y-0 py-2 bg-[#0f172a] text-white hover:bg-[#0f172a]/90 font-semibold px-6 rounded-full cursor-pointer">
             Start a Project
           </button>
-          <button class="p-2.5 border border-gray-200 rounded-xs hover:bg-gray-50 transition-colors cursor-pointer">
-            <i data-lucide="sun" class="w-4 h-4 text-gray-600"></i>
-          </button>
         </div>
-
-        <button id="menu-btn" class="lg:hidden p-2 cursor-pointer">
-          <i data-lucide="menu" class="w-6 h-6"></i>
-        </button>
-      </header>
-
-      <div id="mobile-menu" class="hidden flex-col border-b border-gray-200 p-4 bg-gray-50 lg:hidden">
-        <a href="#" class="py-3 text-sm font-bold uppercase tracking-widest border-b border-gray-200">Services</a>
-        <a href="#" class="py-3 text-sm font-bold uppercase tracking-widest border-b border-gray-200">Expertise</a>
-        <a href="#" class="py-3 text-sm font-bold uppercase tracking-widest border-b border-gray-200">Products</a>
-        <a href="#" class="py-3 text-sm font-bold uppercase tracking-widest border-b border-gray-200">Process</a>
-        <a href="#" class="py-3 text-sm font-bold uppercase tracking-widest">Contact</a>
-        <button class="mt-4 bg-black text-white text-xs font-bold uppercase tracking-widest px-6 py-4 w-full cursor-pointer">
-          Start a Project
+        <button
+          class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 h-9 w-9 md:hidden cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+            <line x1="4" x2="20" y1="12" y2="12"></line>
+            <line x1="4" x2="20" y1="6" y2="6"></line>
+            <line x1="4" x2="20" y1="18" y2="18"></line>
+          </svg>
         </button>
       </div>
+    </header>
 
-      <section class="relative px-4 sm:px-8 py-20 lg:py-32 border-b border-gray-200 flex flex-col justify-center overflow-hidden">
-        <div class="hidden md:block absolute top-4 left-4 w-3 h-3 border-t-2 border-l-2 border-black"></div>
-        <div class="hidden md:block absolute top-4 right-4 w-3 h-3 border-t-2 border-r-2 border-black"></div>
-        <div class="hidden md:block absolute bottom-4 left-4 w-3 h-3 border-b-2 border-l-2 border-black"></div>
-        <div class="hidden md:block absolute bottom-4 right-4 w-3 h-3 border-b-2 border-r-2 border-black"></div>
-        
-        <div class="max-w-4xl">
-          <p class="text-[11px] font-bold tracking-[0.2em] text-gray-400 mb-6 uppercase flex items-center gap-2">
-            <span class="text-gray-300">//</span> We empower your business
-          </p>
-          <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight text-gray-900 mb-8 leading-[1.05]">
-            Transforming Ideas Into <span class="text-orange-600">Digital</span> Reality.
-          </h1>
-          <p class="text-gray-500 text-lg sm:text-xl max-w-2xl mb-10 leading-relaxed font-light">
-            PeopleTech accelerates your digital transformation with cutting-edge software solutions, mobile apps, and enterprise-grade development services.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
-            <button class="bg-black text-white text-[11px] font-bold uppercase tracking-widest px-8 py-4 hover:bg-gray-800 transition-colors flex items-center justify-center gap-3 cursor-pointer">
-              Start a Project <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </button>
-            <button class="bg-transparent text-black text-[11px] font-bold uppercase tracking-widest px-8 py-4 hover:bg-gray-50 transition-colors border border-gray-200 flex items-center justify-center cursor-pointer">
-              Explore Services
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-gray-200 border-b border-gray-200">
-        <div class="bg-white p-8 flex items-center gap-4">
-          <i data-lucide="square" class="w-8 h-8 fill-gray-200 text-gray-200"></i>
-          <div>
-            <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400">PeopleTech</div>
-            <div class="text-sm font-bold uppercase tracking-widest">By Numbers</div>
-          </div>
-        </div>
-        <div class="bg-white p-8 flex flex-col justify-center">
-          <div class="text-4xl sm:text-5xl font-black mb-1 tracking-tighter">200+</div>
-          <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Projects Delivered</div>
-        </div>
-        <div class="bg-white p-8 flex flex-col justify-center">
-          <div class="text-4xl sm:text-5xl font-black mb-1 tracking-tighter">98%</div>
-          <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Client Satisfaction</div>
-        </div>
-        <div class="bg-white p-8 flex flex-col justify-center">
-          <div class="text-4xl sm:text-5xl font-black mb-1 tracking-tighter">10yr</div>
-          <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Years Experience</div>
-        </div>
-      </div>
-
-      <div class="overflow-hidden bg-white border-b border-gray-200 py-5">
-        <div class="whitespace-nowrap flex w-[200%] animate-[marquee_30s_linear_infinite] hover:[animation-play-state:paused]">
-          <div class="flex items-center gap-8 px-4 w-1/2 justify-around">
-            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">TechVenture <span class="text-orange-500 font-bold">+</span></span>
-            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">InnovateCorp <span class="text-orange-500 font-bold">+</span></span>
-            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">DigitalWave <span class="text-orange-500 font-bold">+</span></span>
-            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">NexaGroup <span class="text-orange-500 font-bold">+</span></span>
-            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">CloudPeak <span class="text-orange-500 font-bold">+</span></span>
-            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">SkyBridge <span class="text-orange-500 font-bold">+</span></span>
-            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">OrbitSystems <span class="text-orange-500 font-bold">+</span></span>
-          </div>
-          <div class="flex items-center gap-8 px-4 w-1/2 justify-around">
-            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">TechVenture <span class="text-orange-500 font-bold">+</span></span>
-            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">InnovateCorp <span class="text-orange-500 font-bold">+</span></span>
-            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">DigitalWave <span class="text-orange-500 font-bold">+</span></span>
-            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">NexaGroup <span class="text-orange-500 font-bold">+</span></span>
-            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">CloudPeak <span class="text-orange-500 font-bold">+</span></span>
-            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">SkyBridge <span class="text-orange-500 font-bold">+</span></span>
-            <span class="flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-700">OrbitSystems <span class="text-orange-500 font-bold">+</span></span>
-          </div>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-[1px] bg-gray-200 border-b border-gray-200">
-        <div class="bg-white p-8 lg:p-12 xl:p-16">
-          <p class="text-[10px] font-bold tracking-[0.2em] text-gray-400 mb-6 uppercase flex items-center gap-2">
-            <span class="text-gray-300">//</span> What We Do
-          </p>
-          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 leading-[1.1]">
-            Digital <span class="text-orange-600">Services</span> <br /> & Smart Solutions
-          </h2>
-        </div>
-        <div class="bg-white p-8 lg:p-12 xl:p-16 flex flex-col justify-center items-start lg:items-end text-left lg:text-right border-t lg:border-t-0 border-gray-200">
-          <p class="text-gray-500 max-w-md mb-8 leading-relaxed font-light">
-            Full-spectrum digital services that transform ideas into scalable products your users love.
-          </p>
-          <button class="bg-black text-white text-[11px] font-bold uppercase tracking-widest px-8 py-4 hover:bg-gray-800 transition-colors flex items-center justify-center gap-3 cursor-pointer">
-            Start a Project <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </button>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-gray-200 border-b border-gray-200">
-        <div class="bg-white p-8 sm:p-10 flex flex-col group hover:bg-gray-50 transition-colors">
-          <div class="w-12 h-12 bg-gray-50 border border-gray-200 flex items-center justify-center mb-8 rounded-sm group-hover:scale-110 transition-transform">
-            <i data-lucide="code" class="w-6 h-6 text-orange-600"></i>
-          </div>
-          <h3 class="text-lg font-bold mb-3">Custom Software Development</h3>
-          <p class="text-gray-500 text-sm mb-8 leading-relaxed font-light flex-grow">Tailored, robust, and scalable software built to solve your unique business challenges and streamline complex operations.</p>
-          <a href="#" class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
-            Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i>
-          </a>
-        </div>
-        <div class="bg-white p-8 sm:p-10 flex flex-col group hover:bg-gray-50 transition-colors">
-          <div class="w-12 h-12 bg-gray-50 border border-gray-200 flex items-center justify-center mb-8 rounded-sm group-hover:scale-110 transition-transform">
-            <i data-lucide="layout" class="w-6 h-6 text-orange-600"></i>
-          </div>
-          <h3 class="text-lg font-bold mb-3">Web Application Development</h3>
-          <p class="text-gray-500 text-sm mb-8 leading-relaxed font-light flex-grow">High-performance, secure, and accessible web apps built with modern frameworks to deliver seamless user experiences.</p>
-          <a href="#" class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
-            Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i>
-          </a>
-        </div>
-        <div class="bg-white p-8 sm:p-10 flex flex-col group hover:bg-gray-50 transition-colors">
-          <div class="w-12 h-12 bg-gray-50 border border-gray-200 flex items-center justify-center mb-8 rounded-sm group-hover:scale-110 transition-transform">
-            <i data-lucide="shopping-cart" class="w-6 h-6 text-orange-600"></i>
-          </div>
-          <h3 class="text-lg font-bold mb-3">eCommerce Development</h3>
-          <p class="text-gray-500 text-sm mb-8 leading-relaxed font-light flex-grow">Scalable online stores with conversion-optimized checkouts, smooth inventory sync, and secure payment integrations.</p>
-          <a href="#" class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
-            Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i>
-          </a>
-        </div>
-        <div class="bg-white p-8 sm:p-10 flex flex-col group hover:bg-gray-50 transition-colors">
-          <div class="w-12 h-12 bg-gray-50 border border-gray-200 flex items-center justify-center mb-8 rounded-sm group-hover:scale-110 transition-transform">
-            <i data-lucide="smartphone" class="w-6 h-6 text-orange-600"></i>
-          </div>
-          <h3 class="text-lg font-bold mb-3">Mobile Application Development</h3>
-          <p class="text-gray-500 text-sm mb-8 leading-relaxed font-light flex-grow">Stunning native and cross-platform mobile apps for iOS and Android that engage users and drive business growth.</p>
-          <a href="#" class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
-            Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i>
-          </a>
-        </div>
-        <div class="bg-white p-8 sm:p-10 flex flex-col group hover:bg-gray-50 transition-colors">
-          <div class="w-12 h-12 bg-gray-50 border border-gray-200 flex items-center justify-center mb-8 rounded-sm group-hover:scale-110 transition-transform">
-            <i data-lucide="rocket" class="w-6 h-6 text-orange-600"></i>
-          </div>
-          <h3 class="text-lg font-bold mb-3">Minimum Viable Product (MVP) Design</h3>
-          <p class="text-gray-500 text-sm mb-8 leading-relaxed font-light flex-grow">Validate your concept and launch fast with a functional prototype optimized for user feedback and early traction.</p>
-          <a href="#" class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
-            Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i>
-          </a>
-        </div>
-        <div class="bg-white p-8 sm:p-10 flex flex-col group hover:bg-gray-50 transition-colors">
-          <div class="w-12 h-12 bg-gray-50 border border-gray-200 flex items-center justify-center mb-8 rounded-sm group-hover:scale-110 transition-transform">
-            <i data-lucide="graduation-cap" class="w-6 h-6 text-orange-600"></i>
-          </div>
-          <h3 class="text-lg font-bold mb-3">IT Training & Consultancy</h3>
-          <p class="text-gray-500 text-sm mb-8 leading-relaxed font-light flex-grow">Expert strategic guidance, tech stack selection advice, and corporate training programs to elevate team capabilities.</p>
-          <a href="#" class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
-            Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i>
-          </a>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-[1px] bg-gray-200 border-b border-gray-200">
-        <div class="bg-white p-8 lg:p-12 xl:p-16">
-          <p class="text-[10px] font-bold tracking-[0.2em] text-gray-400 mb-6 uppercase flex items-center gap-2">
-            <span class="text-gray-300">//</span> Featured Client Solutions
-          </p>
-          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 leading-[1.1]">
-            Tailored <span class="text-orange-600">Engagement</span> <br /> For Every Stage
-          </h2>
-        </div>
-        <div class="bg-white p-8 lg:p-12 xl:p-16 flex flex-col justify-center border-t lg:border-t-0 border-gray-200">
-          <p class="text-gray-500 max-w-md leading-relaxed font-light">
-            Whether you are scaling an enterprise, expanding a growing business, or launching a new startup.
-          </p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-[1px] bg-gray-200 border-b border-gray-200">
-        <div class="bg-white p-8 sm:p-10 relative flex flex-col">
-          <div class="w-12 h-12 bg-gray-50 border border-gray-200 flex items-center justify-center mb-8 rounded-sm">
-            <i data-lucide="box" class="w-6 h-6 text-orange-600"></i>
-          </div>
-          <div class="text-[10px] font-bold text-orange-600 uppercase tracking-widest mb-2">ENTERPRISE</div>
-          <h3 class="text-2xl font-bold mb-8">Managed Services</h3>
-          <ul class="space-y-4 mb-8">
-            <li class="flex items-start gap-3 text-sm text-gray-600 font-medium">
-              <i data-lucide="check-circle" class="w-4 h-4 text-orange-500 mt-0.5 shrink-0"></i> Managed IT Services
-            </li>
-            <li class="flex items-start gap-3 text-sm text-gray-600 font-medium">
-              <i data-lucide="check-circle" class="w-4 h-4 text-orange-500 mt-0.5 shrink-0"></i> Application Modernization
-            </li>
-            <li class="flex items-start gap-3 text-sm text-gray-600 font-medium">
-              <i data-lucide="check-circle" class="w-4 h-4 text-orange-500 mt-0.5 shrink-0"></i> Dedicated Dev Team
-            </li>
-          </ul>
-        </div>
-        <div class="bg-white p-8 sm:p-10 relative flex flex-col">
-          <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-orange-100 text-orange-600 border border-orange-200 text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded-full z-10">
-            Popular Focus
-          </div>
-          <div class="w-12 h-12 bg-gray-50 border border-gray-200 flex items-center justify-center mb-8 rounded-sm">
-            <i data-lucide="monitor-play" class="w-6 h-6 text-orange-600"></i>
-          </div>
-          <div class="text-[10px] font-bold text-orange-600 uppercase tracking-widest mb-2">SME</div>
-          <h3 class="text-2xl font-bold mb-8">Custom Solutions</h3>
-          <ul class="space-y-4 mb-8">
-            <li class="flex items-start gap-3 text-sm text-gray-600 font-medium">
-              <i data-lucide="check-circle" class="w-4 h-4 text-orange-500 mt-0.5 shrink-0"></i> IT Consulting
-            </li>
-            <li class="flex items-start gap-3 text-sm text-gray-600 font-medium">
-              <i data-lucide="check-circle" class="w-4 h-4 text-orange-500 mt-0.5 shrink-0"></i> IT Infrastructure Services
-            </li>
-            <li class="flex items-start gap-3 text-sm text-gray-600 font-medium">
-              <i data-lucide="check-circle" class="w-4 h-4 text-orange-500 mt-0.5 shrink-0"></i> Custom Software Dev
-            </li>
-          </ul>
-        </div>
-        <div class="bg-white p-8 sm:p-10 relative flex flex-col">
-          <div class="w-12 h-12 bg-gray-50 border border-gray-200 flex items-center justify-center mb-8 rounded-sm">
-            <i data-lucide="rocket" class="w-6 h-6 text-orange-600"></i>
-          </div>
-          <div class="text-[10px] font-bold text-orange-600 uppercase tracking-widest mb-2">STARTUP</div>
-          <h3 class="text-2xl font-bold mb-8">Launchpad</h3>
-          <ul class="space-y-4 mb-8">
-            <li class="flex items-start gap-3 text-sm text-gray-600 font-medium">
-              <i data-lucide="check-circle" class="w-4 h-4 text-orange-500 mt-0.5 shrink-0"></i> Discovery Phase
-            </li>
-            <li class="flex items-start gap-3 text-sm text-gray-600 font-medium">
-              <i data-lucide="check-circle" class="w-4 h-4 text-orange-500 mt-0.5 shrink-0"></i> MVP Development
-            </li>
-            <li class="flex items-start gap-3 text-sm text-gray-600 font-medium">
-              <i data-lucide="check-circle" class="w-4 h-4 text-orange-500 mt-0.5 shrink-0"></i> UI/UX Services
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="bg-white border-b border-gray-200 px-8 py-16 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-        <div>
-          <p class="text-[10px] font-bold tracking-[0.2em] text-gray-400 mb-3 uppercase flex items-center gap-2">
-            <span class="text-gray-300">//</span> Free Consultation
-          </p>
-          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
-            Do you have any idea? Let's talk.
-          </h2>
-        </div>
-        <button class="bg-black text-white text-[11px] font-bold uppercase tracking-widest px-8 py-4 hover:bg-gray-800 transition-colors flex items-center justify-center gap-3 shrink-0 cursor-pointer">
-          Book Free Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i>
-        </button>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-[1px] bg-gray-200 border-b border-gray-200">
-        <div class="bg-white p-8 lg:p-12 xl:p-16 flex flex-col justify-center">
-          <p class="text-[10px] font-bold tracking-[0.2em] text-gray-400 mb-6 uppercase flex items-center gap-2">
-            <span class="text-gray-300">//</span> Technology Stack
-          </p>
-          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 mb-6 leading-[1.1]">
-            Our <span class="text-orange-600">Expertise</span>
-          </h2>
-          <p class="text-gray-500 leading-relaxed font-light">
-            We work with the most powerful technologies to build scalable, performant products.
-          </p>
-        </div>
-        <div class="bg-gray-200 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-[1px]">
-          <div class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
-            <i data-lucide="file-text" class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
-            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">PHP</span>
-          </div>
-          <div class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
-            <i data-lucide="box" class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
-            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">LARAVEL</span>
-          </div>
-          <div class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
-            <i data-lucide="terminal" class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
-            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">PYTHON</span>
-          </div>
-          <div class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
-            <i data-lucide="monitor-play" class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
-            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">DJANGO</span>
-          </div>
-          <div class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
-            <i data-lucide="database" class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
-            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">POSTGRESQL</span>
-          </div>
-          <div class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
-            <i data-lucide="atom" class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
-            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">REACT</span>
-          </div>
-          <div class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
-            <i data-lucide="triangle" class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
-            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">VUE</span>
-          </div>
-          <div class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
-            <i data-lucide="database" class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
-            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">MYSQL</span>
-          </div>
-          <div class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
-            <i data-lucide="hexagon" class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
-            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">NEXT.JS</span>
-          </div>
-          <div class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
-            <i data-lucide="wind" class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
-            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">TAILWIND CSS</span>
-          </div>
-          <div class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
-            <i data-lucide="container" class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
-            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">DOCKER</span>
-          </div>
-          <div class="bg-white p-8 flex flex-col items-center justify-center text-center group hover:bg-gray-50 transition-colors aspect-square cursor-pointer">
-            <i data-lucide="smartphone" class="w-8 h-8 mx-auto mb-3 text-gray-400 group-hover:text-orange-600 transition-all group-hover:-translate-y-1 duration-300"></i>
-            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-700">FLUTTER</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-white p-8 lg:p-12 xl:p-16 border-b border-gray-200">
-        <p class="text-[10px] font-bold tracking-[0.2em] text-gray-400 mb-6 uppercase flex items-center gap-2">
-          <span class="text-gray-300">//</span> How We Work
+    <section class="pt-24 pb-20 px-4 lg:px-8 container mx-auto">
+      <div class="max-w-4xl mx-auto text-center space-y-8">
+        <h1 class="text-5xl md:text-7xl font-black leading-[1.1] tracking-tight text-[#0f172a]">
+          Transforming Ideas Into<br><span class="text-[#ff5a00]">Digital</span> Reality.
+        </h1>
+        <p class="text-xl text-[#64748b] max-w-2xl mx-auto leading-relaxed">
+          We build high-performance software, mobile apps, and digital experiences that drive growth. Your vision,
+          engineered to perfection.
         </p>
-        <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 leading-[1.1]">
-          Our Work <span class="text-orange-600">Flow</span>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <button
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 hover:-translate-y-0.5 active:translate-y-0 bg-[#0f172a] text-white hover:bg-[#0f172a]/90 font-semibold px-8 h-14 rounded-full text-base w-full sm:w-auto cursor-pointer">
+            Explore Services
+          </button>
+          <button
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 hover:-translate-y-0.5 active:translate-y-0 font-semibold px-8 h-14 rounded-full text-base border-2 border-[#e2e8f0] bg-transparent text-[#0f172a] hover:bg-[#f1f5f9] w-full sm:w-auto cursor-pointer">
+            Watch Showreel
+          </button>
+        </div>
+        <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto pt-16 border-t border-[#e2e8f0] mt-16">
+          <div>
+            <div class="text-4xl font-black text-[#0f172a] mb-1">150+</div>
+            <div class="text-sm font-medium text-[#64748b] uppercase tracking-wider">Projects</div>
+          </div>
+          <div>
+            <div class="text-4xl font-black text-[#0f172a] mb-1">90%</div>
+            <div class="text-sm font-medium text-[#64748b] uppercase tracking-wider">Success Rate</div>
+          </div>
+          <div>
+            <div class="text-4xl font-black text-[#0f172a] mb-1">10yr</div>
+            <div class="text-sm font-medium text-[#64748b] uppercase tracking-wider">Experience</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--marquee start -->
+
+    <div class="border-y border-[#e2e8f0] bg-white py-8 overflow-hidden relative">
+      <div class="flex overflow-hidden">
+        <div class="flex gap-12 whitespace-nowrap items-center animate-[marquee_25s_linear_infinite]">
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">TechVenture</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">InnovateCorp</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">DigitalWave</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">NexaGroup</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">CloudPeak</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">SkyBridge</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">OrbitSystems</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">TechVenture</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">InnovateCorp</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">DigitalWave</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">NexaGroup</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">CloudPeak</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">SkyBridge</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+          <span class="font-bold text-xl text-[#475569] dark:text-[#94a3b8]">OrbitSystems</span>
+          <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span>
+        </div>
+      </div>
+    </div>
+    <!-- marquee end -->
+    <section id="services" class="py-24 px-4 lg:px-8 container mx-auto">
+      <div class="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
+        <div class="max-w-2xl">
+          <div class="text-[#ff5a00] font-bold text-sm tracking-widest uppercase mb-4 flex items-center gap-2">
+            <span class="w-8 h-[2px] bg-[#ff5a00]"></span>Our Services
+          </div>
+          <h2 class="text-4xl md:text-5xl font-black text-[#0f172a] leading-tight">
+            Digital Services <br><span class="text-[#ff5a00] italic font-serif">&amp;</span> Smart Solutions
+          </h2>
+        </div>
+        <div class="max-w-md">
+          <p class="text-[#64748b] mb-6">
+            We provide end-to-end digital services to help ambitious companies scale. From concept to deployment, we
+            build software that matters.
+          </p>
+          <button
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 py-2 bg-[#ff5a00] text-white hover:bg-[#ff5a00]/90 font-semibold rounded-full px-6 cursor-pointer">
+            Browse Services
+          </button>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          class="bg-white p-8 rounded-2xl border border-[#e2e8f0] hover:shadow-xl hover:border-[#ff5a00]/20 transition-all group hover:-translate-y-1 duration-300">
+          <div
+            class="w-14 h-14 bg-[#f1f5f9] rounded-xl flex items-center justify-center text-[#0f172a] group-hover:bg-[#ff5a00] group-hover:text-white transition-colors mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#0f172a] mb-3">Custom Software Development</h3>
+          <p class="text-[#64748b] mb-6 leading-relaxed">Tailored enterprise solutions designed for your specific
+            business requirements and workflow.</p>
+          <a href="#"
+            class="inline-flex items-center text-sm font-bold text-[#0f172a] group-hover:text-[#ff5a00] transition-colors">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        <div
+          class="bg-white p-8 rounded-2xl border border-[#e2e8f0] hover:shadow-xl hover:border-[#ff5a00]/20 transition-all group hover:-translate-y-1 duration-300">
+          <div
+            class="w-14 h-14 bg-[#f1f5f9] rounded-xl flex items-center justify-center text-[#0f172a] group-hover:bg-[#ff5a00] group-hover:text-white transition-colors mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+              <path d="M3 9h18"></path>
+              <path d="M9 21V9"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#0f172a] mb-3">Web Application Development</h3>
+          <p class="text-[#64748b] mb-6 leading-relaxed">Scalable, high-performance web apps built with modern React
+            frameworks.</p>
+          <a href="#"
+            class="inline-flex items-center text-sm font-bold text-[#0f172a] group-hover:text-[#ff5a00] transition-colors">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        <div
+          class="bg-white p-8 rounded-2xl border border-[#e2e8f0] hover:shadow-xl hover:border-[#ff5a00]/20 transition-all group hover:-translate-y-1 duration-300">
+          <div
+            class="w-14 h-14 bg-[#f1f5f9] rounded-xl flex items-center justify-center text-[#0f172a] group-hover:bg-[#ff5a00] group-hover:text-white transition-colors mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="8" cy="21" r="1"></circle>
+              <circle cx="19" cy="21" r="1"></circle>
+              <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#0f172a] mb-3">eCommerce Development</h3>
+          <p class="text-[#64748b] mb-6 leading-relaxed">Conversion-optimized storefronts using Shopify and custom
+            headless architectures.</p>
+          <a href="#"
+            class="inline-flex items-center text-sm font-bold text-[#0f172a] group-hover:text-[#ff5a00] transition-colors">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        <div
+          class="bg-white p-8 rounded-2xl border border-[#e2e8f0] hover:shadow-xl hover:border-[#ff5a00]/20 transition-all group hover:-translate-y-1 duration-300">
+          <div
+            class="w-14 h-14 bg-[#f1f5f9] rounded-xl flex items-center justify-center text-[#0f172a] group-hover:bg-[#ff5a00] group-hover:text-white transition-colors mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+              <path d="M12 18h.01"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#0f172a] mb-3">Mobile Application Development</h3>
+          <p class="text-[#64748b] mb-6 leading-relaxed">Native-feeling iOS and Android experiences built with Flutter
+            and React Native.</p>
+          <a href="#"
+            class="inline-flex items-center text-sm font-bold text-[#0f172a] group-hover:text-[#ff5a00] transition-colors">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        <div
+          class="bg-white p-8 rounded-2xl border border-[#e2e8f0] hover:shadow-xl hover:border-[#ff5a00]/20 transition-all group hover:-translate-y-1 duration-300">
+          <div
+            class="w-14 h-14 bg-[#f1f5f9] rounded-xl flex items-center justify-center text-[#0f172a] group-hover:bg-[#ff5a00] group-hover:text-white transition-colors mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z">
+              </path>
+              <path
+                d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18">
+              </path>
+              <path d="m2.3 2.3 7.286 7.286"></path>
+              <circle cx="11" cy="11" r="2"></circle>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#0f172a] mb-3">UI/UX Design</h3>
+          <p class="text-[#64748b] mb-6 leading-relaxed">User-centric interface design that looks beautiful and drives
+            engagement.</p>
+          <a href="#"
+            class="inline-flex items-center text-sm font-bold text-[#0f172a] group-hover:text-[#ff5a00] transition-colors">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        <div
+          class="bg-white p-8 rounded-2xl border border-[#e2e8f0] hover:shadow-xl hover:border-[#ff5a00]/20 transition-all group hover:-translate-y-1 duration-300">
+          <div
+            class="w-14 h-14 bg-[#f1f5f9] rounded-xl flex items-center justify-center text-[#0f172a] group-hover:bg-[#ff5a00] group-hover:text-white transition-colors mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z">
+              </path>
+              <path d="M22 10v6"></path>
+              <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#0f172a] mb-3">IT Training &amp; Consultancy</h3>
+          <p class="text-[#64748b] mb-6 leading-relaxed">Strategic technical guidance and team upskilling for modern
+            engineering.</p>
+          <a href="#"
+            class="inline-flex items-center text-sm font-bold text-[#0f172a] group-hover:text-[#ff5a00] transition-colors">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 px-4 lg:px-8 container mx-auto bg-white rounded-[3rem] border border-[#e2e8f0]">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div
+          class="text-[#ff5a00] font-bold text-sm tracking-widest uppercase mb-4 flex items-center justify-center gap-2">
+          <span class="w-8 h-[2px] bg-[#ff5a00]"></span>Our Approach<span class="w-8 h-[2px] bg-[#ff5a00]"></span>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-black text-[#0f172a] mb-6">
+          Tailored Engagement <br class="hidden md:block"> <span class="text-[#ff5a00]">For Every Stage</span>
+        </h2>
+        <p class="text-[#64748b] text-lg">
+          We adapt to how you work. Whether you need a full product team or specialized experts to augment your staff,
+          we have a model that fits.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center p-6">
+          <div
+            class="w-20 h-20 mx-auto bg-[#ff5a00]/10 text-[#ff5a00] rounded-full flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z">
+              </path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-[#0f172a] mb-4">Managed Services</h3>
+          <p class="text-[#64748b] leading-relaxed">End-to-end product development and maintenance. We act as your
+            entire technical arm.</p>
+        </div>
+        <div class="text-center p-6">
+          <div
+            class="w-20 h-20 mx-auto bg-[#ff5a00]/10 text-[#ff5a00] rounded-full flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-[#0f172a] mb-4">Custom Solutions</h3>
+          <p class="text-[#64748b] leading-relaxed">Specific problem solving and discrete project delivery with clear
+            scope and boundaries.</p>
+        </div>
+        <div class="text-center p-6">
+          <div
+            class="w-20 h-20 mx-auto bg-[#ff5a00]/10 text-[#ff5a00] rounded-full flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
+              </path>
+              <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
+              </path>
+              <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+              <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-[#0f172a] mb-4">Launchpad</h3>
+          <p class="text-[#64748b] leading-relaxed">Rapid prototyping and MVP development for startups looking to find
+            market fit quickly.</p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="py-20 px-4 lg:px-8 mt-24 bg-gradient-to-br from-[#ff5a00]/10 to-transparent border-y border-[#e2e8f0]">
+      <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+        <h2 class="text-4xl md:text-5xl font-black text-[#0f172a] max-w-xl">
+          Do you have any idea? <span class="text-[#ff5a00]">Let's talk.</span>
+        </h2>
+        <button
+          class="justify-center whitespace-nowrap transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 hover:-translate-y-0.5 active:translate-y-0 bg-[#0f172a] text-white hover:bg-[#0f172a]/90 font-bold px-8 h-16 rounded-full text-lg w-full md:w-auto flex items-center gap-2 cursor-pointer">
+          Let's Talk Now
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <section id="about" class="py-24 px-4 lg:px-8 container mx-auto">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="text-[#ff5a00] font-bold text-sm tracking-widest uppercase mb-4 flex items-center gap-2">
+            <span class="w-8 h-[2px] bg-[#ff5a00]"></span>Expertise
+          </div>
+          <h2 class="text-4xl md:text-5xl font-black text-[#0f172a] mb-6">
+            Our <span class="text-[#ff5a00]">Expertise</span>
+          </h2>
+          <p class="text-[#64748b] text-lg mb-8 leading-relaxed">
+            We leverage the latest technologies and frameworks to build scalable, secure, and high-performance digital
+            solutions that stand the test of time.
+          </p>
+          <a href="#"
+            class="inline-flex items-center font-bold text-[#0f172a] hover:text-[#ff5a00] transition-colors border-b-2 border-[#0f172a] hover:border-[#ff5a00] pb-1">
+            View All Skills
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+          <div
+            class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
+            <div class="text-4xl text-[#0f172a] mb-3 opacity-80">🐘</div>
+            <span class="text-sm font-semibold text-[#0f172a]">PHP</span>
+          </div>
+          <div
+            class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
+            <div class="text-4xl text-[#0f172a] mb-3 opacity-80">⚙️</div>
+            <span class="text-sm font-semibold text-[#0f172a]">Laravel</span>
+          </div>
+          <div
+            class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
+            <div class="text-4xl text-[#0f172a] mb-3 opacity-80">🐍</div>
+            <span class="text-sm font-semibold text-[#0f172a]">Python</span>
+          </div>
+          <div
+            class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
+            <div class="text-4xl text-[#0f172a] mb-3 opacity-80">📜</div>
+            <span class="text-sm font-semibold text-[#0f172a]">TypeScript</span>
+          </div>
+          <div
+            class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
+            <div class="text-4xl text-[#0f172a] mb-3 opacity-80">🦋</div>
+            <span class="text-sm font-semibold text-[#0f172a]">Flutter</span>
+          </div>
+          <div
+            class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
+            <div class="text-4xl text-[#0f172a] mb-3 opacity-80">🍃</div>
+            <span class="text-sm font-semibold text-[#0f172a]">MongoDB</span>
+          </div>
+          <div
+            class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
+            <div class="text-4xl text-[#0f172a] mb-3 opacity-80">🐬</div>
+            <span class="text-sm font-semibold text-[#0f172a]">PostgreSQL</span>
+          </div>
+          <div
+            class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-[#e2e8f0] hover:border-[#ff5a00]/50 transition-colors">
+            <div class="text-4xl text-[#0f172a] mb-3 opacity-80">🐳</div>
+            <span class="text-sm font-semibold text-[#0f172a]">Docker</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="py-24 px-4 lg:px-8 container mx-auto bg-white rounded-[3rem] border border-[#e2e8f0] overflow-hidden">
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <div
+          class="text-[#ff5a00] font-bold text-sm tracking-widest uppercase mb-4 flex items-center justify-center gap-2">
+          <span class="w-8 h-[2px] bg-[#ff5a00]"></span>How We Work<span class="w-8 h-[2px] bg-[#ff5a00]"></span>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-black text-[#0f172a]">Our Work <span class="text-[#ff5a00]">Flow</span>
         </h2>
       </div>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-[1px] bg-gray-200 border-b border-gray-200">
-        <div class="bg-white p-6 flex flex-col items-center text-center group relative overflow-hidden cursor-pointer">
-          <div class="text-[10px] font-bold text-gray-300 mb-4 bg-gray-50 w-8 h-8 flex items-center justify-center rounded-full">01</div>
-          <i data-lucide="file-text" class="w-5 h-5 text-orange-600 mb-4 group-hover:scale-110 transition-transform"></i>
-          <h4 class="text-[11px] font-bold uppercase tracking-widest mb-3">INITIAL PLANNING</h4>
-          <p class="text-xs text-gray-500 leading-relaxed">Defining goals and mapping strategy.</p>
+      <div class="relative max-w-5xl mx-auto">
+        <div class="absolute top-8 left-10 right-10 h-0.5 border-t-2 border-dashed border-[#e2e8f0] hidden md:block">
         </div>
-        <div class="bg-white p-6 flex flex-col items-center text-center group relative overflow-hidden cursor-pointer">
-          <div class="text-[10px] font-bold text-gray-300 mb-4 bg-gray-50 w-8 h-8 flex items-center justify-center rounded-full">02</div>
-          <i data-lucide="layout-template" class="w-5 h-5 text-orange-600 mb-4 group-hover:scale-110 transition-transform"></i>
-          <h4 class="text-[11px] font-bold uppercase tracking-widest mb-3">WIRE-FRAMING</h4>
-          <p class="text-xs text-gray-500 leading-relaxed">UX blueprinting and layout architecture.</p>
-        </div>
-        <div class="bg-white p-6 flex flex-col items-center text-center group relative overflow-hidden cursor-pointer">
-          <div class="text-[10px] font-bold text-gray-300 mb-4 bg-gray-50 w-8 h-8 flex items-center justify-center rounded-full">03</div>
-          <i data-lucide="pen-tool" class="w-5 h-5 text-orange-600 mb-4 group-hover:scale-110 transition-transform"></i>
-          <h4 class="text-[11px] font-bold uppercase tracking-widest mb-3">COPY & DESIGN</h4>
-          <p class="text-xs text-gray-500 leading-relaxed">High-fidelity UI and creative styling.</p>
-        </div>
-        <div class="bg-white p-6 flex flex-col items-center text-center group relative overflow-hidden cursor-pointer">
-          <div class="text-[10px] font-bold text-gray-300 mb-4 bg-gray-50 w-8 h-8 flex items-center justify-center rounded-full">04</div>
-          <i data-lucide="code" class="w-5 h-5 text-orange-600 mb-4 group-hover:scale-110 transition-transform"></i>
-          <h4 class="text-[11px] font-bold uppercase tracking-widest mb-3">DEVELOPMENT</h4>
-          <p class="text-xs text-gray-500 leading-relaxed">Writing clean, scalable code components.</p>
-        </div>
-        <div class="bg-white p-6 flex flex-col items-center text-center group relative overflow-hidden cursor-pointer">
-          <div class="text-[10px] font-bold text-gray-300 mb-4 bg-gray-50 w-8 h-8 flex items-center justify-center rounded-full">05</div>
-          <i data-lucide="bug" class="w-5 h-5 text-orange-600 mb-4 group-hover:scale-110 transition-transform"></i>
-          <h4 class="text-[11px] font-bold uppercase tracking-widest mb-3">TESTING</h4>
-          <p class="text-xs text-gray-500 leading-relaxed">Rigorous QA checks and bug-fixing.</p>
-        </div>
-        <div class="bg-white p-6 flex flex-col items-center text-center group relative overflow-hidden cursor-pointer">
-          <div class="text-[10px] font-bold text-gray-300 mb-4 bg-gray-50 w-8 h-8 flex items-center justify-center rounded-full">06</div>
-          <i data-lucide="rocket" class="w-5 h-5 text-orange-600 mb-4 group-hover:scale-110 transition-transform"></i>
-          <h4 class="text-[11px] font-bold uppercase tracking-widest mb-3">DEPLOYMENT</h4>
-          <p class="text-xs text-gray-500 leading-relaxed">Secure launching and server setup.</p>
-        </div>
-        <div class="bg-white p-6 flex flex-col items-center text-center group relative overflow-hidden cursor-pointer">
-          <div class="text-[10px] font-bold text-gray-300 mb-4 bg-gray-50 w-8 h-8 flex items-center justify-center rounded-full">07</div>
-          <i data-lucide="headphones" class="w-5 h-5 text-orange-600 mb-4 group-hover:scale-110 transition-transform"></i>
-          <h4 class="text-[11px] font-bold uppercase tracking-widest mb-3">SUPPORT</h4>
-          <p class="text-xs text-gray-500 leading-relaxed">Continuous monitoring and upgrades.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:flex lg:flex-row lg:justify-between gap-8 relative z-10">
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-16 h-16 bg-[#f5f7fa] rounded-full border-4 border-white flex items-center justify-center mb-4 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] text-[#ff5a00] font-black text-xl">
+              01
+            </div>
+            <h4 class="font-bold text-[#0f172a] text-sm uppercase tracking-wide">Discovery</h4>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-16 h-16 bg-[#f5f7fa] rounded-full border-4 border-white flex items-center justify-center mb-4 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] text-[#ff5a00] font-black text-xl">
+              02
+            </div>
+            <h4 class="font-bold text-[#0f172a] text-sm uppercase tracking-wide">Strategy</h4>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-16 h-16 bg-[#f5f7fa] rounded-full border-4 border-white flex items-center justify-center mb-4 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] text-[#ff5a00] font-black text-xl">
+              03
+            </div>
+            <h4 class="font-bold text-[#0f172a] text-sm uppercase tracking-wide">Design</h4>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-16 h-16 bg-[#f5f7fa] rounded-full border-4 border-white flex items-center justify-center mb-4 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] text-[#ff5a00] font-black text-xl">
+              04
+            </div>
+            <h4 class="font-bold text-[#0f172a] text-sm uppercase tracking-wide">Dev</h4>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-16 h-16 bg-[#f5f7fa] rounded-full border-4 border-white flex items-center justify-center mb-4 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] text-[#ff5a00] font-black text-xl">
+              05
+            </div>
+            <h4 class="font-bold text-[#0f172a] text-sm uppercase tracking-wide">Testing</h4>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-16 h-16 bg-[#f5f7fa] rounded-full border-4 border-white flex items-center justify-center mb-4 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] text-[#ff5a00] font-black text-xl">
+              06
+            </div>
+            <h4 class="font-bold text-[#0f172a] text-sm uppercase tracking-wide">Launch</h4>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-16 h-16 bg-[#f5f7fa] rounded-full border-4 border-white flex items-center justify-center mb-4 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] text-[#ff5a00] font-black text-xl">
+              07
+            </div>
+            <h4 class="font-bold text-[#0f172a] text-sm uppercase tracking-wide">Support</h4>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="bg-white border-b border-gray-200 px-8 py-16 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+    <section id="portfolio" class="py-24 px-4 lg:px-8 bg-[#0f172a] text-white">
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+          <div>
+            <div class="text-[#ff5a00] font-bold text-sm tracking-widest uppercase mb-4 flex items-center gap-2">
+              <span class="w-8 h-[2px] bg-[#ff5a00]"></span>Our Products
+            </div>
+            <h2 class="text-4xl md:text-5xl font-black text-white">Our <span class="text-[#ff5a00]">Products</span></h2>
+          </div>
+          <a href="#" class="inline-flex items-center font-bold text-white hover:text-[#ff5a00] transition-colors">
+            View All Projects
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="w-4 h-4 ml-2">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden group">
+            <div
+              class="aspect-video bg-gradient-to-br from-blue-500/20 to-indigo-600/20  flex items-center justify-center relative overflow-hidden">
+              <img src="img/inventory.webp" alt="Inventory Management System"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-white mb-3">Inventory Management System</h3>
+              <p class="text-white/70 mb-6">Complete warehouse and stock tracking solution.</p>
+              <a href="#"
+                class="inline-flex items-center text-sm font-bold text-[#ff5a00] hover:text-white transition-colors">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 ml-2">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden group">
+            <div
+              class="aspect-video bg-gradient-to-br from-purple-500/20 to-pink-600/20 flex items-center justify-center relative overflow-hidden">
+              <img src="img/school.webp" alt="Virtual Management Software"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-white mb-3">School Management Software</h3>
+              <p class="text-white/70 mb-6">Complete school and class management.</p>
+              <a href="#"
+                class="inline-flex items-center text-sm font-bold text-[#ff5a00] hover:text-white transition-colors">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 ml-2">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden group">
+            <div
+              class="aspect-video bg-gradient-to-br from-amber-500/20 to-red-600/20  flex items-center justify-center relative overflow-hidden">
+              <img src="img/pos.webp" alt="Retail POS Software"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-white mb-3">Retail POS Software</h3>
+              <p class="text-white/70 mb-6">Complete retail and shop management.</p>
+              <a href="#"
+                class="inline-flex items-center text-sm font-bold text-[#ff5a00] hover:text-white transition-colors">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 ml-2">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden group">
+            <div
+              class="aspect-video bg-gradient-to-br from-emerald-500/20 to-teal-600/20  flex items-center justify-center relative overflow-hidden">
+              <img src="img/ecommerce.webp" alt="E-commerce Platform"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-white mb-3">E-commerce Platform</h3>
+              <p class="text-white/70 mb-6">High-volume retail storefront engine.</p>
+              <a href="#"
+                class="inline-flex items-center text-sm font-bold text-[#ff5a00] hover:text-white transition-colors">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 ml-2">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden group">
+            <div
+              class="aspect-video bg-gradient-to-br from-cyan-500/20 to-blue-600/20  flex items-center justify-center relative overflow-hidden">
+              <img src="img/crm.webp" alt="CRM System"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-white mb-3">CRM System</h3>
+              <p class="text-white/70 mb-6">Customer relationship and sales pipeline.</p>
+              <a href="#"
+                class="inline-flex items-center text-sm font-bold text-[#ff5a00] hover:text-white transition-colors">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 ml-2">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden group">
+            <div
+              class="aspect-video bg-gradient-to-br from-rose-500/20 to-red-600/20 flex items-center justify-center relative overflow-hidden">
+              <img src="img/lms.webp" alt="Learning Management"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-white mb-3">Learning Management</h3>
+              <p class="text-white/70 mb-6">Course delivery and student tracking.</p>
+              <a href="#"
+                class="inline-flex items-center text-sm font-bold text-[#ff5a00] hover:text-white transition-colors">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 ml-2">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 px-4 lg:px-8 container mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
         <div>
-          <p class="text-[10px] font-bold tracking-[0.2em] text-gray-400 mb-3 uppercase flex items-center gap-2">
-            <span class="text-gray-300">//</span> Ready-Made Solutions
-          </p>
-          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 leading-[1.1]">
-            Our <span class="text-orange-600">Products</span>
-          </h2>
-        </div>
-        <button class="bg-transparent text-black text-[11px] font-bold uppercase tracking-widest px-8 py-4 hover:bg-gray-50 transition-colors border border-gray-200 flex items-center justify-center gap-2 shrink-0 cursor-pointer">
-          View All Products <i data-lucide="arrow-right" class="w-4 h-4"></i>
-        </button>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[1px] bg-gray-200 border-b border-gray-200">
-        <div class="bg-white p-6 group flex flex-col">
-          <div class="relative aspect-[16/10] mb-6 overflow-hidden bg-gray-100 rounded-sm">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600" alt="Inventory" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="text-[#ff5a00] font-bold text-sm tracking-widest uppercase mb-4 flex items-center gap-2">
+            <span class="w-8 h-[2px] bg-[#ff5a00]"></span>Testimonials
           </div>
-          <h3 class="text-lg font-bold mb-3">Inventory Management System</h3>
-          <p class="text-sm text-gray-500 mb-6 leading-relaxed flex-grow">Powerful tool for easy management of inventory, stock control, and supply chain operations in real time.</p>
-          <a href="#" class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
-            Explore More <i data-lucide="arrow-right" class="w-3 h-3"></i>
-          </a>
+          <h2 class="text-4xl md:text-5xl font-black text-[#0f172a]">What Our Clients <br><span
+              class="text-[#ff5a00]">Say</span></h2>
         </div>
-        <div class="bg-white p-6 group flex flex-col">
-          <div class="relative aspect-[16/10] mb-6 overflow-hidden bg-gray-100 rounded-sm">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600" alt="School" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          </div>
-          <h3 class="text-lg font-bold mb-3">School Management Software</h3>
-          <p class="text-sm text-gray-500 mb-6 leading-relaxed flex-grow">Manage all academic, administrative, and official activities of a school with a single intuitive dashboard.</p>
-          <a href="#" class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
-            Explore More <i data-lucide="arrow-right" class="w-3 h-3"></i>
-          </a>
-        </div>
-        <div class="bg-white p-6 group flex flex-col">
-          <div class="relative aspect-[16/10] mb-6 overflow-hidden bg-gray-100 rounded-sm">
-            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=600" alt="POS" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          </div>
-          <h3 class="text-lg font-bold mb-3">Retail POS Software</h3>
-          <p class="text-sm text-gray-500 mb-6 leading-relaxed flex-grow">Impressive point-of-sale software for retail stores. Revolutionize how you process sales and manage bills.</p>
-          <a href="#" class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
-            Explore More <i data-lucide="arrow-right" class="w-3 h-3"></i>
-          </a>
-        </div>
-        <div class="bg-white p-6 group flex flex-col">
-          <div class="relative aspect-[16/10] mb-6 overflow-hidden bg-gray-100 rounded-sm">
-            <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=600" alt="eCommerce" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          </div>
-          <h3 class="text-lg font-bold mb-3">eCommerce Platform</h3>
-          <p class="text-sm text-gray-500 mb-6 leading-relaxed flex-grow">All-in-one scalable commerce platform to list products, manage customer orders, and process payments online.</p>
-          <a href="#" class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
-            Explore More <i data-lucide="arrow-right" class="w-3 h-3"></i>
-          </a>
-        </div>
-        <div class="bg-white p-6 group flex flex-col">
-          <div class="relative aspect-[16/10] mb-6 overflow-hidden bg-gray-100 rounded-sm">
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600" alt="CRM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          </div>
-          <h3 class="text-lg font-bold mb-3">CRM System</h3>
-          <p class="text-sm text-gray-500 mb-6 leading-relaxed flex-grow">Intelligent customer relationship management to track customer leads, automate sales, and boost client satisfaction.</p>
-          <a href="#" class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
-            Explore More <i data-lucide="arrow-right" class="w-3 h-3"></i>
-          </a>
-        </div>
-        <div class="bg-white p-6 group flex flex-col">
-          <div class="relative aspect-[16/10] mb-6 overflow-hidden bg-gray-100 rounded-sm">
-            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600" alt="LMS" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          </div>
-          <h3 class="text-lg font-bold mb-3">Learning Management System (LMS)</h3>
-          <p class="text-sm text-gray-500 mb-6 leading-relaxed flex-grow">Comprehensive educational portal for hosting courses, managing student enrollments, assessments, and tracking progress.</p>
-          <a href="#" class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-black hover:text-orange-600 transition-colors mt-auto">
-            Explore More <i data-lucide="arrow-right" class="w-3 h-3"></i>
-          </a>
+        <div class="flex gap-4">
+          <button
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-full w-12 h-12 border border-[#e2e8f0] text-[#0f172a] hover:bg-[#ff5a00] hover:text-white hover:border-[#ff5a00] transition-all cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+              <path d="m15 18-6-6 6-6"></path>
+            </svg>
+          </button>
+          <button
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-full w-12 h-12 border border-[#e2e8f0] text-[#0f172a] hover:bg-[#ff5a00] hover:text-white hover:border-[#ff5a00] transition-all cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+              <path d="m9 18 6-6-6-6"></path>
+            </svg>
+          </button>
         </div>
       </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div
+          class="bg-white p-8 rounded-2xl border transition-all duration-300 ring-2 ring-[#ff5a00] border-transparent">
+          <div class="flex gap-1 text-[#ff5a00] mb-6">
+            <span class="text-xl font-bold leading-none select-none">★★★★★</span>
+          </div>
+          <p class="text-[#0f172a] text-lg mb-8 italic">"PeopleNTech transformed our vision into a stunning digital
+            reality. Their attention to detail and technical expertise is unmatched in the industry."</p>
+          <div class="flex items-center gap-4">
+            <div
+              class="w-12 h-12 rounded-full bg-[#ff5a00]/10 text-[#ff5a00] font-bold flex items-center justify-center text-xl">
+              S</div>
+            <div>
+              <h4 class="font-bold text-[#0f172a]">Sarah Johnson</h4>
+              <p class="text-sm text-[#64748b]">CEO, TechNova</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-8 rounded-2xl border transition-all duration-300 border-[#e2e8f0]">
+          <div class="flex gap-1 text-[#ff5a00] mb-6">
+            <span class="text-xl font-bold leading-none select-none">★★★★★</span>
+          </div>
+          <p class="text-[#0f172a] text-lg mb-8 italic">"Working with the PeopleNTech team was a breeze. They delivered
+            our eCommerce platform on time and exceeded our expectations."</p>
+          <div class="flex items-center gap-4">
+            <div
+              class="w-12 h-12 rounded-full bg-[#ff5a00]/10 text-[#ff5a00] font-bold flex items-center justify-center text-xl">
+              M</div>
+            <div>
+              <h4 class="font-bold text-[#0f172a]">Michael Chen</h4>
+              <p class="text-sm text-[#64748b]">Founder, RetailFlow</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-8 rounded-2xl border transition-all duration-300 border-[#e2e8f0]">
+          <div class="flex gap-1 text-[#ff5a00] mb-6">
+            <span class="text-xl font-bold leading-none select-none">★★★★★</span>
+          </div>
+          <p class="text-[#0f172a] text-lg mb-8 italic">"The custom software they built for our operations has saved us
+            hundreds of hours. A truly professional and capable agency."</p>
+          <div class="flex items-center gap-4">
+            <div
+              class="w-12 h-12 rounded-full bg-[#ff5a00]/10 text-[#ff5a00] font-bold flex items-center justify-center text-xl">
+              E</div>
+            <div>
+              <h4 class="font-bold text-[#0f172a]">Emma Williams</h4>
+              <p class="text-sm text-[#64748b]">Director, GlobalLogistics</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <div class="bg-white border-b border-gray-200 px-8 py-16 flex justify-between items-center">
+    <section id="contact" class="py-24 px-4 lg:px-8 container mx-auto border-t border-[#e2e8f0]">
+      <div class="grid lg:grid-cols-2 gap-16">
         <div>
-          <p class="text-[10px] font-bold tracking-[0.2em] text-gray-400 mb-3 uppercase flex items-center gap-2">
-            <span class="text-gray-300">//</span> Client Stories
-          </p>
-          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 leading-[1.1]">
-            What Our <span class="text-orange-600">Clients</span> <br /> Say
-          </h2>
-        </div>
-        <div class="hidden sm:flex gap-2">
-          <button class="w-12 h-12 border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors cursor-pointer">
-            <i data-lucide="arrow-right" class="w-5 h-5 rotate-180"></i>
-          </button>
-          <button class="w-12 h-12 border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors cursor-pointer">
-            <i data-lucide="arrow-right" class="w-5 h-5"></i>
-          </button>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-gray-200 border-b border-gray-200">
-        <div class="bg-white p-8 sm:p-10 flex flex-col">
-          <div class="text-orange-500 text-6xl font-serif leading-none h-8 mb-4">“</div>
-          <p class="text-gray-600 text-sm leading-relaxed mb-8 flex-grow">
-            Our MVP was shipped in 8 weeks and investors loved the demo. PeopleTech's team understood our product vision perfectly and translated it into a polished, scalable prototype.
-          </p>
-          <div class="flex text-orange-400 mb-6">
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          <div class="text-[#ff5a00] font-bold text-sm tracking-widest uppercase mb-4 flex items-center gap-2">
+            <span class="w-8 h-[2px] bg-[#ff5a00]"></span>Get In Touch
           </div>
-          <div class="flex items-center gap-4">
-            <div class="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold text-sm">LK</div>
-            <div>
-              <div class="text-sm font-bold">Leon Kader</div>
-              <div class="text-[10px] text-gray-500 uppercase tracking-wider mt-0.5">Co-founder, StartupBridge</div>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white p-8 sm:p-10 flex flex-col">
-          <div class="text-orange-500 text-6xl font-serif leading-none h-8 mb-4">“</div>
-          <p class="text-gray-600 text-sm leading-relaxed mb-8 flex-grow">
-            I have just expressed my idea and they came up with the best solution. It seems like my dream comes true. They are very professional, I consider them all-time tech support for my company.
-          </p>
-          <div class="flex text-orange-400 mb-6">
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-          </div>
-          <div class="flex items-center gap-4">
-            <div class="w-10 h-10 rounded-full bg-gray-800 text-white flex items-center justify-center font-bold text-sm">SM</div>
-            <div>
-              <div class="text-sm font-bold">Safat Mishu</div>
-              <div class="text-[10px] text-gray-500 uppercase tracking-wider mt-0.5">Founder, BD Ltd</div>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white p-8 sm:p-10 flex flex-col">
-          <div class="text-orange-500 text-6xl font-serif leading-none h-8 mb-4">“</div>
-          <p class="text-gray-600 text-sm leading-relaxed mb-8 flex-grow">
-            PeopleTech built our inventory system from scratch in record time. Their team is responsive, talented, and truly cares about the outcome. We couldn't be happier with the final result.
-          </p>
-          <div class="flex text-orange-400 mb-6">
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-          </div>
-          <div class="flex items-center gap-4">
-            <div class="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-sm">AK</div>
-            <div>
-              <div class="text-sm font-bold">Alex Karimi</div>
-              <div class="text-[10px] text-gray-500 uppercase tracking-wider mt-0.5">Project Manager, Alpha Stores</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-white border-b border-gray-200 py-6 flex justify-center gap-2">
-         <span class="w-2 h-2 rounded-full bg-gray-300"></span>
-         <span class="w-2 h-2 rounded-full bg-gray-300"></span>
-         <span class="w-2 h-2 rounded-full bg-gray-300"></span>
-         <span class="h-2 rounded-full bg-orange-500 w-4"></span>
-         <span class="w-2 h-2 rounded-full bg-gray-300"></span>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-[1px] bg-gray-200 border-b border-gray-200">
-        <div class="bg-white p-8 lg:p-12 xl:p-16">
-          <p class="text-[10px] font-bold tracking-[0.2em] text-gray-400 mb-6 uppercase flex items-center gap-2">
-            <span class="text-gray-300">//</span> Get In Touch
-          </p>
-          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 mb-6 leading-[1.1]">
-            Let's <span class="text-orange-600">Talk</span> <br /> About Your Project
-          </h2>
-          <p class="text-gray-500 mb-12 max-w-md leading-relaxed">
-            Every idea has the power to change the world. We'd love to hear yours and help you build something extraordinary.
-          </p>
-
-          <div class="space-y-6">
+          <h2 class="text-4xl md:text-5xl font-black text-[#0f172a] mb-6">Let's Talk <br><span
+              class="text-[#ff5a00]">About Your Project</span></h2>
+          <p class="text-[#64748b] text-lg mb-12">Ready to start your next digital transformation? Send us a message and
+            our team will get back to you within 24 hours.</p>
+          <div class="space-y-8">
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 bg-gray-50 border border-gray-200 flex items-center justify-center shrink-0">
-                <i data-lucide="map-pin" class="w-4 h-4 text-orange-600"></i>
+              <div
+                class="w-12 h-12 bg-[#ff5a00]/10 text-[#ff5a00] rounded-full flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
               </div>
               <div>
-                <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1">Bangladesh Office</div>
-                <div class="text-sm font-semibold">Dhaka, Bangladesh</div>
+                <h4 class="font-bold text-[#0f172a] mb-1">Email Us</h4>
+                <p class="text-[#64748b]">hello@peopleNTech.agency</p>
               </div>
             </div>
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 bg-gray-50 border border-gray-200 flex items-center justify-center shrink-0">
-                <i data-lucide="mail" class="w-4 h-4 text-orange-600"></i>
+              <div
+                class="w-12 h-12 bg-[#ff5a00]/10 text-[#ff5a00] rounded-full flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
               </div>
               <div>
-                <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1">Email</div>
-                <div class="text-sm font-semibold">hello@PeopleNTech.com</div>
+                <h4 class="font-bold text-[#0f172a] mb-1">Call Us</h4>
+                <p class="text-[#64748b]">+1 (555) 123-4567</p>
               </div>
             </div>
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 bg-gray-50 border border-gray-200 flex items-center justify-center shrink-0">
-                <i data-lucide="phone" class="w-4 h-4 text-orange-600"></i>
+              <div
+                class="w-12 h-12 bg-[#ff5a00]/10 text-[#ff5a00] rounded-full flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <path
+                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                  </path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
               </div>
               <div>
-                <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1">Phone</div>
-                <div class="text-sm font-semibold">+1 (800) 123-4567</div>
+                <h4 class="font-bold text-[#0f172a] mb-1">Location</h4>
+                <p class="text-[#64748b]">100 Tech Hub Blvd, Suite 400<br>San Francisco, CA 94107</p>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="bg-white p-8 lg:p-12 xl:p-16">
-          <form class="flex flex-col gap-8 h-full justify-center max-w-lg mx-auto lg:mx-0 w-full">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Name</label>
-                <input type="text" placeholder="John Doe" class="w-full border-b border-gray-200 py-2 focus:outline-none focus:border-orange-500 transition-colors text-sm bg-transparent" />
+        <div class="bg-white p-8 md:p-10 rounded-3xl border border-[#e2e8f0] shadow-lg">
+          <form class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label class="text-sm font-bold text-[#0f172a]">Name</label>
+                <input
+                  class="flex w-full rounded-md border px-3 py-1 text-base shadow-xs transition-colors placeholder:text-[#64748b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 md:text-sm bg-[#f5f7fa] border-[#e2e8f0] h-12"
+                  placeholder="John Doe">
               </div>
-              <div>
-                <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Email</label>
-                <input type="email" placeholder="john@company.com" class="w-full border-b border-gray-200 py-2 focus:outline-none focus:border-orange-500 transition-colors text-sm bg-transparent" />
+              <div class="space-y-2">
+                <label class="text-sm font-bold text-[#0f172a]">Email</label>
+                <input type="email"
+                  class="flex w-full rounded-md border px-3 py-1 text-base shadow-xs transition-colors placeholder:text-[#64748b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 md:text-sm bg-[#f5f7fa] border-[#e2e8f0] h-12"
+                  placeholder="john@example.com">
               </div>
             </div>
-            <div>
-              <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Phone</label>
-              <input type="tel" placeholder="+1 (555) 000-0000" class="w-full border-b border-gray-200 py-2 focus:outline-none focus:border-orange-500 transition-colors text-sm bg-transparent" />
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label class="text-sm font-bold text-[#0f172a]">Phone</label>
+                <input type="tel"
+                  class="flex w-full rounded-md border px-3 py-1 text-base shadow-xs transition-colors placeholder:text-[#64748b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 md:text-sm bg-[#f5f7fa] border-[#e2e8f0] h-12"
+                  placeholder="+1 (555) 000-0000">
+              </div>
+              <div class="space-y-2">
+                <label class="text-sm font-bold text-[#0f172a]">Service</label>
+                <div class="relative">
+                  <select
+                    class="appearance-none flex w-full items-center justify-between rounded-md border px-3 py-2 text-sm shadow-xs focus:outline-none focus:ring-2 focus:ring-orange-500 bg-[#f5f7fa] border-[#e2e8f0] h-12 text-[#0f172a] pr-10 cursor-pointer">
+                    <option value="" disabled selected>Select Service</option>
+                    <option value="software">Software Dev</option>
+                    <option value="web">Web Dev</option>
+                    <option value="mobile">Mobile App</option>
+                    <option value="uiux">UI/UX Design</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-[#0f172a]/50">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="h-4 w-4">
+                      <path d="m6 9 6 6 6-6"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div>
-              <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">About Project</label>
-              <textarea rows="4" placeholder="Tell us about your project..." class="w-full border-b border-gray-200 py-2 focus:outline-none focus:border-orange-500 transition-colors text-sm resize-none bg-transparent"></textarea>
+            <div class="space-y-2">
+              <label class="text-sm font-bold text-[#0f172a]">Message</label>
+              <textarea
+                class="flex w-full rounded-md border px-3 py-2 text-base shadow-xs placeholder:text-[#64748b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 md:text-sm bg-[#f5f7fa] border-[#e2e8f0] min-h-[150px] resize-none"
+                placeholder="Tell us about your project..."></textarea>
             </div>
-            <div class="flex items-center justify-between mt-4">
-              <button type="button" class="bg-black text-white text-[11px] font-bold uppercase tracking-widest px-8 py-4 hover:bg-gray-800 transition-colors flex items-center justify-center gap-3 cursor-pointer">
-                Send Message <i data-lucide="arrow-right" class="w-4 h-4"></i>
-              </button>
-              <span class="text-[10px] text-gray-400 font-medium">We reply within 24 hours</span>
-            </div>
+            <button
+              class="inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 border border-transparent min-h-9 px-4 py-2 w-full h-14 bg-[#ff5a00] text-white hover:bg-[#ff5a00]/90 font-bold text-lg rounded-xl cursor-pointer">
+              Send Message
+            </button>
           </form>
         </div>
       </div>
+    </section>
 
-      <footer class="bg-white px-8 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 border-b border-gray-200">
-        <div class="lg:col-span-2">
-          <div class="flex items-center gap-2 font-black text-xl tracking-tighter mb-6">
-            <i data-lucide="square" class="w-6 h-6 fill-black"></i> PeopleNTech
+    <footer class="bg-[#0f172a] text-white pt-20 pb-10">
+      <div class="container mx-auto px-4 lg:px-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+          <div class="lg:col-span-2">
+            <div class="flex items-center gap-2 mb-6">
+              <img class="w-36 bg-white py-2 px-4 rounded-full" src="img/logo.png" alt="Logo">
+            </div>
+            <p class="text-white/70 max-w-sm mb-8 leading-relaxed">
+              We are a digital agency specializing in custom software development, web applications, and digital
+              experiences.
+            </p>
+            <div class="flex items-center gap-4">
+              <a href="#"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff5a00] hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+              <a href="#"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff5a00] hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <path
+                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+                  </path>
+                </svg>
+              </a>
+              <a href="#"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff5a00] hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff5a00] hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect width="4" height="12" x="2" y="9"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+            </div>
           </div>
-          <p class="text-sm text-gray-500 mb-8 max-w-sm leading-relaxed">
-            Get Smart Solutions that solve problems, empowering businesses through technology since 2014.
-          </p>
-          <div class="flex gap-3">
-            <a href="#" class="w-10 h-10 border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors rounded-sm text-sm font-bold text-gray-600">f</a>
-            <a href="#" class="w-10 h-10 border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors rounded-sm text-sm font-bold text-gray-600">in</a>
-            <a href="#" class="w-10 h-10 border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors rounded-sm text-sm font-bold text-gray-600">X</a>
+          <div>
+            <h4 class="font-bold text-lg mb-6">Services</h4>
+            <ul class="space-y-4">
+              <li><a href="#" class="text-white/70 hover:text-[#ff5a00] transition-colors">Software Dev</a></li>
+              <li><a href="#" class="text-white/70 hover:text-[#ff5a00] transition-colors">Web Dev</a></li>
+              <li><a href="#" class="text-white/70 hover:text-[#ff5a00] transition-colors">Mobile Apps</a></li>
+              <li><a href="#" class="text-white/70 hover:text-[#ff5a00] transition-colors">UI/UX Design</a></li>
+              <li><a href="#" class="text-white/70 hover:text-[#ff5a00] transition-colors">IT Consulting</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-6">Company</h4>
+            <ul class="space-y-4">
+              <li><a href="#" class="text-white/70 hover:text-[#ff5a00] transition-colors">About Us</a></li>
+              <li><a href="#" class="text-white/70 hover:text-[#ff5a00] transition-colors">Portfolio</a></li>
+              <li><a href="#" class="text-white/70 hover:text-[#ff5a00] transition-colors">Careers</a></li>
+              <li><a href="#" class="text-white/70 hover:text-[#ff5a00] transition-colors">Blog</a></li>
+              <li><a href="#" class="text-white/70 hover:text-[#ff5a00] transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-6">Contact</h4>
+            <ul class="space-y-4">
+              <li class="text-white/70 flex items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 text-[#ff5a00] shrink-0">
+                  <path
+                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                  </path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg> SF, CA 94107
+              </li>
+              <li class="text-white/70 flex items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 text-[#ff5a00] shrink-0">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg> +1 555 123 4567
+              </li>
+              <li class="text-white/70 flex items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 text-[#ff5a00] shrink-0">
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg> hello@PeopleNTech.agency
+              </li>
+            </ul>
           </div>
         </div>
-        
-        <div>
-          <h4 class="text-[11px] font-bold uppercase tracking-widest mb-6">Other Services</h4>
-          <ul class="space-y-4 text-sm text-gray-500">
-            <li><a href="#" class="hover:text-orange-600 transition-colors">IT Training</a></li>
-            <li><a href="#" class="hover:text-orange-600 transition-colors">Branding & Marketing</a></li>
-            <li><a href="#" class="hover:text-orange-600 transition-colors">Managed IT</a></li>
-            <li><a href="#" class="hover:text-orange-600 transition-colors">DevOps</a></li>
-            <li><a href="#" class="hover:text-orange-600 transition-colors">QA Testing</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="text-[11px] font-bold uppercase tracking-widest mb-6">Company</h4>
-          <ul class="space-y-4 text-sm text-gray-500">
-            <li><a href="#" class="hover:text-orange-600 transition-colors">About Us</a></li>
-            <li><a href="#" class="hover:text-orange-600 transition-colors">Blog</a></li>
-            <li><a href="#" class="hover:text-orange-600 transition-colors">Careers</a></li>
-            <li><a href="#" class="hover:text-orange-600 transition-colors">Contact Us</a></li>
-            <li><a href="#" class="hover:text-orange-600 transition-colors">Privacy Policy</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="text-[11px] font-bold uppercase tracking-widest mb-6">Offices</h4>
-          <ul class="space-y-4 text-sm text-gray-500">
-            <li class="flex items-center gap-2">
-              <span class="w-4 h-3 bg-green-600 inline-block rounded-sm relative">
-                <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-red-500 rounded-full"></span>
-              </span> 
-              Dhaka, Bangladesh
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="w-4 h-3 bg-blue-800 inline-block rounded-sm relative overflow-hidden">
-                <span class="absolute top-0 left-0 w-1/2 h-1/2 bg-white"></span>
-                <span class="absolute top-0 right-0 w-1/2 h-1/2 bg-red-600"></span>
-                <span class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-white"></span>
-                <span class="absolute bottom-0 right-0 w-1/2 h-1/2 bg-red-600"></span>
-              </span> 
-              Virginia, USA
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="w-4 h-3 bg-blue-800 inline-block rounded-sm relative overflow-hidden">
-                <span class="absolute top-0 left-0 w-1/2 h-1/2 bg-white"></span>
-                <span class="absolute top-0 right-0 w-1/2 h-1/2 bg-red-600"></span>
-                <span class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-white"></span>
-                <span class="absolute bottom-0 right-0 w-1/2 h-1/2 bg-red-600"></span>
-              </span> 
-              New York, USA
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="w-4 h-3 bg-blue-800 inline-block rounded-sm relative overflow-hidden">
-                <span class="absolute top-0 left-0 w-1/2 h-1/2 bg-white"></span>
-                <span class="absolute top-0 right-0 w-1/2 h-1/2 bg-red-600"></span>
-                <span class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-white"></span>
-                <span class="absolute bottom-0 right-0 w-1/2 h-1/2 bg-red-600"></span>
-              </span> 
-              New Jersey, USA
-            </li>
-          </ul>
-        </div>
-      </footer>
-
-      <div class="bg-white px-8 py-6 flex flex-col md:flex-row justify-between items-center text-[10px] font-medium text-gray-400 uppercase tracking-widest gap-4">
-        <p>© 2026 PeopleNTech. All Rights Reserved.</p>
-        <div class="flex gap-6">
-          <a href="#" class="hover:text-gray-600 transition-colors">Privacy Policy</a>
-          <a href="#" class="hover:text-gray-600 transition-colors">Terms of Service</a>
+        <div
+          class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/50">
+          <p>© 2026 PeopleNTech Agency. All rights reserved.</p>
+          <div class="flex items-center gap-6">
+            <a href="#" class="hover:text-[#ff5a00] transition-colors">Privacy Policy</a>
+            <a href="#" class="hover:text-[#ff5a00] transition-colors">Terms of Service</a>
+          </div>
         </div>
       </div>
-
-    </div>
+    </footer>
   </div>
 
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     lucide.createIcons();
-    
-    document.getElementById('menu-btn').addEventListener('click', function() {
-      var menu = document.getElementById('mobile-menu');
-      if (menu.classList.contains('hidden')) {
-        menu.classList.remove('hidden');
-        menu.classList.add('flex');
-      } else {
-        menu.classList.add('hidden');
-        menu.classList.remove('flex');
+
+    // Vanilla JS to handle Testimonial Slider Update System
+    document.addEventListener('DOMContentLoaded', () => {
+      const testimonialSection = document.querySelectorAll('section')[4];
+      if (testimonialSection) {
+        const buttons = testimonialSection.querySelectorAll('button');
+        const testimonials = testimonialSection.querySelectorAll('.grid > div');
+
+        let current = 0;
+
+        function updateTestimonials() {
+          testimonials.forEach((el, index) => {
+            if (index === current) {
+              el.classList.add('ring-2', 'ring-[#ff5a00]', 'border-transparent');
+            } else {
+              el.classList.remove('ring-2', 'ring-[#ff5a00]', 'border-transparent');
+            }
+          });
+        }
+
+        if (buttons.length >= 2 && testimonials.length > 0) {
+          const prevBtn = buttons[0];
+          const nextBtn = buttons[1];
+
+          prevBtn.addEventListener('click', () => {
+            current = (current === 0) ? testimonials.length - 1 : current - 1;
+            updateTestimonials();
+          });
+
+          nextBtn.addEventListener('click', () => {
+            current = (current + 1) % testimonials.length;
+            updateTestimonials();
+          });
+        }
       }
     });
   </script>
+    <!-- Theme variations switch btn -->
+    <div class="fixed top-1/2 -translate-y-1/2 right-4 flex flex-col gap-2 z-50">
+        <span class="text-[.68rem] text-[#475569] dark:text-[#94a3b8] tracking-wider uppercase">Theme
+            variations</span>
+        <a href="v1.html"
+            class="inline-flex items-center justify-center border border-[#e2e8f0] dark:border-[#334155] bg-white dark:bg-[#111827] text-blue-600 dark:text-blue-400 text-[.65rem] font-medium tracking-wider uppercase px-4 py-2 rounded-lg shadow-sm hover:bg-[#f1f5f9] dark:hover:bg-[#1e293b]">Version-1</a>
+        <a href="v2.html"
+            class="inline-flex items-center justify-center border border-[#e2e8f0] dark:border-[#334155] bg-white dark:bg-[#111827] text-orange-600 dark:text-orange-400 text-[.65rem] font-medium tracking-wider uppercase px-4 py-2 rounded-lg shadow-sm hover:bg-[#f1f5f9] dark:hover:bg-[#1e293b]">Version-2</a>
+        <a href="v3.html"
+            class="inline-flex items-center justify-center border border-[#e2e8f0] dark:border-[#334155] bg-white dark:bg-[#111827] text-emerald-600 dark:text-emerald-400 text-[.65rem] font-medium tracking-wider uppercase px-4 py-2 rounded-lg shadow-sm hover:bg-[#f1f5f9] dark:hover:bg-[#1e293b]">Version-3</a>
+        <a href="v4.html"
+            class="inline-flex items-center justify-center border border-[#e2e8f0] dark:border-[#334155] bg-white dark:bg-[#111827] text-purple-600 dark:text-purple-400 text-[.65rem] font-medium tracking-wider uppercase px-4 py-2 rounded-lg shadow-sm hover:bg-[#f1f5f9] dark:hover:bg-[#1e293b]">Version-4</a>
+    </div>
 </body>
+
 </html>
