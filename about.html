@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex">
+
+    <title>About Us - PeopleNTech Software</title>
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link href="https://fonts.bunny.net/css?family=manrope:300,400,500,600,700,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @import "tailwindcss";
+
+    @custom-variant dark (&:where(.dark, .dark *));
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      font-family: 'Manrope',sans-serif;
+      font-weight: 700;
+      font-size: .75rem;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      padding: .82rem 1.75rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background .2s, color .2s, border-color .2s;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      @apply bg-[#0f172a] dark:bg-[#f8fafc] text-[#ffffff] dark:text-[#0b0f19] hover:bg-[#e8440a] dark:hover:bg-[#ff5a1f] hover:text-white dark:hover:text-white;
+    }
+
+    .btn-secondary {
+      @apply border border-[#cbd5e1] dark:border-[#334155] bg-transparent text-[#0f172a] dark:text-[#f8fafc] hover:border-[#0f172a] dark:hover:border-[#f8fafc];
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @keyframes fup {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .swiper-pagination-bullet {
+      background: #cbd5e1;
+      opacity: 1;
+      width: 8px;
+      height: 8px;
+      transition: all 0.3s ease;
+    }
+    :where(.dark, .dark *) .swiper-pagination-bullet {
+      background: #334155;
+    }
+    .swiper-pagination-bullet-active {
+      background: #e8440a;
+      width: 22px;
+      border-radius: 4px;
+    }
+    :where(.dark, .dark *) .swiper-pagination-bullet-active {
+      background: #ff5a1f;
+    }
+    #testiSwiper {
+      padding-bottom: 3.5rem !important;
+    }
+    #testiSwiper .swiper-slide {
+      height: auto !important;
+      display: flex !important;
+    }
+    #testiPrev svg, #testiNext svg {
+      width: 18px !important;
+      height: 18px !important;
+      stroke: currentColor !important;
+      stroke-width: 2.2 !important;
+      fill: none !important;
+      stroke-linecap: round !important;
+      stroke-linejoin: round !important;
+    }
+  </style>
+</head>
+
+<body
+    class="bg-[#edeff5] dark:bg-[#0b0f19] text-[#0f172a] dark:text-[#f8fafc] font-['Manrope',sans-serif] text-[15px] leading-relaxed overflow-x-hidden transition-colors duration-300">
+
+    <!-- topbar start -->
+    <div
+        class="hidden md:block border-b border-[#cbd5e1] dark:border-[#334155] bg-[#13264d] dark:bg-[#1e293b]/20 transition-colors duration-300">
+        <div
+            class="max-w-[1340px] mx-auto px-6 md:px-10 flex items-center justify-between h-[38px] text-[0.72rem] font-bold tracking-wider text-[#475569] dark:text-[#94a3b8]">
+            <div class="flex items-center gap-6">
+                <a href="mailto:info@pntsoft.com"
+                    class="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
+                    <svg class="w-3.5 h-3.5 text-white/80 dark:text-[#ff5a1f]" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span class="normal-case text-white/80">info@pntsoft.com</span>
+                </a>
+                <a href="tel:+18005550199"
+                    class="flex items-center gap-2 text-white/80 hover:text-[#e8440a] dark:hover:text-[#ff5a1f] transition-colors">
+                    <svg class="w-3.5 h-3.5 text-white/80 dark:text-[#ff5a1f]" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                        </path>
+                    </svg>
+                    <span>+1 (800) 555-0199</span>
+                </a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                    class="text-white/80 hover:text-white transition-colors" aria-label="LinkedIn">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                    class="text-white/80 hover:text-white transition-colors" aria-label="Twitter">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                    class="text-white/80 hover:text-white transition-colors" aria-label="GitHub">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- topbar end -->
+
+    <!-- nav start -->
+    <nav id="nav"
+        class="sticky top-0 left-0 right-0 z-50 bg-[#edeff5]/95 dark:bg-[#0b0f19]/95 backdrop-blur-lg border-b border-[#cbd5e1] dark:border-[#334155] transition-colors duration-300">
+        <div class="max-w-[1340px] mx-auto px-6 md:px-10 flex items-center justify-between h-[60px]">
+            <a href="index.html" class="flex items-center gap-2 no-underline group">
+                <!-- logo -->
+                <img src="img/logo.png" class="w-46" alt="Logo">
+            </a>
+            <div id="desktop-nav" class="hidden md:flex items-center gap-[2.2rem]">
+                <a href="index.html"
+                    class="text-[0.75rem] font-medium tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#0f172a] dark:hover:text-[#f8fafc] transition-colors">Home</a>
+                
+                <!-- Services Dropdown -->
+                <div class="relative group flex items-center gap-1 py-4 cursor-pointer">
+                    <a href="services.html"
+                        class="text-[0.75rem] font-medium tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] group-hover:text-[#0f172a] dark:group-hover:text-[#f8fafc] transition-colors">Services</a>
+                    <svg class="w-3 h-3 text-[#475569] dark:text-[#94a3b8] group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-full w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-250 pt-2 z-50">
+                        <div class="bg-white dark:bg-[#0f172a] border border-[#cbd5e1] dark:border-[#334155] p-2 shadow-2xl flex flex-col gap-0.5 rounded-xs">
+                            <a href="index.html#services" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Custom Software</a>
+                            <a href="index.html#services" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Web Application</a>
+                            <a href="index.html#services" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">eCommerce Dev</a>
+                            <a href="index.html#services" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Mobile Application</a>
+                            <a href="index.html#services" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">MVP Design</a>
+                            <a href="index.html#services" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">IT Consultancy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Industries Dropdown -->
+                <div class="relative group flex items-center gap-1 py-4 cursor-pointer">
+                    <a href="industries.html"
+                        class="text-[0.75rem] font-medium tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] group-hover:text-[#0f172a] dark:group-hover:text-[#f8fafc] transition-colors">Industries</a>
+                    <svg class="w-3 h-3 text-[#475569] dark:text-[#94a3b8] group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-full w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-250 pt-2 z-50">
+                        <div class="bg-white dark:bg-[#0f172a] border border-[#cbd5e1] dark:border-[#334155] p-2 shadow-2xl flex flex-col gap-0.5 rounded-xs">
+                            <a href="industries.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Healthcare</a>
+                            <a href="industries.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Logistics</a>
+                            <a href="industries.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Retail & eCommerce</a>
+                            <a href="industries.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Tour & Travel</a>
+                            <a href="industries.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Education</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Dropdown -->
+                <div class="relative group flex items-center gap-1 py-4 cursor-pointer">
+                    <a href="about.html"
+                        class="text-[0.75rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] transition-colors">About</a>
+                    <svg class="w-3 h-3 text-[#0f172a] dark:text-[#f8fafc] group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-full w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-250 pt-2 z-50">
+                        <div class="bg-white dark:bg-[#0f172a] border border-[#cbd5e1] dark:border-[#334155] p-2 shadow-2xl flex flex-col gap-0.5 rounded-xs">
+                            <a href="about.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#e8440a] dark:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">About Us</a>
+                            <a href="about.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Our Team</a>
+                            <a href="index.html#products" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="contact.html"
+                    class="text-[0.75rem] font-medium tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#0f172a] dark:hover:text-[#f8fafc] transition-colors">Contact</a>
+            </div>
+            <div class="flex items-center gap-[.9rem]">
+                <a href="#contact" id="nav-cta" class="hidden md:btn btn-primary !py-2.5 !px-5">Start a Project</a>
+
+                <button id="theme-toggle" title="Toggle dark mode"
+                    class="w-9 h-9 border border-[#cbd5e1] dark:border-[#334155] bg-transparent cursor-pointer flex items-center justify-center shrink-0 hover:border-[#0f172a] dark:hover:border-[#f8fafc] transition-colors">
+                    <svg id="icon-sun"
+                        class="w-[15px] h-[15px] stroke-[#0f172a] dark:stroke-[#f8fafc] fill-none stroke-[1.8]"
+                        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg id="icon-moon"
+                        class="w-[15px] h-[15px] stroke-[#0f172a] dark:stroke-[#f8fafc] fill-none stroke-[1.8]"
+                        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+                <button id="hbg" class="bg-transparent border-none cursor-pointer p-1 hidden flex-col gap-[5px]">
+                    <span class="block w-[22px] h-px bg-[#0f172a] dark:bg-[#f8fafc]"></span>
+                    <span class="block w-[15px] h-px bg-[#0f172a] dark:bg-[#f8fafc]"></span>
+                    <span class="block w-[19px] h-px bg-[#0f172a] dark:bg-[#f8fafc]"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- nav end -->
+
+    <!-- mobile menu -->
+    <div id="mmenu"
+        class="hidden fixed inset-0 bg-[#edeff5] dark:bg-[#0b0f19] z-50 flex-col items-center justify-center gap-7 border-b border-[#cbd5e1] dark:border-[#334155] transition-colors duration-300">
+        <button id="close-m"
+            class="absolute top-[1.4rem] right-[2rem] bg-transparent border-none cursor-pointer text-[1.3rem] text-[#0f172a] dark:text-[#f8fafc]">✕</button>
+        <a href="index.html"
+            class="ml text-[1.7rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] no-underline">Home</a>
+        <a href="about.html"
+            class="ml text-[1.7rem] font-extrabold text-[#e8440a] dark:text-[#ff5a1f] no-underline">About</a>
+        <a href="index.html#services"
+            class="ml text-[1.7rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] no-underline">Services</a>
+        <a href="index.html#expertise"
+            class="ml text-[1.7rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] no-underline">Expertise</a>
+        <a href="index.html#contact"
+            class="ml text-[1.7rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] no-underline">Contact</a>
+        <a href="index.html#contact" class="ml btn btn-primary mt-[.8rem]">Start
+            a Project →</a>
+    </div>
+
+    <!-- page banner / hero start -->
+    <section class="relative bg-cover bg-center overflow-hidden py-20 md:py-24 text-center"
+        style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop');">
+        <!-- Blur backdrop overlay -->
+        <div class="absolute inset-0 bg-[#0f172a]/60 dark:bg-[#0b0f19]/70 backdrop-blur-[6px]"></div>
+
+        <div class="relative max-w-[1340px] mx-auto px-6 md:px-10 z-10">
+            <span
+                class="text-[0.65rem] font-bold tracking-[0.25em] uppercase text-[#e8440a] dark:text-[#ff5a1f] mb-3 block animate-[fup_.7s_ease_both]">//
+                WHO WE ARE</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white animate-[fup_.7s_.1s_ease_both]">
+                About Us
+            </h1>
+            <div class="h-[2px] w-12 bg-[#e8440a] dark:bg-[#ff5a1f] mx-auto mt-4 rounded-full"></div>
+        </div>
+    </section>
+    <!-- page banner / hero end -->
+
+    <!-- history section start -->
+    <section class="py-14 md:py-20 bg-white dark:bg-[#0f172a] fu">
+        <div class="max-w-[1340px] mx-auto px-6 md:px-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 border-l border-t border-[#cbd5e1] dark:border-[#334155]">
+                <!-- History Text Column -->
+                <div
+                    class="p-8 md:p-12 border-r border-b border-[#cbd5e1] dark:border-[#334155] flex flex-col justify-between">
+                    <div>
+                        <p
+                            class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#e8440a] dark:text-[#ff5a1f] mb-[.9rem]">
+                            // Our Story
+                        </p>
+                        <h2 class="text-[1.8rem] md:text-[2.6rem] font-extrabold leading-[1.1] tracking-tight mb-6">
+                            How It All Began
+                        </h2>
+                        <div class="text-[.92rem] text-[#475569] dark:text-[#94a3b8] leading-[1.8] space-y-4">
+                            <p>
+                                PeopleNTech is a USA-based IT training and software solution provider company.
+                                Although it debuted as a staffing agency in the USA in 2005, it is now successfully
+                                operating as a premier IT training, job placement, and software solution provider
+                                with operations across Bangladesh, Canada, India, and the United States.
+                            </p>
+                            <p>
+                                Founded by Engr. Abubokor Hanip, the company was established to address the rapid
+                                changes
+                                in technology requirements. We discovered that traditional classroom theoretical
+                                structures
+                                fell short, and upskilling potential professionals through intensive project-oriented
+                                workspaces
+                                was the most effective way to fill modern tech openings.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Grid Column -->
+                <div class="border-b border-[#cbd5e1] dark:border-[#334155] grid grid-cols-2" id="stats-row">
+                    <!-- Stat 1 -->
+                    <div
+                        class="p-6 md:p-10 border-r border-b border-[#cbd5e1] dark:border-[#334155] text-center flex flex-col justify-center">
+                        <div class="text-[2.4rem] md:text-[3.8rem] font-extrabold tracking-tighter leading-none text-[#e8440a] dark:text-[#ff5a1f]"
+                            data-target="2005" data-suffix="">0</div>
+                        <div
+                            class="text-[0.62rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] mt-2">
+                            Year Founded
+                        </div>
+                    </div>
+                    <!-- Stat 2 -->
+                    <div
+                        class="p-6 md:p-10 border-b border-r border-[#cbd5e1] dark:border-[#334155] text-center flex flex-col justify-center">
+                        <div class="text-[2.4rem] md:text-[3.8rem] font-extrabold tracking-tighter leading-none text-[#0f172a] dark:text-[#f8fafc]"
+                            data-target="60" data-suffix="k+">0</div>
+                        <div
+                            class="text-[0.62rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] mt-2">
+                            Trained Globally
+                        </div>
+                    </div>
+                    <!-- Stat 3 -->
+                    <div
+                        class="p-6 md:p-10 border-r border-[#cbd5e1] dark:border-[#334155] text-center flex flex-col justify-center">
+                        <div class="text-[2.4rem] md:text-[3.8rem] font-extrabold tracking-tighter leading-none text-[#0f172a] dark:text-[#f8fafc]"
+                            data-target="2014" data-suffix="">0</div>
+                        <div
+                            class="text-[0.62rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] mt-2">
+                            Dhaka Campus Est.
+                        </div>
+                    </div>
+                    <!-- Stat 4 -->
+                    <div
+                        class="p-6 md:p-10 border-[#cbd5e1] border-r dark:border-[#334155] text-center flex flex-col justify-center">
+                        <div class="text-[2.4rem] md:text-[3.8rem] font-extrabold tracking-tighter leading-none text-[#e8440a] dark:text-[#ff5a1f]"
+                            data-target="7" data-suffix="+ Regions">0</div>
+                        <div
+                            class="text-[0.62rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] mt-2">
+                            Global Reach
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- history section end -->
+
+    <!-- mission, vision, strength start -->
+    <section
+        class="py-14 md:py-20 bg-gradient-to-tr from-[#e8440a]/5 via-white to-[#edeff5]/20 dark:from-[#ff5a1f]/5 dark:via-[#0f172a] dark:to-[#0b0f19] border-t border-[#cbd5e1] dark:border-[#334155] fu">
+        <div class="max-w-[1340px] mx-auto px-6 md:px-10">
+            <div
+                class="grid grid-cols-1 lg:grid-cols-3 border-l border-t border-r border-[#cbd5e1] dark:border-[#334155]">
+
+                <!-- Mission Card -->
+                <div
+                    class="p-10 border-b border-[#cbd5e1] dark:border-[#334155] lg:border-b-0 lg:border-r bg-white dark:bg-[#1e293b] flex flex-col h-full relative group hover:shadow-2xl hover:shadow-[#0f172a]/5 transition-all duration-300">
+                    <div
+                        class="w-11 h-11 flex items-center justify-center bg-[#f1f5f9] dark:bg-[#334155] border border-[#cbd5e1] dark:border-[#334155] mb-6 text-[#e8440a] dark:text-[#ff5a1f] group-hover:bg-[#e8440a] dark:group-hover:bg-[#ff5a1f] group-hover:border-[#e8440a] dark:group-hover:border-[#ff5a1f] group-hover:text-white transition-all duration-300">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                        </svg>
+                    </div>
+                    <p
+                        class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#e8440a] dark:text-[#ff5a1f] mb-2">
+                        // OUR MISSION</p>
+                    <h3
+                        class="text-xl font-bold mb-4 text-[#0f172a] dark:text-[#f8fafc] tracking-tight group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Accelerating Digitization
+                    </h3>
+                    <p class="text-[0.85rem] text-[#475569] dark:text-[#94a3b8] leading-[1.8] grow">
+                        Our main goal is to bring all the traditional businesses of the country in the light of
+                        digitalization.
+                        We give all kinds of technical support to the ongoing process of an organization or an
+                        individual's idea.
+                    </p>
+                </div>
+
+                <!-- Vision Card -->
+                <div
+                    class="p-10 border-b border-[#cbd5e1] dark:border-[#334155] lg:border-b-0 lg:border-r bg-white dark:bg-[#1e293b] flex flex-col h-full relative group hover:shadow-2xl hover:shadow-[#0f172a]/5 transition-all duration-300">
+                    <div
+                        class="w-11 h-11 flex items-center justify-center bg-[#f1f5f9] dark:bg-[#334155] border border-[#cbd5e1] dark:border-[#334155] mb-6 text-[#e8440a] dark:text-[#ff5a1f] group-hover:bg-[#e8440a] dark:group-hover:bg-[#ff5a1f] group-hover:border-[#e8440a] dark:group-hover:border-[#ff5a1f] group-hover:text-white transition-all duration-300">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                        </svg>
+                    </div>
+                    <p
+                        class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#e8440a] dark:text-[#ff5a1f] mb-2">
+                        // OUR VISION</p>
+                    <h3
+                        class="text-xl font-bold mb-4 text-[#0f172a] dark:text-[#f8fafc] tracking-tight group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Competitive Modernization
+                    </h3>
+                    <p class="text-[0.85rem] text-[#475569] dark:text-[#94a3b8] leading-[1.8] grow">
+                        Making all kinds of businesses modern by digitizing them.
+                        So that they can advance themselves in the midst of any competition and adversity,
+                        standing resilient through modern digital strategy.
+                    </p>
+                </div>
+
+                <!-- Strength Card -->
+                <div
+                    class="p-10 bg-white dark:bg-[#1e293b] flex flex-col h-full relative group hover:shadow-2xl hover:shadow-[#0f172a]/5 transition-all duration-300">
+                    <div
+                        class="w-11 h-11 flex items-center justify-center bg-[#f1f5f9] dark:bg-[#334155] border border-[#cbd5e1] dark:border-[#334155] mb-6 text-[#e8440a] dark:text-[#ff5a1f] group-hover:bg-[#e8440a] dark:group-hover:bg-[#ff5a1f] group-hover:border-[#e8440a] dark:group-hover:border-[#ff5a1f] group-hover:text-white transition-all duration-300">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <p
+                        class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#e8440a] dark:text-[#ff5a1f] mb-2">
+                        // OUR STRENGTH</p>
+                    <h3
+                        class="text-xl font-bold mb-4 text-[#0f172a] dark:text-[#f8fafc] tracking-tight group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Expert Corporate Teams
+                    </h3>
+                    <p class="text-[0.85rem] text-[#475569] dark:text-[#94a3b8] leading-[1.8] grow">
+                        Our main strength is our team of experts.
+                        Those who have expanded and broadened their knowledge through multifaceted work during their
+                        long careers in this sector. Now they are always ready to take any challenge.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- mission, vision, strength end -->
+
+    <!-- CEO message start -->
+    <section class="py-14 md:py-20 bg-white dark:bg-[#0f172a] fu">
+        <div class="max-w-[1340px] mx-auto px-6 md:px-10">
+            <div
+                class="grid grid-cols-1 lg:grid-cols-12 border-l border-t border-r border-[#cbd5e1] dark:border-[#334155]">
+
+                <!-- CEO Photo Grid (4 Columns) -->
+                <div
+                    class="lg:col-span-4 p-8 md:p-10 border-b lg:border-b-0 lg:border-r border-[#cbd5e1] dark:border-[#334155] bg-neutral-50 dark:bg-[#1e293b]/50 flex flex-col justify-center items-center text-center gap-4">
+                    <div class="w-full flex justify-center">
+                        <div
+                            class="relative w-48 h-48 border-4 border-[#e8440a] dark:border-[#ff5a1f] overflow-hidden rounded-full shadow-lg">
+                            <!-- CEO Portrait Initials Vector Box -->
+                            <div
+                                class="w-full h-full bg-[#13264d] dark:bg-[#0f172a] flex items-center justify-center text-white font-extrabold text-5xl tracking-widest">
+                                <img src="img/ceo.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-[1.2rem] font-bold text-[#0f172a] dark:text-[#f8fafc] tracking-tight">
+                            Engr. Abubokor Hanip
+                        </h3>
+                        <p
+                            class="text-[0.68rem] font-bold tracking-[0.15em] text-[#e8440a] dark:text-[#ff5a1f] uppercase mt-1">
+                            Founder & CEO, PeopleNTech
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CEO Message Text (8 Columns) -->
+                <div
+                    class="lg:col-span-8 p-8 md:p-12 border-[#cbd5e1] dark:border-[#334155] flex flex-col justify-center">
+                    <p
+                        class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] mb-4">
+                        // Leadership Vision
+                    </p>
+                    <h2 class="text-[1.8rem] md:text-[2.2rem] font-extrabold leading-[1.15] tracking-tight mb-6">
+                        Message From The Founder
+                    </h2>
+                    <div class="text-[0.9rem] text-[#475569] dark:text-[#94a3b8] leading-[1.8] space-y-4 text-justify">
+                        <p>
+                            "It gives me great pleasure to share that PeopleNTech has established itself as a trusted
+                            name
+                            in the mainstream U.S. IT industry, helping thousands of students and professionals build
+                            successful IT careers.
+                            To date, we have proudly trained over 60,000 individuals globally, empowering them to secure
+                            rewarding positions
+                            across diverse technology sectors."
+                        </p>
+                        <p>
+                            "At PeopleNTech, client and student satisfaction is the cornerstone of our success.
+                            Our reputation is built on quality, consistency, and a commitment to excellence.
+                            Our greatest assets are our highly qualified trainers and diverse team members, whose
+                            professionalism,
+                            deep knowledge, and passion for teaching drive everything we do."
+                        </p>
+                        <p
+                            class="font-medium text-[#0f172a] dark:text-[#f8fafc] border-l-2 border-[#e8440a] dark:border-[#ff5a1f] pl-4 italic">
+                            "We believe that every individual has unique potential — our purpose is to help uncover it,
+                            nurture it, and turn it into success."
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- CEO message end -->
+
+    <!-- Sister concerns start -->
+    <section class="py-14 md:py-20 bg-white dark:bg-[#0f172a] border-t border-[#cbd5e1] dark:border-[#334155] fu">
+        <div class="max-w-[1340px] mx-auto px-6 md:px-10">
+            <div class="grid grid-cols-1 border-l border-t border-[#cbd5e1] dark:border-[#334155]">
+                <div class="p-8 md:p-12 border-r border-b border-[#cbd5e1] dark:border-[#334155]">
+                    <p
+                        class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] mb-[.9rem]">
+                        // Synergy Ecosystem
+                    </p>
+                    <h2 class="text-[2rem] md:text-[3.2rem] font-extrabold leading-[1.08] tracking-tight">
+                        Our Sister <span class="text-[#e8440a] dark:text-[#ff5a1f]">Concerns</span>
+                    </h2>
+                    <p class="text-[0.88rem] text-[#475569] dark:text-[#94a3b8] mt-3 max-w-[500px]">
+                        PeopleNTech functions alongside an elite network of tech, education, media, and placement groups
+                        to offer complete career lifecycles.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 12 concerns grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 border-l border-[#cbd5e1] dark:border-[#334155]">
+
+                <!-- Concern 1 -->
+                <div
+                    class="p-6 md:p-8 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/30 group hover:bg-[#e8440a]/5 dark:hover:bg-[#ff5a1f]/5 transition-colors duration-300">
+                    <div
+                        class="text-[0.65rem] font-bold tracking-widest text-[#cbd5e1] dark:text-[#334155] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors mb-2">
+                        01. STREAMING MEDIA</div>
+                    <h4
+                        class="text-[1rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        NRB Connect</h4>
+                    <p class="text-[0.74rem] text-[#475569] dark:text-[#94a3b8] mt-1.5 leading-relaxed">Diaspora-centric
+                        community connections and media broadcasting.</p>
+                </div>
+
+                <!-- Concern 2 -->
+                <div
+                    class="p-6 md:p-8 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/30 group hover:bg-[#e8440a]/5 dark:hover:bg-[#ff5a1f]/5 transition-colors duration-300">
+                    <div
+                        class="text-[0.65rem] font-bold tracking-widest text-[#cbd5e1] dark:text-[#334155] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors mb-2">
+                        02. SOCIAL IMPACT</div>
+                    <h4
+                        class="text-[1rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Creating Better Bangladesh</h4>
+                    <p class="text-[0.74rem] text-[#475569] dark:text-[#94a3b8] mt-1.5 leading-relaxed">Sustainable
+                        social development and non-profit initiatives.</p>
+                </div>
+
+                <!-- Concern 3 -->
+                <div
+                    class="p-6 md:p-8 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/30 group hover:bg-[#e8440a]/5 dark:hover:bg-[#ff5a1f]/5 transition-colors duration-300">
+                    <div
+                        class="text-[0.65rem] font-bold tracking-widest text-[#cbd5e1] dark:text-[#334155] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors mb-2">
+                        03. GLOBAL ACADEMICS</div>
+                    <h4
+                        class="text-[1rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Higher Study USA</h4>
+                    <p class="text-[0.74rem] text-[#475569] dark:text-[#94a3b8] mt-1.5 leading-relaxed">Guidance and
+                        consultancy for university pathways in the USA.</p>
+                </div>
+
+                <!-- Concern 4 -->
+                <div
+                    class="p-6 md:p-8 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/30 group hover:bg-[#e8440a]/5 dark:hover:bg-[#ff5a1f]/5 transition-colors duration-300">
+                    <div
+                        class="text-[0.65rem] font-bold tracking-widest text-[#cbd5e1] dark:text-[#334155] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors mb-2">
+                        04. PLACEMENT PORTAL</div>
+                    <h4
+                        class="text-[1rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        JobNResume</h4>
+                    <p class="text-[0.74rem] text-[#475569] dark:text-[#94a3b8] mt-1.5 leading-relaxed">Custom resume
+                        building and job placement assistance.</p>
+                </div>
+
+                <!-- Concern 5 -->
+                <div
+                    class="p-6 md:p-8 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/30 group hover:bg-[#e8440a]/5 dark:hover:bg-[#ff5a1f]/5 transition-colors duration-300">
+                    <div
+                        class="text-[0.65rem] font-bold tracking-widest text-[#cbd5e1] dark:text-[#334155] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors mb-2">
+                        05. SKILLS ACADEMY</div>
+                    <h4
+                        class="text-[1rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Upscale Learning</h4>
+                    <p class="text-[0.74rem] text-[#475569] dark:text-[#94a3b8] mt-1.5 leading-relaxed">Corporate
+                        upskilling modules and specialized training.</p>
+                </div>
+
+                <!-- Concern 6 -->
+                <div
+                    class="p-6 md:p-8 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/30 group hover:bg-[#e8440a]/5 dark:hover:bg-[#ff5a1f]/5 transition-colors duration-300">
+                    <div
+                        class="text-[0.65rem] font-bold tracking-widest text-[#cbd5e1] dark:text-[#334155] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors mb-2">
+                        06. BRANDING DESIGN</div>
+                    <h4
+                        class="text-[1rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Smart Illusion</h4>
+                    <p class="text-[0.74rem] text-[#475569] dark:text-[#94a3b8] mt-1.5 leading-relaxed">Visual branding,
+                        interactive mockups, and layout design.</p>
+                </div>
+
+                <!-- Concern 7 -->
+                <div
+                    class="p-6 md:p-8 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/30 group hover:bg-[#e8440a]/5 dark:hover:bg-[#ff5a1f]/5 transition-colors duration-300">
+                    <div
+                        class="text-[0.65rem] font-bold tracking-widest text-[#cbd5e1] dark:text-[#334155] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors mb-2">
+                        07. IT HOSTING & DOMAIN</div>
+                    <h4
+                        class="text-[1rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        PNT DNS</h4>
+                    <p class="text-[0.74rem] text-[#475569] dark:text-[#94a3b8] mt-1.5 leading-relaxed">Domain
+                        registration, hosting setups, and secure DNS systems.</p>
+                </div>
+
+                <!-- Concern 8 -->
+                <div
+                    class="p-6 md:p-8 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/30 group hover:bg-[#e8440a]/5 dark:hover:bg-[#ff5a1f]/5 transition-colors duration-300">
+                    <div
+                        class="text-[0.65rem] font-bold tracking-widest text-[#cbd5e1] dark:text-[#334155] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors mb-2">
+                        08. CREATIVE OUTSOURCING</div>
+                    <h4
+                        class="text-[1rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        BDClipping Studio</h4>
+                    <p class="text-[0.74rem] text-[#475569] dark:text-[#94a3b8] mt-1.5 leading-relaxed">High-volume
+                        image editing, masking, and studio processing.</p>
+                </div>
+
+                <!-- Concern 9 -->
+                <div
+                    class="p-6 md:p-8 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/30 group hover:bg-[#e8440a]/5 dark:hover:bg-[#ff5a1f]/5 transition-colors duration-300">
+                    <div
+                        class="text-[0.65rem] font-bold tracking-widest text-[#cbd5e1] dark:text-[#334155] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors mb-2">
+                        09. CLOUD HEALTHCARE</div>
+                    <h4
+                        class="text-[1rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Care 247</h4>
+                    <p class="text-[0.74rem] text-[#475569] dark:text-[#94a3b8] mt-1.5 leading-relaxed">Cloud-assisted
+                        healthcare monitoring and data automation.</p>
+                </div>
+
+                <!-- Concern 10 -->
+                <div
+                    class="p-6 md:p-8 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/30 group hover:bg-[#e8440a]/5 dark:hover:bg-[#ff5a1f]/5 transition-colors duration-300">
+                    <div
+                        class="text-[0.65rem] font-bold tracking-widest text-[#cbd5e1] dark:text-[#334155] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors mb-2">
+                        10. ED-TECH PLAY</div>
+                    <h4
+                        class="text-[1rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Amar QUIZ</h4>
+                    <p class="text-[0.74rem] text-[#475569] dark:text-[#94a3b8] mt-1.5 leading-relaxed">Gamified
+                        learning portals and test assessment databases.</p>
+                </div>
+
+                <!-- Concern 11 -->
+                <div
+                    class="p-6 md:p-8 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/30 group hover:bg-[#e8440a]/5 dark:hover:bg-[#ff5a1f]/5 transition-colors duration-300">
+                    <div
+                        class="text-[0.65rem] font-bold tracking-widest text-[#cbd5e1] dark:text-[#334155] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors mb-2">
+                        11. DEVELOPMENT GROUP</div>
+                    <h4
+                        class="text-[1rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Volume Coder</h4>
+                    <p class="text-[0.74rem] text-[#475569] dark:text-[#94a3b8] mt-1.5 leading-relaxed">Dedicated
+                        software outsourcing teams and microservice devs.</p>
+                </div>
+
+                <!-- Concern 12 -->
+                <div
+                    class="p-6 md:p-8 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/30 group hover:bg-[#e8440a]/5 dark:hover:bg-[#ff5a1f]/5 transition-colors duration-300">
+                    <div
+                        class="text-[0.65rem] font-bold tracking-widest text-[#cbd5e1] dark:text-[#334155] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors mb-2">
+                        12. TRAINING SYSTEM</div>
+                    <h4
+                        class="text-[1rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        GTS</h4>
+                    <p class="text-[0.74rem] text-[#475569] dark:text-[#94a3b8] mt-1.5 leading-relaxed">Global training
+                        systems and learning management infrastructures.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Sister concerns end -->
+
+    <!-- footer start -->
+    <footer class="bg-[#13264d] border-t border-white/10 dark:border-white/10 w-full">
+        <div class="max-w-[1340px] mx-auto px-6 md:px-10">
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] border-l border-white/10 dark:border-white/10">
+                <div class="p-8 md:p-12 border-r border-white/10 dark:border-white/10">
+                    <div class="flex items-center gap-2 mb-4">
+                        <!-- logo -->
+                        <img src="img/logo.png" class="w-46 bg-white px-3 py-2 rounded-full" alt="Logo">
+                    </div>
+                    <p class="text-[.8rem] text-white/70 dark:text-white/70 line-height-[1.9] max-w-[240px]">Get Smart
+                        Solutions to all your problems. Empowering businesses through technology since 2014.</p>
+                    <div class="flex gap-2 mt-5">
+                        <a href="#"
+                            class="w-[30px] h-[30px] border border-white/20 dark:border-white/20 flex items-center justify-center font-bold text-[.65rem] text-white/70 dark:text-white/70 no-underline hover:border-white dark:hover:border-white">f</a>
+                        <a href="#"
+                            class="w-[30px] h-[30px] border border-white/20 dark:border-white/20 flex items-center justify-center font-bold text-[.65rem] text-white/70 dark:text-white/70 no-underline hover:border-white dark:hover:border-white">in</a>
+                        <a href="#"
+                            class="w-[30px] h-[30px] border border-white/20 dark:border-white/20 flex items-center justify-center font-bold text-[.65rem] text-white/70 dark:text-white/70 no-underline hover:border-white dark:hover:border-white">tw</a>
+                    </div>
+                </div>
+                <div class="p-10 border-r border-white/10 dark:border-white/10">
+                    <div
+                        class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-white/70 dark:text-white/70 mb-4">
+                        Other Services</div>
+                    <ul class="list-none m-0 p-0 flex flex-col gap-2.5">
+                        <li><a href="index.html#services"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">IT
+                                Training</a></li>
+                        <li><a href="index.html#services"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">Branding
+                                & Marketing</a></li>
+                        <li><a href="index.html#services"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">Managed
+                                IT</a></li>
+                        <li><a href="index.html#services"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">CI/CD</a>
+                        </li>
+                        <li><a href="index.html#services"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">QA
+                                Testing</a></li>
+                    </ul>
+                </div>
+                <div class="p-10 border-r border-white/10 dark:border-white/10">
+                    <div
+                        class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-white/70 dark:text-white/70 mb-4">
+                        Company</div>
+                    <ul class="list-none m-0 p-0 flex flex-col gap-2.5">
+                        <li><a href="about.html"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">About
+                                Us</a></li>
+                        <li><a href="index.html"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">Blog</a>
+                        </li>
+                        <li><a href="index.html"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">Careers</a>
+                        </li>
+                        <li><a href="index.html#contact"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">Contact
+                                Us</a></li>
+                        <li><a href="#"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">Privacy
+                                Policy</a></li>
+                    </ul>
+                </div>
+                <div class="p-10 border-r border-white/10 dark:border-white/10">
+                    <div
+                        class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-white/70 dark:text-white/70 mb-4">
+                        Offices</div>
+                    <ul class="list-none m-0 p-0 flex flex-col gap-2.5">
+                        <li class="text-[.8rem] text-white/70 dark:text-white/70">🇧🇩 Dhaka, Bangladesh</li>
+                        <li class="text-[.8rem] text-white/70 dark:text-white/70">🇺🇸 Virginia, USA</li>
+                        <li class="text-[.8rem] text-white/70 dark:text-white/70">🗽 New York, USA</li>
+                        <li class="text-[.8rem] text-white/70 dark:text-white/70">🏙️ New Jersey, USA</li>
+                        <li class="text-[.8rem] text-white/70 dark:text-white/70">🇺🇸 Pennsylvania, USA</li>
+                        <li class="text-[.8rem] text-white/70 dark:text-white/70">🇨🇦 Kitchener, Canada</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- copyright -->
+    <div class="bg-[#13264d] border-t border-white/10 dark:border-white/10">
+        <div class="max-w-[1340px] mx-auto px-6 md:px-10 ">
+            <div class="flex items-center justify-between flex-wrap gap-4 py-[1.1rem]">
+                <span class="text-[.68rem] text-white/70 dark:text-white/70 tracking-wider uppercase">© 2026
+                    PeopleNTech. ALL RIGHTS RESERVED.</span>
+                <div class="flex gap-8">
+                    <a href="#"
+                        class="text-[.68rem] text-white/70 dark:text-white/70 no-underline tracking-wider uppercase">Privacy
+                        Policy</a>
+                    <a href="#"
+                        class="text-[.68rem] text-white/70 dark:text-white/70 no-underline tracking-wider uppercase">Terms
+                        of Service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme variations switch btn -->
+    <div class="fixed top-1/2 -translate-y-1/2 right-4 flex flex-col gap-2 z-50">
+        <span class="text-[.68rem] text-[#475569] dark:text-[#94a3b8] tracking-wider uppercase">Theme
+            variations</span>
+        <a href="v1.html"
+            class="inline-flex items-center justify-center border border-[#e2e8f0] dark:border-[#334155] bg-white dark:bg-[#111827] text-blue-600 dark:text-blue-400 text-[.65rem] font-medium tracking-wider uppercase px-4 py-2 rounded-lg shadow-sm hover:bg-[#f1f5f9] dark:hover:bg-[#1e293b]">Version-1</a>
+        <a href="v2.html"
+            class="inline-flex items-center justify-center border border-[#e2e8f0] dark:border-[#334155] bg-white dark:bg-[#111827] text-orange-600 dark:text-orange-400 text-[.65rem] font-medium tracking-wider uppercase px-4 py-2 rounded-lg shadow-sm hover:bg-[#f1f5f9] dark:hover:bg-[#1e293b]">Version-2</a>
+        <a href="v3.html"
+            class="inline-flex items-center justify-center border border-[#e2e8f0] dark:border-[#334155] bg-white dark:bg-[#111827] text-emerald-600 dark:text-emerald-400 text-[.65rem] font-medium tracking-wider uppercase px-4 py-2 rounded-lg shadow-sm hover:bg-[#f1f5f9] dark:hover:bg-[#1e293b]">Version-3</a>
+        <a href="v4.html"
+            class="inline-flex items-center justify-center border border-[#e2e8f0] dark:border-[#334155] bg-white dark:bg-[#111827] text-purple-600 dark:text-purple-400 text-[.65rem] font-medium tracking-wider uppercase px-4 py-2 rounded-lg shadow-sm hover:bg-[#f1f5f9] dark:hover:bg-[#1e293b]">Version-4</a>
+    </div>
+
+    <script>
+        // Responsive nav
+        function setNav() {
+            const w = window.innerWidth;
+            document.getElementById('desktop-nav').style.display = w < 768 ? 'none' : 'flex';
+            document.getElementById('nav-cta').style.display = w < 768 ? 'none' : 'inline-flex';
+            document.getElementById('hbg').style.display = w < 768 ? 'flex' : 'none';
+        }
+        setNav(); window.addEventListener('resize', setNav);
+
+        // Mobile menu
+        document.getElementById('hbg').addEventListener('click', () => { document.getElementById('mmenu').classList.remove('hidden'); document.getElementById('mmenu').classList.add('flex'); });
+        document.getElementById('close-m').addEventListener('click', () => { document.getElementById('mmenu').classList.add('hidden'); document.getElementById('mmenu').classList.remove('flex'); });
+        document.querySelectorAll('.ml').forEach(l => l.addEventListener('click', () => { document.getElementById('mmenu').classList.add('hidden'); document.getElementById('mmenu').classList.remove('flex'); }));
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function (e) {
+                const t = document.querySelector(this.getAttribute('href'));
+                if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+            });
+        });
+
+        // Fade-up animation entry behavior
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('!opacity-100', '!translate-y-0'); });
+        }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.fu').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-7', 'transition-all', 'duration-[600ms]', 'ease-out');
+            io.observe(el);
+        });
+
+        // Counter
+        function animCount(el, target, suffix) {
+            const dur = 1600, start = performance.now();
+            const run = now => {
+                const p = Math.min((now - start) / dur, 1);
+                const ease = 1 - Math.pow(1 - p, 3);
+                el.textContent = Math.floor(ease * target) + suffix;
+                if (p < 1) requestAnimationFrame(run);
+                else el.textContent = target + suffix;
+            };
+            requestAnimationFrame(run);
+        }
+        const sio = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    document.querySelectorAll('[data-target]').forEach(el => {
+                        animCount(el, +el.dataset.target, el.dataset.suffix || '');
+                    });
+                    sio.disconnect();
+                }
+            });
+        }, { threshold: 0.4 });
+        const sr = document.getElementById('stats-row');
+        if (sr) sio.observe(sr);
+
+        // Dark mode implementation handling state variations via attribute changes
+        const html = document.documentElement;
+        const toggle = document.getElementById('theme-toggle');
+        const iconSun = document.getElementById('icon-sun');
+        const iconMoon = document.getElementById('icon-moon');
+
+        function applyTheme(dark) {
+            if (dark) {
+                html.classList.add('dark');
+                iconSun.style.display = 'none';
+                iconMoon.style.display = 'block';
+            } else {
+                html.classList.remove('dark');
+                iconSun.style.display = 'block';
+                iconMoon.style.display = 'none';
+            }
+        }
+
+        const saved = localStorage.getItem('pt-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        applyTheme(saved ? saved === 'dark' : prefersDark);
+
+        toggle.addEventListener('click', () => {
+            const isDark = html.classList.contains('dark');
+            applyTheme(!isDark);
+            localStorage.setItem('pt-theme', !isDark ? 'dark' : 'light');
+        });
+    </script>
+</body>
+
+</html>
