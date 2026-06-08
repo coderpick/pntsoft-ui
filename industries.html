@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex">
 
-    <title>Contact Us - PeopleNTech Software</title>
+    <title>Industries We Serve - PeopleNTech Software</title>
     <link rel="preconnect" href="https://fonts.bunny.net" />
     <link href="https://fonts.bunny.net/css?family=manrope:300,400,500,600,700,800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
         @import "tailwindcss";
@@ -38,11 +37,6 @@
 
     .btn-secondary {
       @apply border border-[#cbd5e1] dark:border-[#334155] bg-transparent text-[#0f172a] dark:text-[#f8fafc] hover:border-[#0f172a] dark:hover:border-[#f8fafc];
-    }
-
-    @keyframes marquee {
-      0% { transform: translateX(0%); }
-      100% { transform: translateX(-50%); }
     }
 
     @keyframes fup {
@@ -148,8 +142,8 @@
                 <!-- Industries Dropdown -->
                 <div class="relative group flex items-center gap-1 py-4 cursor-pointer">
                     <a href="industries.html"
-                        class="text-[0.75rem] font-medium tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] group-hover:text-[#0f172a] dark:group-hover:text-[#f8fafc] transition-colors">Industries</a>
-                    <svg class="w-3 h-3 text-[#475569] dark:text-[#94a3b8] group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        class="text-[0.75rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] transition-colors">Industries</a>
+                    <svg class="w-3 h-3 text-[#0f172a] dark:text-[#f8fafc] group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                     <div class="absolute left-1/2 -translate-x-1/2 top-full w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-250 pt-2 z-50">
@@ -181,7 +175,7 @@
                 </div>
 
                 <a href="contact.html"
-                    class="text-[0.75rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] transition-colors">Contact</a>
+                    class="text-[0.75rem] font-medium tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#0f172a] dark:hover:text-[#f8fafc] transition-colors">Contact</a>
             </div>
             <div class="flex items-center gap-[.9rem]">
                 <a href="#contact" id="nav-cta" class="hidden md:btn btn-primary !py-2.5 !px-5">Start a Project</a>
@@ -231,150 +225,217 @@
         <a href="index.html#expertise"
             class="ml text-[1.7rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] no-underline">Expertise</a>
         <a href="contact.html"
-            class="ml text-[1.7rem] font-extrabold text-[#e8440a] dark:text-[#ff5a1f] no-underline">Contact</a>
+            class="ml text-[1.7rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] no-underline">Contact</a>
         <a href="index.html#contact" class="ml btn btn-primary mt-[.8rem]">Start
             a Project →</a>
     </div>
 
     <!-- page banner / hero start -->
-    <section class="relative bg-cover bg-center overflow-hidden py-20 md:py-24 text-center" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop');">
+    <section class="relative bg-cover bg-center overflow-hidden py-20 md:py-24 text-center"
+        style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop');">
         <!-- Blur backdrop overlay -->
         <div class="absolute inset-0 bg-[#0f172a]/60 dark:bg-[#0b0f19]/70 backdrop-blur-[6px]"></div>
-        
+
         <div class="relative max-w-[1340px] mx-auto px-6 md:px-10 z-10">
-            <span class="text-[0.65rem] font-bold tracking-[0.25em] uppercase text-[#e8440a] dark:text-[#ff5a1f] mb-3 block animate-[fup_.7s_ease_both]">// GET IN TOUCH</span>
+            <span
+                class="text-[0.65rem] font-bold tracking-[0.25em] uppercase text-[#e8440a] dark:text-[#ff5a1f] mb-3 block animate-[fup_.7s_ease_both]">//
+                INDUSTRIES</span>
             <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white animate-[fup_.7s_.1s_ease_both]">
-                Contact Us
+                Industries We Serve
             </h1>
             <div class="h-[2px] w-12 bg-[#e8440a] dark:bg-[#ff5a1f] mx-auto mt-4 rounded-full"></div>
         </div>
     </section>
     <!-- page banner / hero end -->
 
-    <!-- main contact grid start -->
+    <!-- industries cards grid start -->
     <section class="py-14 md:py-20 bg-white dark:bg-[#0f172a] fu">
         <div class="max-w-[1340px] mx-auto px-6 md:px-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 border-l border-t border-r border-b border-[#cbd5e1] dark:border-[#334155]">
+            
+            <div class="text-center mb-12">
+                <p class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#e8440a] dark:text-[#ff5a1f] mb-2">// OUR MARKETS</p>
+                <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-[#0f172a] dark:text-[#f8fafc]">Tailored Engineering For Key Sectors</h2>
+                <p class="mt-4 max-w-xl mx-auto text-[#475569] dark:text-[#94a3b8] text-[0.88rem] leading-relaxed">
+                    We combine domain-specific operational expertise with premium modern technologies to solve complex backend integrations, optimize data flows, and secure transaction nodes.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-l border-t border-[#cbd5e1] dark:border-[#334155]">
                 
-                <!-- Left Column: Office Coordinates (7 Columns) -->
-                <div class="lg:col-span-7 p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-[#cbd5e1] dark:border-[#334155]">
-                    <p class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#e8440a] dark:text-[#ff5a1f] mb-[.9rem]">
-                        // Our Global Networks
-                    </p>
-                    <h2 class="text-[1.8rem] md:text-[2.4rem] font-extrabold leading-[1.1] tracking-tight mb-8">
-                        PeopleNTech Offices
-                    </h2>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- Office 1: Virginia HQ -->
-                        <div class="p-5 border border-[#cbd5e1] dark:border-[#334155] bg-[#edeff5]/25 dark:bg-[#1e293b]/20 group hover:border-[#e8440a] dark:hover:border-[#ff5a1f] transition-all">
-                            <span class="text-xl">🇺🇸</span>
-                            <h4 class="text-[0.85rem] font-bold uppercase tracking-wider text-[#0f172a] dark:text-[#f8fafc] mt-2 mb-1.5">Virginia Office (HQ)</h4>
-                            <p class="text-[0.78rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
-                                Virginia, USA
-                            </p>
+                <!-- Healthcare Card -->
+                <div class="p-8 md:p-10 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/20 flex flex-col justify-between group hover:shadow-2xl transition-all duration-300">
+                    <div>
+                        <div class="w-12 h-12 flex items-center justify-center bg-[#f1f5f9] dark:bg-[#334155] text-[#e8440a] dark:text-[#ff5a1f] border border-[#cbd5e1] dark:border-[#334155] mb-6 group-hover:bg-[#e8440a] dark:group-hover:bg-[#ff5a1f] group-hover:text-white transition-all duration-300">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
                         </div>
-
-                        <!-- Office 2: New York -->
-                        <div class="p-5 border border-[#cbd5e1] dark:border-[#334155] bg-[#edeff5]/25 dark:bg-[#1e293b]/20 group hover:border-[#e8440a] dark:hover:border-[#ff5a1f] transition-all">
-                            <span class="text-xl">🗽</span>
-                            <h4 class="text-[0.85rem] font-bold uppercase tracking-wider text-[#0f172a] dark:text-[#f8fafc] mt-2 mb-1.5">New York Office</h4>
-                            <p class="text-[0.78rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
-                                New York, USA
-                            </p>
-                        </div>
-
-                        <!-- Office 3: New Jersey -->
-                        <div class="p-5 border border-[#cbd5e1] dark:border-[#334155] bg-[#edeff5]/25 dark:bg-[#1e293b]/20 group hover:border-[#e8440a] dark:hover:border-[#ff5a1f] transition-all">
-                            <span class="text-xl">🏙️</span>
-                            <h4 class="text-[0.85rem] font-bold uppercase tracking-wider text-[#0f172a] dark:text-[#f8fafc] mt-2 mb-1.5">New Jersey Office</h4>
-                            <p class="text-[0.78rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
-                                New Jersey, USA
-                            </p>
-                        </div>
-
-                        <!-- Office 4: Pennsylvania -->
-                        <div class="p-5 border border-[#cbd5e1] dark:border-[#334155] bg-[#edeff5]/25 dark:bg-[#1e293b]/20 group hover:border-[#e8440a] dark:hover:border-[#ff5a1f] transition-all">
-                            <span class="text-xl">🇺🇸</span>
-                            <h4 class="text-[0.85rem] font-bold uppercase tracking-wider text-[#0f172a] dark:text-[#f8fafc] mt-2 mb-1.5">Pennsylvania (Upper Darby) Office</h4>
-                            <p class="text-[0.78rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
-                                6796 Market St, 2nd FL, Upper Darby, PA 19082
-                            </p>
-                        </div>
-
-                        <!-- Office 5: Canada -->
-                        <div class="p-5 border border-[#cbd5e1] dark:border-[#334155] bg-[#edeff5]/25 dark:bg-[#1e293b]/20 group hover:border-[#e8440a] dark:hover:border-[#ff5a1f] transition-all">
-                            <span class="text-xl">🇨🇦</span>
-                            <h4 class="text-[0.85rem] font-bold uppercase tracking-wider text-[#0f172a] dark:text-[#f8fafc] mt-2 mb-1.5">Canada Office</h4>
-                            <p class="text-[0.78rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
-                                502 Zeller Drive Kitchener ON N2A 0B3 Canada
-                            </p>
-                        </div>
-
-                        <!-- Office 6: Dhaka -->
-                        <div class="p-5 border border-[#cbd5e1] dark:border-[#334155] bg-[#edeff5]/25 dark:bg-[#1e293b]/20 group hover:border-[#e8440a] dark:hover:border-[#ff5a1f] transition-all">
-                            <span class="text-xl">🇧🇩</span>
-                            <h4 class="text-[0.85rem] font-bold uppercase tracking-wider text-[#0f172a] dark:text-[#f8fafc] mt-2 mb-1.5">Dhaka Office</h4>
-                            <p class="text-[0.78rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
-                                Dhaka, Bangladesh
-                            </p>
-                        </div>
+                        <h3 class="text-xl font-bold mb-3 tracking-tight text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">Healthcare</h3>
+                        <p class="text-[0.82rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed mb-6">
+                            Telemedicine, secure EMR/EHR system integrations, client portals, and healthcare diagnostics engineered to exceed strict medical compliance.
+                        </p>
+                        <ul class="list-none p-0 m-0 mb-8 space-y-2 text-[0.78rem] text-[#475569] dark:text-[#94a3b8]">
+                            <li class="flex items-center gap-2">
+                                <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span> HIPAA/HL7 Compliant Platforms
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span> Telehealth Video Streaming
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span> Clinical Workflow Automation
+                            </li>
+                        </ul>
                     </div>
-
-                    <div class="mt-8 border-t border-[#cbd5e1] dark:border-[#334155] pt-6 flex flex-wrap gap-x-8 gap-y-4">
-                        <div>
-                            <div class="text-[0.62rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] mb-0.5">Primary Email</div>
-                            <a href="mailto:info@pntsoft.com" class="text-[0.88rem] font-semibold text-[#0f172a] dark:text-[#f8fafc] hover:text-[#e8440a] dark:hover:text-[#ff5a1f]">info@pntsoft.com</a>
-                        </div>
-                        <div>
-                            <div class="text-[0.62rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] mb-0.5">Phone Line</div>
-                            <a href="tel:+18005550199" class="text-[0.88rem] font-semibold text-[#0f172a] dark:text-[#f8fafc] hover:text-[#e8440a] dark:hover:text-[#ff5a1f]">+1 (800) 555-0199</a>
-                        </div>
-                    </div>
+                    <a href="healthcare.html" class="btn btn-secondary text-center w-full group-hover:bg-[#0f172a] group-hover:text-white dark:group-hover:bg-[#f8fafc] dark:group-hover:text-[#0b0f19] transition-all">Explore Sector →</a>
                 </div>
 
-                <!-- Right Column: Premium Contact Form (5 Columns) -->
-                <div class="lg:col-span-5 p-8 md:p-12 border-[#cbd5e1] dark:border-[#334155] bg-[#f8fafc] dark:bg-[#1e293b]/10 flex flex-col justify-center">
-                    <form id="cform">
-                        <div class="mb-5">
-                            <label class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] block mb-2">Name</label>
-                            <input type="text" placeholder="John Doe"
-                                class="w-full bg-transparent border-0 border-b border-[#cbd5e1] dark:border-[#334155] py-2.5 text-[.9rem] text-[#0f172a] dark:text-[#f8fafc] outline-none focus:border-[#e8440a] dark:focus:border-[#ff5a1f] placeholder-[#475569] dark:placeholder-[#94a3b8] transition-colors"
-                                required />
+                <!-- Logistics Card -->
+                <div class="p-8 md:p-10 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/20 flex flex-col justify-between group hover:shadow-2xl transition-all duration-300">
+                    <div>
+                        <div class="w-12 h-12 flex items-center justify-center bg-[#f1f5f9] dark:bg-[#334155] text-[#e8440a] dark:text-[#ff5a1f] border border-[#cbd5e1] dark:border-[#334155] mb-6 group-hover:bg-[#e8440a] dark:group-hover:bg-[#ff5a1f] group-hover:text-white transition-all duration-300">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="1" y="3" width="15" height="13" rx="2" ry="2"></rect>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                            </svg>
                         </div>
-                        <div class="mb-5">
-                            <label class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] block mb-2">Email</label>
-                            <input type="email" placeholder="john@company.com"
-                                class="w-full bg-transparent border-0 border-b border-[#cbd5e1] dark:border-[#334155] py-2.5 text-[.9rem] text-[#0f172a] dark:text-[#f8fafc] outline-none focus:border-[#e8440a] dark:focus:border-[#ff5a1f] placeholder-[#475569] dark:placeholder-[#94a3b8] transition-colors"
-                                required />
-                        </div>
-                        <div class="mb-5">
-                            <label class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] block mb-2">Phone</label>
-                            <input type="tel" placeholder="+1 (555) 000-0000"
-                                class="w-full bg-transparent border-0 border-b border-[#cbd5e1] dark:border-[#334155] py-2.5 text-[.9rem] text-[#0f172a] dark:text-[#f8fafc] outline-none focus:border-[#e8440a] dark:focus:border-[#ff5a1f] placeholder-[#475569] dark:placeholder-[#94a3b8] transition-colors" />
-                        </div>
-                        <div class="mb-6">
-                            <label class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] block mb-2">Message</label>
-                            <textarea rows="4" placeholder="How can we help you?"
-                                class="w-full bg-transparent border-0 border-b border-[#cbd5e1] dark:border-[#334155] py-2.5 text-[.9rem] text-[#0f172a] dark:text-[#f8fafc] outline-none focus:border-[#e8440a] dark:focus:border-[#ff5a1f] placeholder-[#475569] dark:placeholder-[#94a3b8] transition-colors resize-none"></textarea>
-                        </div>
-                        <div class="flex items-center justify-between flex-wrap gap-4">
-                            <button type="submit" class="btn btn-primary w-full md:w-auto">Send Message →</button>
-                        </div>
-                    </form>
-                    <div id="fsuccess" class="hidden text-center py-10">
-                        <div class="text-[2rem] text-[#e8440a] dark:text-[#ff5a1f] mb-3">✓</div>
-                        <h3 class="text-[1.15rem] font-extrabold mb-1.5">Message Sent!</h3>
-                        <p class="text-[#475569] dark:text-[#94a3b8] text-[.85rem] leading-relaxed">
-                            Thank you for reaching out. We will get back to you within 24 hours.
+                        <h3 class="text-xl font-bold mb-3 tracking-tight text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">Logistics</h3>
+                        <p class="text-[0.82rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed mb-6">
+                            Supply chain tracking, fleet routers, automated warehouse layouts, delivery dispatcher nodes, and IoT hardware syncing systems.
                         </p>
+                        <ul class="list-none p-0 m-0 mb-8 space-y-2 text-[0.78rem] text-[#475569] dark:text-[#94a3b8]">
+                            <li class="flex items-center gap-2">
+                                <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span> GPS & Fleet Routing APIs
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span> Warehouse Inventory Sync
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span> Driver Dispatcher Apps
+                            </li>
+                        </ul>
                     </div>
+                    <a href="logistics.html" class="btn btn-secondary text-center w-full group-hover:bg-[#0f172a] group-hover:text-white dark:group-hover:bg-[#f8fafc] dark:group-hover:text-[#0b0f19] transition-all">Explore Sector →</a>
+                </div>
+
+                <!-- Retail & eCommerce Card -->
+                <div class="p-8 md:p-10 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/20 flex flex-col justify-between group hover:shadow-2xl transition-all duration-300">
+                    <div>
+                        <div class="w-12 h-12 flex items-center justify-center bg-[#f1f5f9] dark:bg-[#334155] text-[#e8440a] dark:text-[#ff5a1f] border border-[#cbd5e1] dark:border-[#334155] mb-6 group-hover:bg-[#e8440a] dark:group-hover:bg-[#ff5a1f] group-hover:text-white transition-all duration-300">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 tracking-tight text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">Retail & eCommerce</h3>
+                        <p class="text-[0.82rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed mb-6">
+                            High-volume multi-vendor online stores, automated POS synchronizations, custom conversion optimization checkout funnels, and payment layers.
+                        </p>
+                        <ul class="list-none p-0 m-0 mb-8 space-y-2 text-[0.78rem] text-[#475569] dark:text-[#94a3b8]">
+                            <li class="flex items-center gap-2">
+                                <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span> Global Payment Gateways
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span> Multi-Vendor Store Architecture
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span> Real-Time Stock Updates
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="retail-ecommerce.html" class="btn btn-secondary text-center w-full group-hover:bg-[#0f172a] group-hover:text-white dark:group-hover:bg-[#f8fafc] dark:group-hover:text-[#0b0f19] transition-all">Explore Sector →</a>
+                </div>
+
+                <!-- Tour & Travel Card -->
+                <div class="p-8 md:p-10 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/20 flex flex-col justify-between group hover:shadow-2xl transition-all duration-300">
+                    <div>
+                        <div class="w-12 h-12 flex items-center justify-center bg-[#f1f5f9] dark:bg-[#334155] text-[#e8440a] dark:text-[#ff5a1f] border border-[#cbd5e1] dark:border-[#334155] mb-6 group-hover:bg-[#e8440a] dark:group-hover:bg-[#ff5a1f] group-hover:text-white transition-all duration-300">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 tracking-tight text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">Tour & Travel</h3>
+                        <p class="text-[0.82rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed mb-6">
+                            Dynamic travel booking engines, GDS flight/hotel API integrations, interactive custom itinerary planners, and split-fee booking models.
+                        </p>
+                        <ul class="list-none p-0 m-0 mb-8 space-y-2 text-[0.78rem] text-[#475569] dark:text-[#94a3b8]">
+                            <li class="flex items-center gap-2">
+                                <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span> Amadeus/Sabre GDS Integrations
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span> Live Booking Calendars
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span> Dynamic Fare Calculators
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="tour-travel.html" class="btn btn-secondary text-center w-full group-hover:bg-[#0f172a] group-hover:text-white dark:group-hover:bg-[#f8fafc] dark:group-hover:text-[#0b0f19] transition-all">Explore Sector →</a>
+                </div>
+
+                <!-- Education Card -->
+                <div class="p-8 md:p-10 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/20 flex flex-col justify-between group hover:shadow-2xl transition-all duration-300">
+                    <div>
+                        <div class="w-12 h-12 flex items-center justify-center bg-[#f1f5f9] dark:bg-[#334155] text-[#e8440a] dark:text-[#ff5a1f] border border-[#cbd5e1] dark:border-[#334155] mb-6 group-hover:bg-[#e8440a] dark:group-hover:bg-[#ff5a1f] group-hover:text-white transition-all duration-300">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c0 2 2.5 3 6 3s6-1 6-3v-5"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 tracking-tight text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">Education</h3>
+                        <p class="text-[0.82rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed mb-6">
+                            Scalable Learning Management Systems (LMS), online quiz & grading engines, student management platforms, and video-enabled classrooms.
+                        </p>
+                        <ul class="list-none p-0 m-0 mb-8 space-y-2 text-[0.78rem] text-[#475569] dark:text-[#94a3b8]">
+                            <li class="flex items-center gap-2">
+                                <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span> SCORM & LTI Integrations
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span> Virtual Interactive Classrooms
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span> Automated Quiz Engines
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="education.html" class="btn btn-secondary text-center w-full group-hover:bg-[#0f172a] group-hover:text-white dark:group-hover:bg-[#f8fafc] dark:group-hover:text-[#0b0f19] transition-all">Explore Sector →</a>
+                </div>
+
+                <!-- IT Consultancy Card -->
+                <div class="p-8 md:p-10 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/20 flex flex-col justify-between group hover:shadow-2xl transition-all duration-300">
+                    <div>
+                        <div class="w-12 h-12 flex items-center justify-center bg-[#f1f5f9] dark:bg-[#334155] text-[#e8440a] dark:text-[#ff5a1f] border border-[#cbd5e1] dark:border-[#334155] mb-6 group-hover:bg-[#e8440a] dark:group-hover:bg-[#ff5a1f] group-hover:text-white transition-all duration-300">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 tracking-tight text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">IT Consultancy</h3>
+                        <p class="text-[0.82rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed mb-6">
+                            Cloud migration roadmaps, legacy code security audits, custom digital transformation blueprints, DevOps pipeline automations.
+                        </p>
+                        <ul class="list-none p-0 m-0 mb-8 space-y-2 text-[0.78rem] text-[#475569] dark:text-[#94a3b8]">
+                            <li class="flex items-center gap-2">
+                                <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span> Cloud Deployment Strategy (AWS/GCP)
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span> Code Audits & Vulnerability Scans
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-[#e8440a] dark:text-[#ff5a1f]">✦</span> DevOps Pipeline Containerization
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="it-consultancy.html" class="btn btn-secondary text-center w-full group-hover:bg-[#0f172a] group-hover:text-white dark:group-hover:bg-[#f8fafc] dark:group-hover:text-[#0b0f19] transition-all">Explore Sector →</a>
                 </div>
 
             </div>
         </div>
     </section>
-    <!-- main contact grid end -->
+    <!-- industries cards grid end -->
 
     <!-- footer start -->
     <footer class="bg-[#13264d] border-t border-white/10 dark:border-white/10 w-full">
@@ -402,19 +463,19 @@
                         class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-white/70 dark:text-white/70 mb-4">
                         Other Services</div>
                     <ul class="list-none m-0 p-0 flex flex-col gap-2.5">
-                        <li><a href="index.html#services"
+                        <li><a href="service.html"
                                 class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">IT
                                 Training</a></li>
-                        <li><a href="index.html#services"
+                        <li><a href="service.html"
                                 class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">Branding
                                 & Marketing</a></li>
-                        <li><a href="index.html#services"
+                        <li><a href="service.html"
                                 class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">Managed
                                 IT</a></li>
-                        <li><a href="index.html#services"
+                        <li><a href="service.html"
                                 class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">CI/CD</a>
                         </li>
-                        <li><a href="index.html#services"
+                        <li><a href="service.html"
                                 class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">QA
                                 Testing</a></li>
                     </ul>
@@ -521,17 +582,6 @@
         document.querySelectorAll('.fu').forEach(el => {
             el.classList.add('opacity-0', 'translate-y-7', 'transition-all', 'duration-[600ms]', 'ease-out');
             io.observe(el);
-        });
-
-        // Contact form submissions layout actions
-        document.getElementById('cform').addEventListener('submit', e => {
-            e.preventDefault();
-            const btn = e.target.querySelector('button');
-            btn.textContent = 'Sending…'; btn.disabled = true;
-            setTimeout(() => {
-                document.getElementById('cform').classList.add('hidden');
-                document.getElementById('fsuccess').classList.remove('hidden');
-            }, 1100);
         });
 
         // Dark mode implementation handling state variations via attribute changes

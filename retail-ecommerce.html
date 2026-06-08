@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex">
+
+    <title>Retail software development service | PeopleNTech</title>
+    <meta name="description" content="Retail POS software integrated with inventory system. Our custom retail software will help to improve customer experience, their number & back-office operation." />
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link href="https://fonts.bunny.net/css?family=manrope:300,400,500,600,700,800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @import "tailwindcss";
+
+    @custom-variant dark (&:where(.dark, .dark *));
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      font-family: 'Manrope',sans-serif;
+      font-weight: 700;
+      font-size: .75rem;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      padding: .82rem 1.75rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background .2s, color .2s, border-color .2s;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      @apply bg-[#0f172a] dark:bg-[#f8fafc] text-[#ffffff] dark:text-[#0b0f19] hover:bg-[#e8440a] dark:hover:bg-[#ff5a1f] hover:text-white dark:hover:text-white;
+    }
+
+    .btn-secondary {
+      @apply border border-[#cbd5e1] dark:border-[#334155] bg-transparent text-[#0f172a] dark:text-[#f8fafc] hover:border-[#0f172a] dark:hover:border-[#f8fafc];
+    }
+
+    @keyframes fup {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .faq-trigger svg {
+      transition: transform 0.3s ease;
+    }
+    .faq-active .faq-trigger svg {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+
+<body
+    class="bg-[#edeff5] dark:bg-[#0b0f19] text-[#0f172a] dark:text-[#f8fafc] font-['Manrope',sans-serif] text-[15px] leading-relaxed overflow-x-hidden transition-colors duration-300">
+
+    <!-- topbar start -->
+    <div
+        class="hidden md:block border-b border-[#cbd5e1] dark:border-[#334155] bg-[#13264d] dark:bg-[#1e293b]/20 transition-colors duration-300">
+        <div
+            class="max-w-[1340px] mx-auto px-6 md:px-10 flex items-center justify-between h-[38px] text-[0.72rem] font-bold tracking-wider text-[#475569] dark:text-[#94a3b8]">
+            <div class="flex items-center gap-6">
+                <a href="mailto:info@pntsoft.com"
+                    class="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
+                    <svg class="w-3.5 h-3.5 text-white/80 dark:text-[#ff5a1f]" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span class="normal-case text-white/80">info@pntsoft.com</span>
+                </a>
+                <a href="tel:+18005550199"
+                    class="flex items-center gap-2 text-white/80 hover:text-[#e8440a] dark:hover:text-[#ff5a1f] transition-colors">
+                    <svg class="w-3.5 h-3.5 text-white/80 dark:text-[#ff5a1f]" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                        </path>
+                    </svg>
+                    <span>+1 (800) 555-0199</span>
+                </a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                    class="text-white/80 hover:text-white transition-colors" aria-label="LinkedIn">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                    class="text-white/80 hover:text-white transition-colors" aria-label="Twitter">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                    class="text-white/80 hover:text-white transition-colors" aria-label="GitHub">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- topbar end -->
+
+    <!-- nav start -->
+    <nav id="nav"
+        class="sticky top-0 left-0 right-0 z-50 bg-[#edeff5]/95 dark:bg-[#0b0f19]/95 backdrop-blur-lg border-b border-[#cbd5e1] dark:border-[#334155] transition-colors duration-300">
+        <div class="max-w-[1340px] mx-auto px-6 md:px-10 flex items-center justify-between h-[60px]">
+            <a href="index.html" class="flex items-center gap-2 no-underline group">
+                <!-- logo -->
+                <img src="img/logo.png" class="w-46" alt="Logo">
+            </a>
+            <div id="desktop-nav" class="hidden md:flex items-center gap-[2.2rem]">
+                <a href="index.html"
+                    class="text-[0.75rem] font-medium tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#0f172a] dark:hover:text-[#f8fafc] transition-colors">Home</a>
+                
+                <!-- Services Dropdown -->
+                <div class="relative group flex items-center gap-1 py-4 cursor-pointer">
+                    <a href="service.html"
+                        class="text-[0.75rem] font-medium tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] group-hover:text-[#0f172a] dark:group-hover:text-[#f8fafc] transition-colors">Services</a>
+                    <svg class="w-3 h-3 text-[#475569] dark:text-[#94a3b8] group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-full w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-250 pt-2 z-50">
+                        <div class="bg-white dark:bg-[#0f172a] border border-[#cbd5e1] dark:border-[#334155] p-2 shadow-2xl flex flex-col gap-0.5 rounded-xs">
+                            <a href="custom-software.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Custom Software</a>
+                            <a href="web-application.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Web Application</a>
+                            <a href="ecommerce-dev.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">eCommerce Dev</a>
+                            <a href="mobile-application.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Mobile Application</a>
+                            <a href="mvp-design.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">MVP Design</a>
+                            <a href="it-training-consultancy.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">IT Consultancy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Industries Dropdown -->
+                <div class="relative group flex items-center gap-1 py-4 cursor-pointer">
+                    <a href="industries.html"
+                        class="text-[0.75rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] transition-colors">Industries</a>
+                    <svg class="w-3 h-3 text-[#0f172a] dark:text-[#f8fafc] group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-full w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-250 pt-2 z-50">
+                        <div class="bg-white dark:bg-[#0f172a] border border-[#cbd5e1] dark:border-[#334155] p-2 shadow-2xl flex flex-col gap-0.5 rounded-xs">
+                            <a href="healthcare.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Healthcare</a>
+                            <a href="logistics.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Logistics</a>
+                            <a href="retail-ecommerce.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#e8440a] dark:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Retail & eCommerce</a>
+                            <a href="tour-travel.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Tour & Travel</a>
+                            <a href="education.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Education</a>
+                            <a href="it-consultancy.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">IT Consultancy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Dropdown -->
+                <div class="relative group flex items-center gap-1 py-4 cursor-pointer">
+                    <a href="about.html"
+                        class="text-[0.75rem] font-medium tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] group-hover:text-[#0f172a] dark:group-hover:text-[#f8fafc] transition-colors">About</a>
+                    <svg class="w-3 h-3 text-[#475569] dark:text-[#94a3b8] group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-full w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-250 pt-2 z-50">
+                        <div class="bg-white dark:bg-[#0f172a] border border-[#cbd5e1] dark:border-[#334155] p-2 shadow-2xl flex flex-col gap-0.5 rounded-xs">
+                            <a href="about.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">About Us</a>
+                            <a href="team.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Our Team</a>
+                            <a href="index.html#products" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="contact.html"
+                    class="text-[0.75rem] font-medium tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#0f172a] dark:hover:text-[#f8fafc] transition-colors">Contact</a>
+            </div>
+            <div class="flex items-center gap-[.9rem]">
+                <a href="#contact" id="nav-cta" class="hidden md:btn btn-primary !py-2.5 !px-5">Start a Project</a>
+
+                <button id="theme-toggle" title="Toggle dark mode"
+                    class="w-9 h-9 border border-[#cbd5e1] dark:border-[#334155] bg-transparent cursor-pointer flex items-center justify-center shrink-0 hover:border-[#0f172a] dark:hover:border-[#f8fafc] transition-colors">
+                    <svg id="icon-sun"
+                        class="w-[15px] h-[15px] stroke-[#0f172a] dark:stroke-[#f8fafc] fill-none stroke-[1.8]"
+                        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg id="icon-moon"
+                        class="w-[15px] h-[15px] stroke-[#0f172a] dark:stroke-[#f8fafc] fill-none stroke-[1.8]"
+                        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+                <button id="hbg" class="bg-transparent border-none cursor-pointer p-1 hidden flex-col gap-[5px]">
+                    <span class="block w-[22px] h-px bg-[#0f172a] dark:bg-[#f8fafc]"></span>
+                    <span class="block w-[15px] h-px bg-[#0f172a] dark:bg-[#f8fafc]"></span>
+                    <span class="block w-[19px] h-px bg-[#0f172a] dark:bg-[#f8fafc]"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- nav end -->
+
+    <!-- mobile menu -->
+    <div id="mmenu"
+        class="hidden fixed inset-0 bg-[#edeff5] dark:bg-[#0b0f19] z-50 flex-col items-center justify-center gap-7 border-b border-[#cbd5e1] dark:border-[#334155] transition-colors duration-300">
+        <button id="close-m"
+            class="absolute top-[1.4rem] right-[2rem] bg-transparent border-none cursor-pointer text-[1.3rem] text-[#0f172a] dark:text-[#f8fafc]">✕</button>
+        <a href="index.html"
+            class="ml text-[1.7rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] no-underline">Home</a>
+        <a href="about.html"
+            class="ml text-[1.7rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] no-underline">About</a>
+        <a href="service.html"
+            class="ml text-[1.7rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] no-underline">Services</a>
+        <a href="index.html#expertise"
+            class="ml text-[1.7rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] no-underline">Expertise</a>
+        <a href="contact.html"
+            class="ml text-[1.7rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] no-underline">Contact</a>
+        <a href="index.html#contact" class="ml btn btn-primary mt-[.8rem]">Start
+            a Project →</a>
+    </div>
+
+    <!-- page banner / hero start -->
+    <section class="relative bg-cover bg-center overflow-hidden py-20 md:py-24 text-center"
+        style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1600&auto=format&fit=crop');">
+        <!-- Blur backdrop overlay -->
+        <div class="absolute inset-0 bg-[#0f172a]/60 dark:bg-[#0b0f19]/70 backdrop-blur-[6px]"></div>
+
+        <div class="relative max-w-[1340px] mx-auto px-6 md:px-10 z-10">
+            <span
+                class="text-[0.65rem] font-bold tracking-[0.25em] uppercase text-[#e8440a] dark:text-[#ff5a1f] mb-3 block animate-[fup_.7s_ease_both]">Home / Industries</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white animate-[fup_.7s_.1s_ease_both]">
+                Retail Software Development Service
+            </h1>
+            <div class="h-[2px] w-12 bg-[#e8440a] dark:bg-[#ff5a1f] mx-auto mt-4 rounded-full"></div>
+        </div>
+    </section>
+    <!-- page banner / hero end -->
+
+    <!-- industry info start -->
+    <section class="py-14 md:py-20 bg-white dark:bg-[#0f172a] fu">
+        <div class="max-w-[1340px] mx-auto px-6 md:px-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 border-l border-t border-r border-[#cbd5e1] dark:border-[#334155]">
+                
+                <!-- Info Section (7 Columns) -->
+                <div class="lg:col-span-7 p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-[#cbd5e1] dark:border-[#334155]">
+                    <span class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#e8440a] dark:text-[#ff5a1f] mb-[.9rem] block">
+                        // WHY RETAIL NEED SMART SOFTWARE
+                    </span>
+                    <h2 class="text-[1.8rem] md:text-[2.4rem] font-extrabold leading-[1.1] tracking-tight mb-6">
+                        Why retail business need smart software?
+                    </h2>
+                    <p class="text-[#475569] dark:text-[#94a3b8] text-[0.88rem] leading-relaxed mb-6">
+                        Now a days there are tough competition in the market of retail business. Sellers are increasing day by day but on the contrary consumer are same in number. To survive in this industry retail shop owner need to reach a greater number of your clients at minimum time before other do.
+                    </p>
+                    <p class="text-[#475569] dark:text-[#94a3b8] text-[0.88rem] leading-relaxed">
+                        But in traditional marketing method, the retailers can't reach the goal. That's why all the retailers have started expanding their retail shop business smartly in global market.
+                    </p>
+                </div>
+
+                <!-- Stats Grid (5 Columns) -->
+                <div class="lg:col-span-5 grid grid-cols-2" id="stats-row">
+                    <div class="p-6 md:p-8 border-b border-[#cbd5e1] dark:border-[#334155] text-center flex flex-col justify-center">
+                        <div class="text-[2.2rem] md:text-[3.2rem] font-extrabold tracking-tighter leading-none text-[#e8440a] dark:text-[#ff5a1f]"
+                            data-target="140" data-suffix="ms">0</div>
+                        <div class="text-[0.6rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] mt-2">
+                            Avg. Load Speed
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 border-b border-l border-[#cbd5e1] dark:border-[#334155] text-center flex flex-col justify-center">
+                        <div class="text-[2.2rem] md:text-[3.2rem] font-extrabold tracking-tighter leading-none text-[#0f172a] dark:text-[#f8fafc]"
+                            data-target="24" data-suffix="%">0</div>
+                        <div class="text-[0.6rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] mt-2">
+                            Cart Recovery Gain
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 text-center flex flex-col justify-center">
+                        <div class="text-[2.2rem] md:text-[3.2rem] font-extrabold tracking-tighter leading-none text-[#0f172a] dark:text-[#f8fafc]"
+                            data-target="80" data-suffix="M+">0</div>
+                        <div class="text-[0.6rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] mt-2">
+                            Gross Volume Processed
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 border-l border-[#cbd5e1] dark:border-[#334155] text-center flex flex-col justify-center">
+                        <div class="text-[2.2rem] md:text-[3.2rem] font-extrabold tracking-tighter leading-none text-[#e8440a] dark:text-[#ff5a1f]"
+                            data-target="99" data-suffix=".99%">0</div>
+                        <div class="text-[0.6rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] mt-2">
+                            Checkout Uptime
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 border-l border-r border-[#cbd5e1] dark:border-[#334155]">
+                
+                <!-- Feature 1 -->
+                <div class="p-8 border-b border-r border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/10 hover:bg-[#edeff5]/20 dark:hover:bg-[#1e293b]/35 transition-all animate-[fup_.6s_ease_both]">
+                    <span class="text-[#e8440a] dark:text-[#ff5a1f] text-xl font-bold">✦</span>
+                    <h4 class="text-[0.85rem] font-bold uppercase tracking-wider text-[#0f172a] dark:text-[#f8fafc] mt-3 mb-2">Brand loyalty</h4>
+                    <p class="text-[0.78rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                        Statistics indicate that customers are intend to shop again and again from a same app if they satisfied with the services. So a smart retail software can increase the act of customer return.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-8 border-b border-r border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/10 hover:bg-[#edeff5]/20 dark:hover:bg-[#1e293b]/35 transition-all animate-[fup_.6s_.1s_ease_both]">
+                    <span class="text-[#e8440a] dark:text-[#ff5a1f] text-xl font-bold">✦</span>
+                    <h4 class="text-[0.85rem] font-bold uppercase tracking-wider text-[#0f172a] dark:text-[#f8fafc] mt-3 mb-2">Increased sales</h4>
+                    <p class="text-[0.78rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                        eCommerce website and apps helps to reach more customer at the same time. It opens a door in the global market for the shop owner. It gives them a variety of buyer and chance to improve their product quality.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-8 border-b border-[#cbd5e1] dark:border-[#cbd5e1] dark:bg-[#1e293b]/10 hover:bg-[#edeff5]/20 dark:hover:bg-[#1e293b]/35 transition-all animate-[fup_.6s_.2s_ease_both]">
+                    <span class="text-[#e8440a] dark:text-[#ff5a1f] text-xl font-bold">✦</span>
+                    <h4 class="text-[0.85rem] font-bold uppercase tracking-wider text-[#0f172a] dark:text-[#f8fafc] mt-3 mb-2">Analytical Report</h4>
+                    <p class="text-[0.78rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                        Our apps has custom report generate option for the retailers. It helps them to take profitable decision base on that statistics.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="p-8 border-b md:border-b-0 border-r border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/10 hover:bg-[#edeff5]/20 dark:hover:bg-[#1e293b]/35 transition-all animate-[fup_.6s_.3s_ease_both]">
+                    <span class="text-[#e8440a] dark:text-[#ff5a1f] text-xl font-bold">✦</span>
+                    <h4 class="text-[0.85rem] font-bold uppercase tracking-wider text-[#0f172a] dark:text-[#f8fafc] mt-3 mb-2">Data & Store Safety</h4>
+                    <p class="text-[0.78rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                        Bad occurrence can happen at any time. It really hurts when it comes to your business. but if your operate your business online in parallel to traditional then there will be a chance to survive. We give you security in data storage, payment process and transaction.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="p-8 border-b-0 md:border-r border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/10 hover:bg-[#edeff5]/20 dark:hover:bg-[#1e293b]/35 transition-all animate-[fup_.6s_.4s_ease_both]">
+                    <span class="text-[#e8440a] dark:text-[#ff5a1f] text-xl font-bold">✦</span>
+                    <h4 class="text-[0.85rem] font-bold uppercase tracking-wider text-[#0f172a] dark:text-[#f8fafc] mt-3 mb-2">Strong Supply chain management</h4>
+                    <p class="text-[0.78rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                        Our retail software has unique inventory and supply chain manages features which will give you an advance forecast of your inventory and retail shop. Customized and smart notification features will notify your suppliers and logistic department to ensure availability by reducing man involvement.
+                    </p>
+                </div>
+
+                <!-- Feature 6 (Placeholder / CTA) -->
+                <div class="p-8 bg-[#e8440a]/5 dark:bg-[#ff5a1f]/5 flex flex-col justify-center items-start animate-[fup_.6s_.5s_ease_both]">
+                    <h4 class="text-[0.85rem] font-bold uppercase tracking-wider text-[#e8440a] dark:text-[#ff5a1f] mb-2">Need a custom solution?</h4>
+                    <p class="text-[0.75rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed mb-4">
+                        Speak with our enterprise software architects to build custom integrations for your business.
+                    </p>
+                    <a href="#contact" class="text-[0.7rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] transition-colors">Start Assessment →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- industry info end -->
+
+    <!-- Solutions Tabs Section Start -->
+    <section class="py-14 md:py-20 border-t border-b border-[#cbd5e1] dark:border-[#334155] bg-white/40 dark:bg-[#1e293b]/10 fu">
+        <div class="max-w-[1340px] mx-auto px-6 md:px-10">
+            <div class="text-center mb-10">
+                <span class="text-[0.65rem] font-bold tracking-[0.25em] uppercase text-[#e8440a] dark:text-[#ff5a1f] mb-2 block">// TAILORED SEGMENTS</span>
+                <h3 class="text-2xl md:text-4xl font-extrabold tracking-tight text-[#0f172a] dark:text-[#f8fafc]">We Provide retail software solution for</h3>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <!-- Tab Buttons -->
+                <div class="flex justify-center border-b border-[#cbd5e1] dark:border-[#334155] mb-8">
+                    <button id="tab-btn-large" class="px-6 py-3 text-[0.8rem] font-bold tracking-wider uppercase border-b-2 border-[#e8440a] text-[#e8440a] cursor-pointer focus:outline-none transition-colors duration-200">
+                        Large Retail Network
+                    </button>
+                    <button id="tab-btn-small" class="px-6 py-3 text-[0.8rem] font-bold tracking-wider uppercase border-b-2 border-transparent text-[#475569] dark:text-[#94a3b8] hover:text-[#0f172a] dark:hover:text-[#f8fafc] cursor-pointer focus:outline-none transition-colors duration-200">
+                        Small Retail Shop
+                    </button>
+                </div>
+
+                <!-- Tab Content -->
+                <div>
+                    <!-- Tab Panel 1: Large Retail -->
+                    <div id="tab-panel-large" class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                        <div class="md:col-span-8">
+                            <p class="text-[#475569] dark:text-[#94a3b8] text-[0.9rem] leading-relaxed">
+                                We understand what matters for a big retails company. Our expert engineering team has designed the software to bring all the sales point under one roof virtually. extreme data safety and zero downtime is our promise. easy user experience & smart interface, user log report access control will ensure smooth backed operation.
+                            </p>
+                        </div>
+                        <div class="md:col-span-4 flex justify-center">
+                            <img class="max-w-full h-auto rounded-lg shadow-md border border-[#cbd5e1] dark:border-[#334155]" alt="Large Retail Network" src="https://peoplentech.net/uploads/extra_file/16598631742331Super shop software solution.png">
+                        </div>
+                    </div>
+
+                    <!-- Tab Panel 2: Small Retail -->
+                    <div id="tab-panel-small" class="hidden grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                        <div class="md:col-span-8">
+                            <p class="text-[#475569] dark:text-[#94a3b8] text-[0.9rem] leading-relaxed">
+                                Considering their budget and capacity we have come up with a smart solutions for them. Our search optimized eCommerce website and app will gives them the power to reach maximum customer.
+                            </p>
+                        </div>
+                        <div class="md:col-span-4 flex justify-center">
+                            <img class="max-w-full h-auto rounded-lg shadow-md border border-[#cbd5e1] dark:border-[#334155]" alt="Small Retail Shop" src="https://peoplentech.net/uploads/extra_file/16597903632896software for small retail shop.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Solutions Tabs Section End -->
+
+    <!-- Retail Applications Section Start -->
+    <section class="py-14 md:py-20 bg-white dark:bg-[#0f172a] fu">
+        <div class="max-w-[1340px] mx-auto px-6 md:px-10">
+            <div class="text-center mb-10">
+                <span class="text-[0.65rem] font-bold tracking-[0.25em] uppercase text-[#e8440a] dark:text-[#ff5a1f] mb-2 block">// TARGETED APPLICATIONS</span>
+                <h3 class="text-2xl md:text-4xl font-extrabold tracking-tight text-[#0f172a] dark:text-[#f8fafc]">Our Retail Applications</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 border-l border-t border-[#cbd5e1] dark:border-[#334155]">
+                
+                <!-- RMS -->
+                <div class="p-8 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/10 hover:bg-[#edeff5]/20 dark:hover:bg-[#1e293b]/35 transition-all">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <h4 class="text-base font-extrabold text-[#0f172a] dark:text-[#f8fafc]">Retail management system (RMS)</h4>
+                        <span class="self-start sm:self-auto px-2.5 py-1 text-[0.62rem] font-bold tracking-wider uppercase bg-[#cbd5e1] dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs shrink-0">Web, Mobile App</span>
+                    </div>
+                    <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed mb-6">
+                        Product purchases, inventory management, stock & expiry date reminder, supplier and distributor management, custom CRM solution.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center gap-1.5 text-[0.72rem] font-bold tracking-wider uppercase text-[#e8440a] dark:text-[#ff5a1f]">Get Quotation →</a>
+                </div>
+
+                <!-- POS -->
+                <div class="p-8 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/10 hover:bg-[#edeff5]/20 dark:hover:bg-[#1e293b]/35 transition-all">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <h4 class="text-base font-extrabold text-[#0f172a] dark:text-[#f8fafc]">Point of sale (POS)</h4>
+                        <span class="self-start sm:self-auto px-2.5 py-1 text-[0.62rem] font-bold tracking-wider uppercase bg-[#cbd5e1] dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs shrink-0">Web, Mobile App</span>
+                    </div>
+                    <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed mb-6">
+                        unlimited product list, stock management, sales, billing, sales report, customer loyalty intensive program etc.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center gap-1.5 text-[0.72rem] font-bold tracking-wider uppercase text-[#e8440a] dark:text-[#ff5a1f]">Get Quotation →</a>
+                </div>
+
+                <!-- Inventory System -->
+                <div class="p-8 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#1e293b]/10 hover:bg-[#edeff5]/20 dark:hover:bg-[#1e293b]/35 transition-all">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <h4 class="text-base font-extrabold text-[#0f172a] dark:text-[#f8fafc]">Inventory System</h4>
+                        <span class="self-start sm:self-auto px-2.5 py-1 text-[0.62rem] font-bold tracking-wider uppercase bg-[#cbd5e1] dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs shrink-0">Web Application</span>
+                    </div>
+                    <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed mb-6">
+                        Product purchases, stock & expiry date reminder, supplier and distributor management, custom CRM solution.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center gap-1.5 text-[0.72rem] font-bold tracking-wider uppercase text-[#e8440a] dark:text-[#ff5a1f]">Get Quotation →</a>
+                </div>
+
+                <!-- E-Commerce -->
+                <div class="p-8 border-r border-[#cbd5e1] dark:border-[#cbd5e1] bg-white dark:bg-[#1e293b]/10 hover:bg-[#edeff5]/20 dark:hover:bg-[#1e293b]/35 transition-all">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <h4 class="text-base font-extrabold text-[#0f172a] dark:text-[#f8fafc]">E-Commerce Application</h4>
+                        <span class="self-start sm:self-auto px-2.5 py-1 text-[0.62rem] font-bold tracking-wider uppercase bg-[#cbd5e1] dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs shrink-0">Web, Mobile Application</span>
+                    </div>
+                    <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed mb-6">
+                        Single Vendor and multi vendor website and mobile app. SEO optimized, secured transaction, SMS / email marketing etc.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center gap-1.5 text-[0.72rem] font-bold tracking-wider uppercase text-[#e8440a] dark:text-[#ff5a1f]">Get Quotation →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- industry info end -->
+
+    <!-- technology stack focus grid start -->
+    <section class="py-14 md:py-20 border-t border-b border-[#cbd5e1] dark:border-[#334155] fu bg-white/40 dark:bg-[#1e293b]/10">
+        <div class="max-w-[1340px] mx-auto px-6 md:px-10">
+            <div class="text-center mb-10">
+                <span class="text-[0.65rem] font-bold tracking-[0.25em] uppercase text-[#e8440a] dark:text-[#ff5a1f] mb-2 block">// COMMERCE TECH STACK</span>
+                <h3 class="text-2xl md:text-4xl font-extrabold tracking-tight">Transactional Architecture</h3>
+                <p class="text-[#475569] dark:text-[#94a3b8] text-[0.85rem] mt-2 max-w-lg mx-auto">
+                    We select modern static-generation frameworks and ultra-fast caching layers to withstand black-friday traffic spikes easily.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 border-l border-t border-[#cbd5e1] dark:border-[#334155]">
+                
+                <!-- Frontend -->
+                <div class="p-6 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#0f172a]">
+                    <span class="text-[0.62rem] font-bold tracking-wider text-[#e8440a] dark:text-[#ff5a1f] uppercase">// Frontend</span>
+                    <h4 class="text-base font-extrabold mt-1 mb-3">Next.js / Tailwind</h4>
+                    <p class="text-[0.75rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                        Headless static-generated product pages, fast checkout steps, and smooth micro-animations.
+                    </p>
+                </div>
+
+                <!-- Backend -->
+                <div class="p-6 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#0f172a]">
+                    <span class="text-[0.62rem] font-bold tracking-wider text-[#e8440a] dark:text-[#ff5a1f] uppercase">// Processing Core</span>
+                    <h4 class="text-base font-extrabold mt-1 mb-3">Laravel / Node.js</h4>
+                    <p class="text-[0.75rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                        High-throughput order dispatching pipelines, coupon code validators, and transactional PDF generators.
+                    </p>
+                </div>
+
+                <!-- Caching -->
+                <div class="p-6 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#0f172a]">
+                    <span class="text-[0.62rem] font-bold tracking-wider text-[#e8440a] dark:text-[#ff5a1f] uppercase">// Caching Layer</span>
+                    <h4 class="text-base font-extrabold mt-1 mb-3">Redis Cache</h4>
+                    <p class="text-[0.75rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                        In-memory session keys, instant catalog caches, and fast checkout cart allocations.
+                    </p>
+                </div>
+
+                <!-- Cloud -->
+                <div class="p-6 border-r border-b border-[#cbd5e1] dark:border-[#334155] bg-white dark:bg-[#0f172a]">
+                    <span class="text-[0.62rem] font-bold tracking-wider text-[#e8440a] dark:text-[#ff5a1f] uppercase">// Scaling</span>
+                    <h4 class="text-base font-extrabold mt-1 mb-3">Docker / AWS ECS</h4>
+                    <p class="text-[0.75rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                        Container-scaled clusters with auto-scale policies to prevent downtime during holiday traffic rushes.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- technology stack focus grid end -->
+
+    <!-- FAQ accordion section start -->
+    <section class="py-14 md:py-20 bg-white dark:bg-[#0f172a] fu">
+        <div class="max-w-[800px] mx-auto px-6 md:px-10">
+            <div class="text-center mb-10">
+                <span class="text-[0.65rem] font-bold tracking-[0.25em] uppercase text-[#e8440a] dark:text-[#ff5a1f] mb-2 block">// COMMON INQUIRIES</span>
+                <h3 class="text-2xl md:text-4xl font-extrabold tracking-tight">Retail Solutions FAQs</h3>
+            </div>
+
+            <div class="border-t border-[#cbd5e1] dark:border-[#334155] flex flex-col">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item border-b border-[#cbd5e1] dark:border-[#334155] py-4">
+                    <button class="faq-trigger w-full flex items-center justify-between text-left font-bold text-[#0f172a] dark:text-[#f8fafc] text-[0.92rem] outline-none">
+                        <span>Why retail business need smart software?</span>
+                        <svg class="w-4 h-4 shrink-0 text-[#e8440a] dark:text-[#ff5a1f]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="text-[0.82rem] text-[#475569] dark:text-[#94a3b8] mt-3 leading-relaxed">
+                            Now a days there are tough competition in the market of retail market. suppliers are increasing day by day but on the contrary consumer are same in number. To survive in this industry your need to reach a greater number of your clients at minimum time before the other do. But in traditional marketing method, you can't reach the goal. That's why all the retailers have started expanding their business smartly in global market.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item border-b border-[#cbd5e1] dark:border-[#334155] py-4">
+                    <button class="faq-trigger w-full flex items-center justify-between text-left font-bold text-[#0f172a] dark:text-[#f8fafc] text-[0.92rem] outline-none">
+                        <span>Can you integrate with our existing brick-and-mortar POS system?</span>
+                        <svg class="w-4 h-4 shrink-0 text-[#e8440a] dark:text-[#ff5a1f]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="text-[0.82rem] text-[#475569] dark:text-[#94a3b8] mt-3 leading-relaxed">
+                            Yes. We regularly build custom API middleware connecting online checkout actions with physical POS systems (Square, Clover, Lightspeed, or custom legacy systems) to keep inventory counts aligned across channels automatically.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item border-b border-[#cbd5e1] dark:border-[#334155] py-4">
+                    <button class="faq-trigger w-full flex items-center justify-between text-left font-bold text-[#0f172a] dark:text-[#f8fafc] text-[0.92rem] outline-none">
+                        <span>How do you protect storefronts from crashing during high-traffic surges?</span>
+                        <svg class="w-4 h-4 shrink-0 text-[#e8440a] dark:text-[#ff5a1f]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="text-[0.82rem] text-[#475569] dark:text-[#94a3b8] mt-3 leading-relaxed">
+                            By decoupling our systems through headless Next.js static files served over CDN nodes. Database calls are minimized via Redis caching, and backends are containerized on AWS ECS with auto-scaling policies to handle spikes instantly.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item border-b border-[#cbd5e1] dark:border-[#334155] py-4">
+                    <button class="faq-trigger w-full flex items-center justify-between text-left font-bold text-[#0f172a] dark:text-[#f8fafc] text-[0.92rem] outline-none">
+                        <span>What payment gateways do you support?</span>
+                        <svg class="w-4 h-4 shrink-0 text-[#e8440a] dark:text-[#ff5a1f]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="text-[0.82rem] text-[#475569] dark:text-[#94a3b8] mt-3 leading-relaxed">
+                            We support Stripe, Adyen, PayPal, Braintree, and local standard gateways. For international merchants, we support multi-currency routing nodes and localized payment checkouts automatically.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ accordion section end -->
+
+    <!-- contact section start -->
+    <section id="contact" class="py-14 md:py-20 bg-white dark:bg-[#0f172a] border-t border-[#cbd5e1] dark:border-[#334155] fu">
+        <div class="max-w-[1340px] mx-auto px-6 md:px-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 border border-[#cbd5e1] dark:border-[#334155]">
+                
+                <!-- Left Details -->
+                <div class="lg:col-span-6 p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-[#cbd5e1] dark:border-[#334155] flex flex-col justify-center">
+                    <span class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#e8440a] dark:text-[#ff5a1f] mb-2 block">// CONVERT VISITORS INSTANTLY</span>
+                    <h2 class="text-[1.8rem] md:text-[2.6rem] font-extrabold leading-[1.1] tracking-tight mb-4">Start Your E-Commerce Project</h2>
+                    <p class="text-[#475569] dark:text-[#94a3b8] text-[0.88rem] leading-relaxed mb-6">
+                        Ready to launch a high-conversion headless storefront or marketplace? Partner with our principal e-commerce architects to scale your online volume.
+                    </p>
+                    <div class="flex flex-col gap-2 text-[0.82rem] font-semibold">
+                        <span class="text-[#475569] dark:text-[#94a3b8]">📧 Direct Email: <a href="mailto:info@pntsoft.com" class="text-[#0f172a] dark:text-[#f8fafc] hover:text-[#e8440a] dark:hover:text-[#ff5a1f]">info@pntsoft.com</a></span>
+                        <span class="text-[#475569] dark:text-[#94a3b8]">📞 Architect Hotline: <a href="tel:+18005550199" class="text-[#0f172a] dark:text-[#f8fafc] hover:text-[#e8440a] dark:hover:text-[#ff5a1f]">+1 (800) 555-0199</a></span>
+                    </div>
+                </div>
+
+                <!-- Right Form -->
+                <div class="lg:col-span-6 p-8 md:p-12 bg-[#cbd5e1]/10 dark:bg-[#1e293b]/10 flex flex-col justify-center">
+                    <form id="cform">
+                        <div class="mb-5">
+                            <label class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] block mb-2">Merchant Name</label>
+                            <input type="text" placeholder="Fashion Brand LLC"
+                                class="w-full bg-transparent border-0 border-b border-[#cbd5e1] dark:border-[#334155] py-2.5 text-[.9rem] text-[#0f172a] dark:text-[#f8fafc] outline-none focus:border-[#e8440a] dark:focus:border-[#ff5a1f] placeholder-[#cbd5e1]/80 dark:placeholder-[#334155] transition-colors"
+                                required />
+                        </div>
+                        <div class="mb-5">
+                            <label class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] block mb-2">Business Email</label>
+                            <input type="email" placeholder="commerce@brand.com"
+                                class="w-full bg-transparent border-0 border-b border-[#cbd5e1] dark:border-[#334155] py-2.5 text-[.9rem] text-[#0f172a] dark:text-[#f8fafc] outline-none focus:border-[#e8440a] dark:focus:border-[#ff5a1f] placeholder-[#cbd5e1]/80 dark:placeholder-[#334155] transition-colors"
+                                required />
+                        </div>
+                        <div class="mb-5">
+                            <label class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] block mb-2">Monthly Transaction Volume</label>
+                            <input type="text" placeholder="$100k - $500k"
+                                class="w-full bg-transparent border-0 border-b border-[#cbd5e1] dark:border-[#334155] py-2.5 text-[.9rem] text-[#0f172a] dark:text-[#f8fafc] outline-none focus:border-[#e8440a] dark:focus:border-[#ff5a1f] placeholder-[#cbd5e1]/80 dark:placeholder-[#334155] transition-colors" />
+                        </div>
+                        <div class="mb-6">
+                            <label class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] block mb-2">Project Scope</label>
+                            <textarea rows="4" placeholder="Briefly describe your products, payment needs, or POS syncing blockages..."
+                                class="w-full bg-transparent border-0 border-b border-[#cbd5e1] dark:border-[#334155] py-2.5 text-[.9rem] text-[#0f172a] dark:text-[#f8fafc] outline-none focus:border-[#e8440a] dark:focus:border-[#ff5a1f] placeholder-[#cbd5e1]/80 dark:placeholder-[#334155] transition-colors resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full md:w-auto">Send Architecture Assessment →</button>
+                    </form>
+                    <div id="fsuccess" class="hidden text-center py-10">
+                        <div class="text-[2rem] text-[#e8440a] dark:text-[#ff5a1f] mb-3">✓</div>
+                        <h3 class="text-[1.15rem] font-extrabold mb-1.5">Inquiry Received!</h3>
+                        <p class="text-[#475569] dark:text-[#94a3b8] text-[.85rem] leading-relaxed">
+                            Thank you. Our e-commerce systems architect will contact you within 1 business day.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- contact section end -->
+
+    <!-- related industry section start -->
+    <section class="py-14 md:py-20 bg-white dark:bg-[#0f172a] border-t border-[#cbd5e1] dark:border-[#334155] fu">
+        <div class="max-w-[1340px] mx-auto px-6 md:px-10">
+            <div class="text-center mb-10">
+                <span class="text-[0.65rem] font-bold tracking-[0.25em] uppercase text-[#e8440a] dark:text-[#ff5a1f] mb-2 block">// DOMAIN BREADTH</span>
+                <h3 class="text-2xl md:text-4xl font-extrabold tracking-tight">Explore Related Industries</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 border-l border-t border-r border-b border-[#cbd5e1] dark:border-[#334155]">
+                
+                <!-- Logistics -->
+                <div class="p-8 bg-[#cbd5e1]/10 dark:bg-[#1e293b]/10 flex flex-col justify-between group hover:bg-[#e8440a]/5 dark:hover:bg-[#ff5a1f]/5 transition-colors duration-300">
+                    <div>
+                        <h4 class="text-[1rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f]">Logistics</h4>
+                        <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] mt-2.5 leading-relaxed">
+                            Supply chain tracking, fleet optimization routers, WMS, and dispatcher channels.
+                        </p>
+                    </div>
+                    <a href="logistics.html" class="inline-flex items-center gap-1.5 mt-6 text-[0.72rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f]">Explore Sector →</a>
+                </div>
+
+                <!-- Tour & Travel -->
+                <div class="p-8 border-t md:border-t-0 md:border-l border-[#cbd5e1] dark:border-[#334155] flex flex-col justify-between group hover:bg-[#e8440a]/5 dark:hover:bg-[#ff5a1f]/5 transition-colors duration-300">
+                    <div>
+                        <h4 class="text-[1rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f]">Tour & Travel</h4>
+                        <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] mt-2.5 leading-relaxed">
+                            Booking engines, Sabre/Amadeus GDS APIs, itineraries, custom travel portals.
+                        </p>
+                    </div>
+                    <a href="tour-travel.html" class="inline-flex items-center gap-1.5 mt-6 text-[0.72rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f]">Explore Sector →</a>
+                </div>
+
+                <!-- IT Consultancy -->
+                <div class="p-8 border-t md:border-t-0 md:border-l border-[#cbd5e1] dark:border-[#334155] flex flex-col justify-between group hover:bg-[#e8440a]/5 dark:hover:bg-[#ff5a1f]/5 transition-colors duration-300">
+                    <div>
+                        <h4 class="text-[1rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f]">IT Consultancy</h4>
+                        <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] mt-2.5 leading-relaxed">
+                            Cloud blueprints, DevOps containers, legacy code security diagnostics.
+                        </p>
+                    </div>
+                    <a href="it-consultancy.html" class="inline-flex items-center gap-1.5 mt-6 text-[0.72rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f]">Explore Sector →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- related industry section end -->
+
+    <!-- footer start -->
+    <footer class="bg-[#13264d] border-t border-white/10 dark:border-white/10 w-full">
+        <div class="max-w-[1340px] mx-auto px-6 md:px-10">
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] border-l border-white/10 dark:border-white/10">
+                <div class="p-8 md:p-12 border-r border-white/10 dark:border-white/10">
+                    <div class="flex items-center gap-2 mb-4">
+                        <!-- logo -->
+                        <img src="img/logo.png" class="w-46 bg-white px-3 py-2 rounded-full" alt="Logo">
+                    </div>
+                    <p class="text-[.8rem] text-white/70 dark:text-white/70 line-height-[1.9] max-w-[240px]">Get Smart
+                        Solutions to all your problems. Empowering businesses through technology since 2014.</p>
+                    <div class="flex gap-2 mt-5">
+                        <a href="#"
+                            class="w-[30px] h-[30px] border border-white/20 dark:border-white/20 flex items-center justify-center font-bold text-[.65rem] text-white/70 dark:text-white/70 no-underline hover:border-white dark:hover:border-white">f</a>
+                        <a href="#"
+                            class="w-[30px] h-[30px] border border-white/20 dark:border-white/20 flex items-center justify-center font-bold text-[.65rem] text-white/70 dark:text-white/70 no-underline hover:border-white dark:hover:border-white">in</a>
+                        <a href="#"
+                            class="w-[30px] h-[30px] border border-white/20 dark:border-white/20 flex items-center justify-center font-bold text-[.65rem] text-white/70 dark:text-white/70 no-underline hover:border-white dark:hover:border-white">tw</a>
+                    </div>
+                </div>
+                <div class="p-10 border-r border-white/10 dark:border-white/10">
+                    <div
+                        class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-white/70 dark:text-white/70 mb-4">
+                        Other Services</div>
+                    <ul class="list-none m-0 p-0 flex flex-col gap-2.5">
+                        <li><a href="service.html"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">IT
+                                Training</a></li>
+                        <li><a href="service.html"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">Branding
+                                & Marketing</a></li>
+                        <li><a href="service.html"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">Managed
+                                IT</a></li>
+                        <li><a href="service.html"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">CI/CD</a>
+                        </li>
+                        <li><a href="service.html"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">QA
+                                Testing</a></li>
+                    </ul>
+                </div>
+                <div class="p-10 border-r border-white/10 dark:border-white/10">
+                    <div
+                        class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-white/70 dark:text-white/70 mb-4">
+                        Company</div>
+                    <ul class="list-none m-0 p-0 flex flex-col gap-2.5">
+                        <li><a href="about.html"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">About
+                                Us</a></li>
+                        <li><a href="index.html"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">Blog</a>
+                        </li>
+                        <li><a href="index.html"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">Careers</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">Contact
+                                Us</a></li>
+                        <li><a href="#"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-white dark:hover:text-white">Privacy
+                                Policy</a></li>
+                    </ul>
+                </div>
+                <div class="p-10 border-r border-white/10 dark:border-white/10">
+                    <div
+                        class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-white/70 dark:text-white/70 mb-4">
+                        Offices</div>
+                    <ul class="list-none m-0 p-0 flex flex-col gap-2.5">
+                        <li class="text-[.8rem] text-white/70 dark:text-white/70">🇧🇩 Dhaka, Bangladesh</li>
+                        <li class="text-[.8rem] text-white/70 dark:text-white/70">🇺🇸 Virginia, USA</li>
+                        <li class="text-[.8rem] text-white/70 dark:text-white/70">🗽 New York, USA</li>
+                        <li class="text-[.8rem] text-white/70 dark:text-white/70">🏙️ New Jersey, USA</li>
+                        <li class="text-[.8rem] text-white/70 dark:text-white/70">🇺🇸 Pennsylvania, USA</li>
+                        <li class="text-[.8rem] text-white/70 dark:text-white/70">🇨🇦 Kitchener, Canada</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- copyright -->
+    <div class="bg-[#13264d] border-t border-white/10 dark:border-white/10">
+        <div class="max-w-[1340px] mx-auto px-6 md:px-10 ">
+            <div class="flex items-center justify-between flex-wrap gap-4 py-[1.1rem]">
+                <span class="text-[.68rem] text-white/70 dark:text-white/70 tracking-wider uppercase">© 2026
+                    PeopleNTech. ALL RIGHTS RESERVED.</span>
+                <div class="flex gap-8">
+                    <a href="#"
+                        class="text-[.68rem] text-white/70 dark:text-white/70 no-underline tracking-wider uppercase">Privacy
+                        Policy</a>
+                    <a href="#"
+                        class="text-[.68rem] text-white/70 dark:text-white/70 no-underline tracking-wider uppercase">Terms
+                        of Service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme variations switch btn -->
+    <div class="fixed top-1/2 -translate-y-1/2 right-4 flex flex-col gap-2 z-50">
+        <span class="text-[.68rem] text-[#475569] dark:text-[#94a3b8] tracking-wider uppercase">Theme
+            variations</span>
+        <a href="v1.html"
+            class="inline-flex items-center justify-center border border-[#e2e8f0] dark:border-[#334155] bg-white dark:bg-[#111827] text-blue-600 dark:text-blue-400 text-[.65rem] font-medium tracking-wider uppercase px-4 py-2 rounded-lg shadow-sm hover:bg-[#f1f5f9] dark:hover:bg-[#1e293b]">Version-1</a>
+        <a href="v2.html"
+            class="inline-flex items-center justify-center border border-[#e2e8f0] dark:border-[#334155] bg-white dark:bg-[#111827] text-orange-600 dark:text-orange-400 text-[.65rem] font-medium tracking-wider uppercase px-4 py-2 rounded-lg shadow-sm hover:bg-[#f1f5f9] dark:hover:bg-[#1e293b]">Version-2</a>
+        <a href="v3.html"
+            class="inline-flex items-center justify-center border border-[#e2e8f0] dark:border-[#334155] bg-white dark:bg-[#111827] text-emerald-600 dark:text-emerald-400 text-[.65rem] font-medium tracking-wider uppercase px-4 py-2 rounded-lg shadow-sm hover:bg-[#f1f5f9] dark:hover:bg-[#1e293b]">Version-3</a>
+        <a href="v4.html"
+            class="inline-flex items-center justify-center border border-[#e2e8f0] dark:border-[#334155] bg-white dark:bg-[#111827] text-purple-600 dark:text-purple-400 text-[.65rem] font-medium tracking-wider uppercase px-4 py-2 rounded-lg shadow-sm hover:bg-[#f1f5f9] dark:hover:bg-[#1e293b]">Version-4</a>
+    </div>
+
+    <script>
+        // Responsive nav
+        function setNav() {
+            const w = window.innerWidth;
+            document.getElementById('desktop-nav').style.display = w < 768 ? 'none' : 'flex';
+            document.getElementById('nav-cta').style.display = w < 768 ? 'none' : 'inline-flex';
+            document.getElementById('hbg').style.display = w < 768 ? 'flex' : 'none';
+        }
+        setNav(); window.addEventListener('resize', setNav);
+
+        // Mobile menu
+        document.getElementById('hbg').addEventListener('click', () => { document.getElementById('mmenu').classList.remove('hidden'); document.getElementById('mmenu').classList.add('flex'); });
+        document.getElementById('close-m').addEventListener('click', () => { document.getElementById('mmenu').classList.add('hidden'); document.getElementById('mmenu').classList.remove('flex'); });
+        document.querySelectorAll('.ml').forEach(l => l.addEventListener('click', () => { document.getElementById('mmenu').classList.add('hidden'); document.getElementById('mmenu').classList.remove('flex'); }));
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function (e) {
+                const t = document.querySelector(this.getAttribute('href'));
+                if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+            });
+        });
+
+        // Fade-up animation entry behavior
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('!opacity-100', '!translate-y-0'); });
+        }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.fu').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-7', 'transition-all', 'duration-[600ms]', 'ease-out');
+            io.observe(el);
+        });
+
+        // Counter
+        function animCount(el, target, suffix) {
+            const dur = 1600, start = performance.now();
+            const run = now => {
+                const p = Math.min((now - start) / dur, 1);
+                const ease = 1 - Math.pow(1 - p, 3);
+                el.textContent = Math.floor(ease * target) + suffix;
+                if (p < 1) requestAnimationFrame(run);
+                else el.textContent = target + suffix;
+            };
+            requestAnimationFrame(run);
+        }
+        const sio = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    document.querySelectorAll('[data-target]').forEach(el => {
+                        animCount(el, +el.dataset.target, el.dataset.suffix || '');
+                    });
+                    sio.disconnect();
+                }
+            });
+        }, { threshold: 0.4 });
+        const sr = document.getElementById('stats-row');
+        if (sr) sio.observe(sr);
+
+        // Contact form submissions
+        document.getElementById('cform').addEventListener('submit', e => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            btn.textContent = 'Sending…'; btn.disabled = true;
+            setTimeout(() => {
+                document.getElementById('cform').classList.add('hidden');
+                document.getElementById('fsuccess').classList.remove('hidden');
+            }, 1100);
+        });
+
+        // FAQ accordion toggle handlers
+        document.querySelectorAll('.faq-trigger').forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const item = trigger.closest('.faq-item');
+                const content = item.querySelector('.faq-content');
+                const isActive = item.classList.contains('faq-active');
+
+                // Collapse all FAQs
+                document.querySelectorAll('.faq-item').forEach(el => {
+                    el.classList.remove('faq-active');
+                    el.querySelector('.faq-content').style.maxHeight = '0px';
+                });
+
+                // Open this one if it wasn't active
+                if (!isActive) {
+                    item.classList.add('faq-active');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                }
+            });
+        });
+
+        // Dark mode implementation handling state variations via attribute changes
+        const html = document.documentElement;
+        const toggle = document.getElementById('theme-toggle');
+        const iconSun = document.getElementById('icon-sun');
+        const iconMoon = document.getElementById('icon-moon');
+
+        function applyTheme(dark) {
+            if (dark) {
+                html.classList.add('dark');
+                iconSun.style.display = 'none';
+                iconMoon.style.display = 'block';
+            } else {
+                html.classList.remove('dark');
+                iconSun.style.display = 'block';
+                iconMoon.style.display = 'none';
+            }
+        }
+
+        const saved = localStorage.getItem('pt-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        applyTheme(saved ? saved === 'dark' : prefersDark);
+
+        toggle.addEventListener('click', () => {
+            const isDark = html.classList.contains('dark');
+            applyTheme(!isDark);
+            localStorage.setItem('pt-theme', !isDark ? 'dark' : 'light');
+        });
+
+        // Tabs logic
+        const tabBtnLarge = document.getElementById('tab-btn-large');
+        const tabBtnSmall = document.getElementById('tab-btn-small');
+        const tabPanelLarge = document.getElementById('tab-panel-large');
+        const tabPanelSmall = document.getElementById('tab-panel-small');
+
+        if (tabBtnLarge && tabBtnSmall) {
+            tabBtnLarge.addEventListener('click', () => {
+                tabBtnLarge.classList.add('border-[#e8440a]', 'text-[#e8440a]');
+                tabBtnLarge.classList.remove('border-transparent', 'text-[#475569]', 'dark:text-[#94a3b8]');
+                
+                tabBtnSmall.classList.remove('border-[#e8440a]', 'text-[#e8440a]');
+                tabBtnSmall.classList.add('border-transparent', 'text-[#475569]', 'dark:text-[#94a3b8]');
+                
+                tabPanelLarge.classList.remove('hidden');
+                tabPanelSmall.classList.add('hidden');
+            });
+
+            tabBtnSmall.addEventListener('click', () => {
+                tabBtnSmall.classList.add('border-[#e8440a]', 'text-[#e8440a]');
+                tabBtnSmall.classList.remove('border-transparent', 'text-[#475569]', 'dark:text-[#94a3b8]');
+                
+                tabBtnLarge.classList.remove('border-[#e8440a]', 'text-[#e8440a]');
+                tabBtnLarge.classList.add('border-transparent', 'text-[#475569]', 'dark:text-[#94a3b8]');
+                
+                tabPanelSmall.classList.remove('hidden');
+                tabPanelLarge.classList.add('hidden');
+            });
+        }
+    </script>
+</body>
+
+</html>
