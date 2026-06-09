@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex">
+
+    <title>Our Portfolio - PeopleNTech Software</title>
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link href="https://fonts.bunny.net/css?family=manrope:300,400,500,600,700,800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @import "tailwindcss";
+
+    @custom-variant dark (&:where(.dark, .dark *));
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      font-family: 'Manrope',sans-serif;
+      font-weight: 700;
+      font-size: .75rem;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      padding: .82rem 1.75rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background .2s, color .2s, border-color .2s;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      @apply bg-[#0f172a] dark:bg-[#f8fafc] text-[#ffffff] dark:text-[#0b0f19] hover:bg-[#e8440a] dark:hover:bg-[#ff5a1f] hover:text-white dark:hover:text-white;
+    }
+
+    .btn-secondary {
+      @apply border border-[#cbd5e1] dark:border-[#334155] bg-transparent text-[#0f172a] dark:text-[#f8fafc] hover:border-[#0f172a] dark:hover:border-[#f8fafc];
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @keyframes fup {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body
+    class="bg-[#edeff5] dark:bg-[#0b0f19] text-[#0f172a] dark:text-[#f8fafc] font-['Manrope',sans-serif] text-[15px] leading-relaxed overflow-x-hidden transition-colors duration-300">
+
+    <!-- topbar start -->
+    <div
+        class="hidden md:block border-b border-[#cbd5e1] dark:border-[#334155] bg-[#13264d] dark:bg-[#1e293b]/20 transition-colors duration-300">
+        <div
+            class="max-w-[1340px] mx-auto px-6 md:px-10 flex items-center justify-between h-[38px] text-[0.72rem] font-bold tracking-wider text-[#475569] dark:text-[#94a3b8]">
+            <div class="flex items-center gap-6">
+                <a href="mailto:info@pntsoft.com"
+                    class="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
+                    <svg class="w-3.5 h-3.5 text-white/80 dark:text-[#ff5a1f]" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span class="normal-case text-white/80">info@pntsoft.com</span>
+                </a>
+                <a href="tel:+18005550199"
+                    class="flex items-center gap-2 text-white/80 hover:text-[#e8440a] dark:hover:text-[#ff5a1f] transition-colors">
+                    <svg class="w-3.5 h-3.5 text-white/80 dark:text-[#ff5a1f]" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                        </path>
+                    </svg>
+                    <span>+1 (800) 555-0199</span>
+                </a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                    class="text-white/80 hover:text-white transition-colors" aria-label="LinkedIn">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                    class="text-white/80 hover:text-white transition-colors" aria-label="Twitter">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                    class="text-white/80 hover:text-white transition-colors" aria-label="GitHub">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- topbar end -->
+
+    <!-- nav start -->
+    <nav id="nav"
+        class="sticky top-0 left-0 right-0 z-50 bg-[#edeff5]/95 dark:bg-[#0b0f19]/95 backdrop-blur-lg border-b border-[#cbd5e1] dark:border-[#334155] transition-colors duration-300">
+        <div class="max-w-[1340px] mx-auto px-6 md:px-10 flex items-center justify-between h-[60px]">
+            <a href="index.html" class="flex items-center gap-2 no-underline group">
+                <!-- logo -->
+                <img src="img/logo.png" class="w-46" alt="Logo">
+            </a>
+            <div id="desktop-nav" class="hidden md:flex items-center gap-[2.2rem]">
+                <a href="index.html"
+                    class="text-[0.75rem] font-medium tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#0f172a] dark:hover:text-[#f8fafc] transition-colors">Home</a>
+                
+                <!-- Services Dropdown -->
+                <div class="relative group flex items-center gap-1 py-4 cursor-pointer">
+                    <a href="service.html"
+                        class="text-[0.75rem] font-medium tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] group-hover:text-[#0f172a] dark:group-hover:text-[#f8fafc] transition-colors">Services</a>
+                    <svg class="w-3 h-3 text-[#475569] dark:text-[#94a3b8] group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-full w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-250 pt-2 z-50">
+                        <div class="bg-white dark:bg-[#0f172a] border border-[#cbd5e1] dark:border-[#334155] p-2 shadow-2xl flex flex-col gap-0.5 rounded-xs">
+                            <a href="custom-software.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Custom Software</a>
+                            <a href="web-application.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Web Application</a>
+                            <a href="ecommerce-dev.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">eCommerce Dev</a>
+                            <a href="mobile-application.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Mobile Application</a>
+                            <a href="mvp-design.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">MVP Design</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Industries Dropdown -->
+                <div class="relative group flex items-center gap-1 py-4 cursor-pointer">
+                    <a href="industries.html"
+                        class="text-[0.75rem] font-medium tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] group-hover:text-[#0f172a] dark:group-hover:text-[#f8fafc] transition-colors">Industries</a>
+                    <svg class="w-3 h-3 text-[#475569] dark:text-[#94a3b8] group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-full w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-250 pt-2 z-50">
+                        <div class="bg-white dark:bg-[#0f172a] border border-[#cbd5e1] dark:border-[#334155] p-2 shadow-2xl flex flex-col gap-0.5 rounded-xs">
+                            <a href="healthcare.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Healthcare</a>
+                            <a href="logistics.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Logistics</a>
+                            <a href="retail-ecommerce.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Retail & eCommerce</a>
+                            <a href="tour-travel.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Tour & Travel</a>
+                            <a href="education.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Education</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Dropdown -->
+                <div class="relative group flex items-center gap-1 py-4 cursor-pointer">
+                    <a href="about.html"
+                        class="text-[0.75rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] transition-colors">About</a>
+                    <svg class="w-3 h-3 text-[#0f172a] dark:text-[#f8fafc] group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-full w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-250 pt-2 z-50">
+                        <div class="bg-white dark:bg-[#0f172a] border border-[#cbd5e1] dark:border-[#334155] p-2 shadow-2xl flex flex-col gap-0.5 rounded-xs">
+                            <a href="about.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">About Us</a>
+                            <a href="team.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#e8440a] dark:hover:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Our Team</a>
+                            <a href="portfolio.html" class="px-4 py-2.5 text-[0.68rem] font-bold tracking-wider uppercase text-[#e8440a] dark:text-[#ff5a1f] hover:bg-[#edeff5]/50 dark:hover:bg-[#1e293b]/40 transition-all">Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="contact.html"
+                    class="text-[0.75rem] font-medium tracking-wider uppercase text-[#475569] dark:text-[#94a3b8] hover:text-[#0f172a] dark:hover:text-[#f8fafc] transition-colors">Contact</a>
+            </div>
+            <div class="flex items-center gap-[.9rem]">
+                <a href="#contact" id="nav-cta" class="hidden md:btn btn-primary !py-2.5 !px-5">Start a Project</a>
+
+                <button id="theme-toggle" title="Toggle dark mode"
+                    class="w-9 h-9 border border-[#cbd5e1] dark:border-[#334155] bg-transparent cursor-pointer flex items-center justify-center shrink-0 hover:border-[#0f172a] dark:hover:border-[#f8fafc] transition-colors">
+                    <svg id="icon-sun"
+                        class="w-[15px] h-[15px] stroke-[#0f172a] dark:stroke-[#f8fafc] fill-none stroke-[1.8]"
+                        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg id="icon-moon"
+                        class="w-[15px] h-[15px] stroke-[#0f172a] dark:stroke-[#f8fafc] fill-none stroke-[1.8]"
+                        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+                <button id="hbg" class="bg-transparent border-none cursor-pointer p-1 hidden flex-col gap-[5px]">
+                    <span class="block w-[22px] h-px bg-[#0f172a] dark:bg-[#f8fafc]"></span>
+                    <span class="block w-[15px] h-px bg-[#0f172a] dark:bg-[#f8fafc]"></span>
+                    <span class="block w-[19px] h-px bg-[#0f172a] dark:bg-[#f8fafc]"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- nav end -->
+
+    <!-- mobile menu -->
+    <div id="mmenu"
+        class="hidden fixed inset-0 bg-[#edeff5] dark:bg-[#0b0f19] z-50 flex-col items-center justify-center gap-7 border-b border-[#cbd5e1] dark:border-[#334155] transition-colors duration-300">
+        <button id="close-m"
+            class="absolute top-[1.4rem] right-[2rem] bg-transparent border-none cursor-pointer text-[1.3rem] text-[#0f172a] dark:text-[#f8fafc]">✕</button>
+        <a href="index.html"
+            class="ml text-[1.7rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] no-underline">Home</a>
+        <a href="about.html"
+            class="ml text-[1.7rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] no-underline">About</a>
+        <a href="service.html"
+            class="ml text-[1.7rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] no-underline">Services</a>
+        <a href="index.html#expertise"
+            class="ml text-[1.7rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] no-underline">Expertise</a>
+        <a href="contact.html"
+            class="ml text-[1.7rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] no-underline">Contact</a>
+        <a href="index.html#contact" class="ml btn btn-primary mt-[.8rem]">Start
+            a Project →</a>
+    </div>
+
+    <!-- page banner / hero start -->
+    <section class="relative bg-cover bg-center overflow-hidden py-20 md:py-24 text-center"
+        style="background-image: url('img/portfolio/portfolio-banner.png');">
+        <!-- Blur backdrop overlay -->
+        <div class="absolute inset-0 bg-[#0f172a]/60 dark:bg-[#0b0f19]/70 backdrop-blur-[6px]"></div>
+
+        <div class="relative max-w-[1340px] mx-auto px-6 md:px-10 z-10">
+            <span
+                class="text-[0.65rem] font-bold tracking-[0.25em] uppercase text-[#e8440a] dark:text-[#ff5a1f] mb-3 block animate-[fup_.7s_ease_both]">//
+                PORTFOLIO</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white animate-[fup_.7s_.1s_ease_both]">
+                Selected Work
+            </h1>
+            <div class="h-[2px] w-12 bg-[#e8440a] dark:bg-[#ff5a1f] mx-auto mt-4 rounded-full"></div>
+        </div>
+    </section>
+    <!-- page banner / hero end -->
+
+    <!-- Portfolio Grid Section start -->
+    <section class="py-14 md:py-20 bg-[#edeff5] dark:bg-[#0b0f19] fu">
+        <div class="max-w-[1340px] mx-auto px-6 md:px-10">
+            
+            <!-- Section Header with Blueprint Corner Decorators -->
+            <div class="relative p-8 border border-[#cbd5e1] dark:border-[#334155] mb-12 bg-white dark:bg-[#0f172a] before:content-[''] before:absolute before:w-2.5 before:h-2.5 before:top-[-1px] before:left-[-1px] before:border-t-2 before:border-l-2 before:border-[#0f172a] dark:before:border-[#f8fafc] after:content-[''] after:absolute after:w-2.5 after:h-2.5 after:top-[-1px] after:right-[-1px] after:border-t-2 after:border-r-2 after:border-[#0f172a] dark:after:border-[#f8fafc]">
+                <span class="text-[0.65rem] font-bold tracking-[0.25em] uppercase text-[#e8440a] dark:text-[#ff5a1f] mb-3 block">// CLIENT SUCCESSES</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-[#0f172a] dark:text-[#f8fafc]">
+                    Our Technical Portfolio
+                </h2>
+                <p class="text-[0.82rem] text-[#475569] dark:text-[#94a3b8] mt-2">Discover the robust enterprise platforms, e-commerce networks, and customized web systems we've designed and delivered since 2014.</p>
+            </div>
+
+            <!-- Blueprint Card Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-l border-t border-[#cbd5e1] dark:border-[#334155]">
+                
+                <!-- Project 13 -->
+                <div class="bg-white dark:bg-[#0f172a] border-r border-b border-[#cbd5e1] dark:border-[#334155] p-6 flex flex-col justify-between group transition-all duration-300 relative">
+                    <div class="absolute w-2 h-2 top-0 left-0 border-t border-l border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute w-2 h-2 top-0 right-0 border-t border-r border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    
+                    <div>
+                        <div class="overflow-hidden mb-4 border border-[#cbd5e1] dark:border-[#334155]">
+                            <img class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500" src="img/portfolio/jkkniu-edu-bd.png" alt="Jatiya Kabi Kazi Nazrul Islam University">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[0.62rem] font-bold uppercase tracking-wider text-[#475569] dark:text-[#94a3b8]">Country: Bangladesh</span>
+                            <span class="w-1.5 h-1.5 bg-[#e8440a] dark:bg-[#ff5a1f] rounded-full"></span>
+                        </div>
+                        <h3 class="text-[1.12rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] leading-tight tracking-tight mt-3 mb-2 group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">Jatiya Kabi Kazi Nazrul Islam University</h3>
+                        <div class="flex flex-wrap gap-1 mt-1 mb-4">
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">JavaScript</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">PHP</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">Laravel</span>
+                        </div>
+                        <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                            Official academic portal for JKKNIU. It handles university academic management, admission queries, departmental directories, and student resources.
+                        </p>
+                    </div>
+                    <a href="https://www.jkkniu.edu.bd/" target="_blank" class="inline-flex items-center gap-1.5 mt-6 text-[0.72rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Explore More <span class="inline-block group-hover:translate-x-1 transition-transform duration-250">→</span>
+                    </a>
+                </div>
+
+                <!-- Project 14 -->
+                <div class="bg-white dark:bg-[#0f172a] border-r border-b border-[#cbd5e1] dark:border-[#334155] p-6 flex flex-col justify-between group transition-all duration-300 relative">
+                    <div class="absolute w-2 h-2 top-0 left-0 border-t border-l border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute w-2 h-2 top-0 right-0 border-t border-r border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    
+                    <div>
+                        <div class="overflow-hidden mb-4 border border-[#cbd5e1] dark:border-[#334155]">
+                            <img class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500" src="img/portfolio/wust-edu.png" alt="Washington University of Science and Technology">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[0.62rem] font-bold uppercase tracking-wider text-[#475569] dark:text-[#94a3b8]">Country: USA</span>
+                            <span class="w-1.5 h-1.5 bg-[#e8440a] dark:bg-[#ff5a1f] rounded-full"></span>
+                        </div>
+                        <h3 class="text-[1.12rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] leading-tight tracking-tight mt-3 mb-2 group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">Washington University of Science and Technology</h3>
+                        <div class="flex flex-wrap gap-1 mt-1 mb-4">
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">JavaScript</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">React</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">Next.js</span>
+                        </div>
+                        <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                            Institutional website for WUST. Features admissions systems, dynamic class scheduling, course databases, and student enrollment tools.
+                        </p>
+                    </div>
+                    <a href="https://www.wust.edu/" target="_blank" class="inline-flex items-center gap-1.5 mt-6 text-[0.72rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Explore More <span class="inline-block group-hover:translate-x-1 transition-transform duration-250">→</span>
+                    </a>
+                </div>
+
+                <!-- Project 15 -->
+                <div class="bg-white dark:bg-[#0f172a] border-r border-b border-[#cbd5e1] dark:border-[#334155] p-6 flex flex-col justify-between group transition-all duration-300 relative">
+                    <div class="absolute w-2 h-2 top-0 left-0 border-t border-l border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute w-2 h-2 top-0 right-0 border-t border-r border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    
+                    <div>
+                        <div class="overflow-hidden mb-4 border border-[#cbd5e1] dark:border-[#334155]">
+                            <img class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500" src="img/portfolio/plummylookbd.png" alt="Plummy Look">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[0.62rem] font-bold uppercase tracking-wider text-[#475569] dark:text-[#94a3b8]">Country: Bangladesh</span>
+                            <span class="w-1.5 h-1.5 bg-[#e8440a] dark:bg-[#ff5a1f] rounded-full"></span>
+                        </div>
+                        <h3 class="text-[1.12rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] leading-tight tracking-tight mt-3 mb-2 group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">Plummy Look (E-commerce)</h3>
+                        <div class="flex flex-wrap gap-1 mt-1 mb-4">
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">JavaScript</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">PHP</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">Laravel</span>
+                        </div>
+                        <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                            An authentic online beauty and skincare e-commerce platform in Bangladesh, supporting product catalogs, online ordering, payment integration, and customer dashboards.
+                        </p>
+                    </div>
+                    <a href="https://plummylookbd.com/" target="_blank" class="inline-flex items-center gap-1.5 mt-6 text-[0.72rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Explore More <span class="inline-block group-hover:translate-x-1 transition-transform duration-250">→</span>
+                    </a>
+                </div>
+
+                <!-- Project 16 -->
+                <div class="bg-white dark:bg-[#0f172a] border-r border-b border-[#cbd5e1] dark:border-[#334155] p-6 flex flex-col justify-between group transition-all duration-300 relative">
+                    <div class="absolute w-2 h-2 top-0 left-0 border-t border-l border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute w-2 h-2 top-0 right-0 border-t border-r border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    
+                    <div>
+                        <div class="overflow-hidden mb-4 border border-[#cbd5e1] dark:border-[#334155]">
+                            <img class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500" src="img/portfolio/camposdetoledo.png" alt="Campos de Toledo">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[0.62rem] font-bold uppercase tracking-wider text-[#475569] dark:text-[#94a3b8]">Country: Spain</span>
+                            <span class="w-1.5 h-1.5 bg-[#e8440a] dark:bg-[#ff5a1f] rounded-full"></span>
+                        </div>
+                        <h3 class="text-[1.12rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] leading-tight tracking-tight mt-3 mb-2 group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">Campos de Toledo</h3>
+                        <div class="flex flex-wrap gap-1 mt-1 mb-4">
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">JavaScript</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">PHP</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">Laravel</span>
+                        </div>
+                        <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                            E-commerce and operations platform for Frutas y Verduras Campos de Toledo, managing wholesale orders, product lists, inventory updates, and retail customer interactions.
+                        </p>
+                    </div>
+                    <a href="https://www.camposdetoledo.com/" target="_blank" class="inline-flex items-center gap-1.5 mt-6 text-[0.72rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Explore More <span class="inline-block group-hover:translate-x-1 transition-transform duration-250">→</span>
+                    </a>
+                </div>
+
+                <!-- Project 1 -->
+                <div class="bg-white dark:bg-[#0f172a] border-r border-b border-[#cbd5e1] dark:border-[#334155] p-6 flex flex-col justify-between group transition-all duration-300 relative">
+                    <div class="absolute w-2 h-2 top-0 left-0 border-t border-l border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute w-2 h-2 top-0 right-0 border-t border-r border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    
+                    <div>
+                        <div class="overflow-hidden mb-4 border border-[#cbd5e1] dark:border-[#334155]">
+                            <img class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500" src="img/portfolio/16527702815403bangladesh-police.jpg" alt="Bangladesh Police">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[0.62rem] font-bold uppercase tracking-wider text-[#475569] dark:text-[#94a3b8]">Country: Bangladesh</span>
+                            <span class="w-1.5 h-1.5 bg-[#e8440a] dark:bg-[#ff5a1f] rounded-full"></span>
+                        </div>
+                        <h3 class="text-[1.12rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] leading-tight tracking-tight mt-3 mb-2 group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">Bangladesh Police</h3>
+                        <div class="flex flex-wrap gap-1 mt-1 mb-4">
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">JavaScript</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">PHP</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">Laravel</span>
+                        </div>
+                        <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                            A web application that designed for Bangladesh police. By this application they can publish their regular updates of police and provide results of public query within a short time.
+                        </p>
+                    </div>
+                    <a href="https://www.police.gov.bd/" target="_blank" class="inline-flex items-center gap-1.5 mt-6 text-[0.72rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Explore More <span class="inline-block group-hover:translate-x-1 transition-transform duration-250">→</span>
+                    </a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white dark:bg-[#0f172a] border-r border-b border-[#cbd5e1] dark:border-[#334155] p-6 flex flex-col justify-between group transition-all duration-300 relative">
+                    <div class="absolute w-2 h-2 top-0 left-0 border-t border-l border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute w-2 h-2 top-0 right-0 border-t border-r border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    
+                    <div>
+                        <div class="overflow-hidden mb-4 border border-[#cbd5e1] dark:border-[#334155]">
+                            <img class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500" src="img/portfolio/16527707811081police-officers-club.jpg" alt="Police Officers Club">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[0.62rem] font-bold uppercase tracking-wider text-[#475569] dark:text-[#94a3b8]">Country: Bangladesh</span>
+                            <span class="w-1.5 h-1.5 bg-[#e8440a] dark:bg-[#ff5a1f] rounded-full"></span>
+                        </div>
+                        <h3 class="text-[1.12rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] leading-tight tracking-tight mt-3 mb-2 group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">Police Officers Club</h3>
+                        <div class="flex flex-wrap gap-1 mt-1 mb-4">
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">JavaScript</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">PHP</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">Laravel</span>
+                        </div>
+                        <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                            A dynamic website has designed for Bangladesh police officer club where they can update and publish club activity.
+                        </p>
+                    </div>
+                    <a href="https://apps.piit.us/police-officers-club-v1.4/" target="_blank" class="inline-flex items-center gap-1.5 mt-6 text-[0.72rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Explore More <span class="inline-block group-hover:translate-x-1 transition-transform duration-250">→</span>
+                    </a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white dark:bg-[#0f172a] border-r border-b border-[#cbd5e1] dark:border-[#334155] p-6 flex flex-col justify-between group transition-all duration-300 relative">
+                    <div class="absolute w-2 h-2 top-0 left-0 border-t border-l border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute w-2 h-2 top-0 right-0 border-t border-r border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    
+                    <div>
+                        <div class="overflow-hidden mb-4 border border-[#cbd5e1] dark:border-[#334155]">
+                            <img class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500" src="img/portfolio/16527724071405nikhut-ponno.jpg" alt="Nikhut Ponno">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[0.62rem] font-bold uppercase tracking-wider text-[#475569] dark:text-[#94a3b8]">Country: Bangladesh</span>
+                            <span class="w-1.5 h-1.5 bg-[#e8440a] dark:bg-[#ff5a1f] rounded-full"></span>
+                        </div>
+                        <h3 class="text-[1.12rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] leading-tight tracking-tight mt-3 mb-2 group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">Nikhut Ponno (E-commerce)</h3>
+                        <div class="flex flex-wrap gap-1 mt-1 mb-4">
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">JavaScript</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">PHP</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">Laravel</span>
+                        </div>
+                        <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                            Tranportation management system with automatic route planning module.
+                        </p>
+                    </div>
+                    <a href="https://nikhutponno.com/" target="_blank" class="inline-flex items-center gap-1.5 mt-6 text-[0.72rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Explore More <span class="inline-block group-hover:translate-x-1 transition-transform duration-250">→</span>
+                    </a>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-white dark:bg-[#0f172a] border-r border-b border-[#cbd5e1] dark:border-[#334155] p-6 flex flex-col justify-between group transition-all duration-300 relative">
+                    <div class="absolute w-2 h-2 top-0 left-0 border-t border-l border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute w-2 h-2 top-0 right-0 border-t border-r border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    
+                    <div>
+                        <div class="overflow-hidden mb-4 border border-[#cbd5e1] dark:border-[#334155]">
+                            <img class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500" src="img/portfolio/16527721996189expert-clipping-studio.jpg" alt="Expert Clipping Studio">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[0.62rem] font-bold uppercase tracking-wider text-[#475569] dark:text-[#94a3b8]">Country: Bangladesh</span>
+                            <span class="w-1.5 h-1.5 bg-[#e8440a] dark:bg-[#ff5a1f] rounded-full"></span>
+                        </div>
+                        <h3 class="text-[1.12rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] leading-tight tracking-tight mt-3 mb-2 group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">Expert Clipping Studio</h3>
+                        <div class="flex flex-wrap gap-1 mt-1 mb-4">
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">JavaScript</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">PHP</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">Laravel</span>
+                        </div>
+                        <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                            Tranportation management system with automatic route planning module.
+                        </p>
+                    </div>
+                    <a href="https://apps.piit.us/clipping-path/" target="_blank" class="inline-flex items-center gap-1.5 mt-6 text-[0.72rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Explore More <span class="inline-block group-hover:translate-x-1 transition-transform duration-250">→</span>
+                    </a>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="bg-white dark:bg-[#0f172a] border-r border-b border-[#cbd5e1] dark:border-[#334155] p-6 flex flex-col justify-between group transition-all duration-300 relative">
+                    <div class="absolute w-2 h-2 top-0 left-0 border-t border-l border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute w-2 h-2 top-0 right-0 border-t border-r border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    
+                    <div>
+                        <div class="overflow-hidden mb-4 border border-[#cbd5e1] dark:border-[#334155]">
+                            <img class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500" src="img/portfolio/16527726156641job-n-resume.jpg" alt="Job N Resume">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[0.62rem] font-bold uppercase tracking-wider text-[#475569] dark:text-[#94a3b8]">Country: Bangladesh</span>
+                            <span class="w-1.5 h-1.5 bg-[#e8440a] dark:bg-[#ff5a1f] rounded-full"></span>
+                        </div>
+                        <h3 class="text-[1.12rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] leading-tight tracking-tight mt-3 mb-2 group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">Job N Resume</h3>
+                        <div class="flex flex-wrap gap-1 mt-1 mb-4">
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">JavaScript</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">PHP</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">Laravel</span>
+                        </div>
+                        <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                            Tranportation management system with automatic route planning module.
+                        </p>
+                    </div>
+                    <a href="https://jobnresume.com/" target="_blank" class="inline-flex items-center gap-1.5 mt-6 text-[0.72rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Explore More <span class="inline-block group-hover:translate-x-1 transition-transform duration-250">→</span>
+                    </a>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="bg-white dark:bg-[#0f172a] border-r border-b border-[#cbd5e1] dark:border-[#334155] p-6 flex flex-col justify-between group transition-all duration-300 relative">
+                    <div class="absolute w-2 h-2 top-0 left-0 border-t border-l border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute w-2 h-2 top-0 right-0 border-t border-r border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    
+                    <div>
+                        <div class="overflow-hidden mb-4 border border-[#cbd5e1] dark:border-[#334155]">
+                            <img class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500" src="img/portfolio/16527728682558tutorial-zone.jpg" alt="Tutorial Zone">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[0.62rem] font-bold uppercase tracking-wider text-[#475569] dark:text-[#94a3b8]">Country: Bangladesh</span>
+                            <span class="w-1.5 h-1.5 bg-[#e8440a] dark:bg-[#ff5a1f] rounded-full"></span>
+                        </div>
+                        <h3 class="text-[1.12rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] leading-tight tracking-tight mt-3 mb-2 group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">Tutorial Zone</h3>
+                        <div class="flex flex-wrap gap-1 mt-1 mb-4">
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">JavaScript</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">PHP</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">Laravel</span>
+                        </div>
+                        <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                            Tranportation management system with automatic route planning module.
+                        </p>
+                    </div>
+                    <a href="https://bdtutorialzone.com/" target="_blank" class="inline-flex items-center gap-1.5 mt-6 text-[0.72rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Explore More <span class="inline-block group-hover:translate-x-1 transition-transform duration-250">→</span>
+                    </a>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="bg-white dark:bg-[#0f172a] border-r border-b border-[#cbd5e1] dark:border-[#334155] p-6 flex flex-col justify-between group transition-all duration-300 relative">
+                    <div class="absolute w-2 h-2 top-0 left-0 border-t border-l border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute w-2 h-2 top-0 right-0 border-t border-r border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    
+                    <div>
+                        <div class="overflow-hidden mb-4 border border-[#cbd5e1] dark:border-[#334155]">
+                            <img class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500" src="img/portfolio/16527705534977ugc-of-bangladesh.jpg" alt="University Grants Commission">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[0.62rem] font-bold uppercase tracking-wider text-[#475569] dark:text-[#94a3b8]">Country: Bangladesh</span>
+                            <span class="w-1.5 h-1.5 bg-[#e8440a] dark:bg-[#ff5a1f] rounded-full"></span>
+                        </div>
+                        <h3 class="text-[1.12rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] leading-tight tracking-tight mt-3 mb-2 group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">University Grants Commission</h3>
+                        <div class="flex flex-wrap gap-1 mt-1 mb-4">
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">JavaScript</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">PHP</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">Laravel</span>
+                        </div>
+                        <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                            Tranportation management system with automatic route planning module.
+                        </p>
+                    </div>
+                    <a href="http://submission-ugc.gov.bd/" target="_blank" class="inline-flex items-center gap-1.5 mt-6 text-[0.72rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Explore More <span class="inline-block group-hover:translate-x-1 transition-transform duration-250">→</span>
+                    </a>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="bg-white dark:bg-[#0f172a] border-r border-b border-[#cbd5e1] dark:border-[#334155] p-6 flex flex-col justify-between group transition-all duration-300 relative">
+                    <div class="absolute w-2 h-2 top-0 left-0 border-t border-l border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute w-2 h-2 top-0 right-0 border-t border-r border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    
+                    <div>
+                        <div class="overflow-hidden mb-4 border border-[#cbd5e1] dark:border-[#334155]">
+                            <img class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500" src="img/portfolio/16527725314886training-institute.jpg" alt="Training Institute">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[0.62rem] font-bold uppercase tracking-wider text-[#475569] dark:text-[#94a3b8]">Country: Bangladesh</span>
+                            <span class="w-1.5 h-1.5 bg-[#e8440a] dark:bg-[#ff5a1f] rounded-full"></span>
+                        </div>
+                        <h3 class="text-[1.12rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] leading-tight tracking-tight mt-3 mb-2 group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">Training Institute</h3>
+                        <div class="flex flex-wrap gap-1 mt-1 mb-4">
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">JavaScript</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">PHP</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">Laravel</span>
+                        </div>
+                        <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                            Tranportation management system with automatic route planning module.
+                        </p>
+                    </div>
+                    <a href="https://peoplentech.com.bd/" target="_blank" class="inline-flex items-center gap-1.5 mt-6 text-[0.72rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Explore More <span class="inline-block group-hover:translate-x-1 transition-transform duration-250">→</span>
+                    </a>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="bg-white dark:bg-[#0f172a] border-r border-b border-[#cbd5e1] dark:border-[#334155] p-6 flex flex-col justify-between group transition-all duration-300 relative">
+                    <div class="absolute w-2 h-2 top-0 left-0 border-t border-l border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute w-2 h-2 top-0 right-0 border-t border-r border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    
+                    <div>
+                        <div class="overflow-hidden mb-4 border border-[#cbd5e1] dark:border-[#334155]">
+                            <img class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500" src="img/portfolio/16527727023959amar-quiz.jpg" alt="Amar Quiz">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[0.62rem] font-bold uppercase tracking-wider text-[#475569] dark:text-[#94a3b8]">Country: Bangladesh</span>
+                            <span class="w-1.5 h-1.5 bg-[#e8440a] dark:bg-[#ff5a1f] rounded-full"></span>
+                        </div>
+                        <h3 class="text-[1.12rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] leading-tight tracking-tight mt-3 mb-2 group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">Amar Quiz</h3>
+                        <div class="flex flex-wrap gap-1 mt-1 mb-4">
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">JavaScript</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">PHP</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">Laravel</span>
+                        </div>
+                        <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                            Tranportation management system with automatic route planning module.
+                        </p>
+                    </div>
+                    <a href="https://amarquiz.com/" target="_blank" class="inline-flex items-center gap-1.5 mt-6 text-[0.72rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Explore More <span class="inline-block group-hover:translate-x-1 transition-transform duration-250">→</span>
+                    </a>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="bg-white dark:bg-[#0f172a] border-r border-b border-[#cbd5e1] dark:border-[#334155] p-6 flex flex-col justify-between group transition-all duration-300 relative">
+                    <div class="absolute w-2 h-2 top-0 left-0 border-t border-l border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute w-2 h-2 top-0 right-0 border-t border-r border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    
+                    <div>
+                        <div class="overflow-hidden mb-4 border border-[#cbd5e1] dark:border-[#334155]">
+                            <img class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500" src="img/portfolio/16527720471226health-bd-24.jpg" alt="Health BD 24">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[0.62rem] font-bold uppercase tracking-wider text-[#475569] dark:text-[#94a3b8]">Country: Bangladesh</span>
+                            <span class="w-1.5 h-1.5 bg-[#e8440a] dark:bg-[#ff5a1f] rounded-full"></span>
+                        </div>
+                        <h3 class="text-[1.12rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] leading-tight tracking-tight mt-3 mb-2 group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">Health BD 24</h3>
+                        <div class="flex flex-wrap gap-1 mt-1 mb-4">
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">JavaScript</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">PHP</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">Laravel</span>
+                        </div>
+                        <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                            Tranportation management system with automatic route planning module.
+                        </p>
+                    </div>
+                    <a href="https://healthbd24.com/" target="_blank" class="inline-flex items-center gap-1.5 mt-6 text-[0.72rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Explore More <span class="inline-block group-hover:translate-x-1 transition-transform duration-250">→</span>
+                    </a>
+                </div>
+
+                <!-- Project 11 -->
+                <div class="bg-white dark:bg-[#0f172a] border-r border-b border-[#cbd5e1] dark:border-[#334155] p-6 flex flex-col justify-between group transition-all duration-300 relative">
+                    <div class="absolute w-2 h-2 top-0 left-0 border-t border-l border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute w-2 h-2 top-0 right-0 border-t border-r border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    
+                    <div>
+                        <div class="overflow-hidden mb-4 border border-[#cbd5e1] dark:border-[#334155]">
+                            <img class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500" src="img/portfolio/16527722984442kazi-law-chamber.jpg" alt="Kazi Law Chamber">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[0.62rem] font-bold uppercase tracking-wider text-[#475569] dark:text-[#94a3b8]">Country: Bangladesh</span>
+                            <span class="w-1.5 h-1.5 bg-[#e8440a] dark:bg-[#ff5a1f] rounded-full"></span>
+                        </div>
+                        <h3 class="text-[1.12rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] leading-tight tracking-tight mt-3 mb-2 group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">Kazi Law Chamber</h3>
+                        <div class="flex flex-wrap gap-1 mt-1 mb-4">
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">JavaScript</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">PHP</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">Laravel</span>
+                        </div>
+                        <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                            Tranportation management system with automatic route planning module.
+                        </p>
+                    </div>
+                    <a href="https://www.kazilawchamber.com/" target="_blank" class="inline-flex items-center gap-1.5 mt-6 text-[0.72rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Explore More <span class="inline-block group-hover:translate-x-1 transition-transform duration-250">→</span>
+                    </a>
+                </div>
+
+                <!-- Project 12 -->
+                <div class="bg-white dark:bg-[#0f172a] border-r border-b border-[#cbd5e1] dark:border-[#334155] p-6 flex flex-col justify-between group transition-all duration-300 relative">
+                    <div class="absolute w-2 h-2 top-0 left-0 border-t border-l border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute w-2 h-2 top-0 right-0 border-t border-r border-[#e8440a] dark:border-[#ff5a1f] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    
+                    <div>
+                        <div class="overflow-hidden mb-4 border border-[#cbd5e1] dark:border-[#334155]">
+                            <img class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500" src="img/portfolio/16527727807361prothom-palok.jpg" alt="Prothom Palok">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[0.62rem] font-bold uppercase tracking-wider text-[#475569] dark:text-[#94a3b8]">Country: Bangladesh</span>
+                            <span class="w-1.5 h-1.5 bg-[#e8440a] dark:bg-[#ff5a1f] rounded-full"></span>
+                        </div>
+                        <h3 class="text-[1.12rem] font-extrabold text-[#0f172a] dark:text-[#f8fafc] leading-tight tracking-tight mt-3 mb-2 group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">Prothom Palok</h3>
+                        <div class="flex flex-wrap gap-1 mt-1 mb-4">
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">JavaScript</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">PHP</span>
+                            <span class="px-2 py-0.5 text-[0.58rem] font-bold tracking-wider uppercase bg-[#cbd5e1]/45 dark:bg-[#334155] text-[#475569] dark:text-[#94a3b8] rounded-xs">Laravel</span>
+                        </div>
+                        <p class="text-[0.8rem] text-[#475569] dark:text-[#94a3b8] leading-relaxed">
+                            Tranportation management system with automatic route planning module.
+                        </p>
+                    </div>
+                    <a href="https://www.prothompalok.com/" target="_blank" class="inline-flex items-center gap-1.5 mt-6 text-[0.72rem] font-bold tracking-wider uppercase text-[#0f172a] dark:text-[#f8fafc] group-hover:text-[#e8440a] dark:group-hover:text-[#ff5a1f] transition-colors">
+                        Explore More <span class="inline-block group-hover:translate-x-1 transition-transform duration-250">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section start -->
+    <section id="contact" class="py-14 md:py-20 bg-white dark:bg-[#0f172a] border-t border-[#cbd5e1] dark:border-[#334155] fu">
+        <div class="max-w-[1340px] mx-auto px-6 md:px-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 border border-[#cbd5e1] dark:border-[#334155]">
+                
+                <!-- Left Details -->
+                <div class="lg:col-span-6 p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-[#cbd5e1] dark:border-[#334155] flex flex-col justify-center">
+                    <span class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#e8440a] dark:text-[#ff5a1f] mb-2 block">// DOCK YOUR IDEAS HERE</span>
+                    <h2 class="text-[1.8rem] md:text-[2.6rem] font-extrabold leading-[1.1] tracking-tight mb-4">Start Your Custom Project</h2>
+                    <p class="text-[#475569] dark:text-[#94a3b8] text-[0.88rem] leading-relaxed mb-6">
+                        Have an idea for a web app, custom system, or integration? Connect with our systems architects to launch a high-performing digital platform.
+                    </p>
+                    <div class="flex flex-col gap-2 text-[0.82rem] font-semibold">
+                        <span class="text-[#475569] dark:text-[#94a3b8]">📧 Direct Email: <a href="mailto:info@pntsoft.com" class="text-[#0f172a] dark:text-[#f8fafc] hover:text-[#e8440a] dark:hover:text-[#ff5a1f]">info@pntsoft.com</a></span>
+                        <span class="text-[#475569] dark:text-[#94a3b8]">📞 Architect Hotline: <a href="tel:+18005550199" class="text-[#0f172a] dark:text-[#f8fafc] hover:text-[#e8440a] dark:hover:text-[#ff5a1f]">+1 (800) 555-0199</a></span>
+                    </div>
+                </div>
+
+                <!-- Right Form -->
+                <div class="lg:col-span-6 p-8 md:p-12 bg-[#cbd5e1]/10 dark:bg-[#1e293b]/10 flex flex-col justify-center">
+                    <form id="cform">
+                        <div class="mb-5">
+                            <label class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] block mb-2">Your Name</label>
+                            <input type="text" placeholder="John Doe"
+                                class="w-full bg-transparent border-0 border-b border-[#cbd5e1] dark:border-[#334155] py-2.5 text-[.9rem] text-[#0f172a] dark:text-[#f8fafc] outline-none focus:border-[#e8440a] dark:focus:border-[#ff5a1f] placeholder-[#cbd5e1]/80 dark:placeholder-[#334155] transition-colors"
+                                required />
+                        </div>
+                        <div class="mb-5">
+                            <label class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] block mb-2">Business Email</label>
+                            <input type="email" placeholder="john@example.com"
+                                class="w-full bg-transparent border-0 border-b border-[#cbd5e1] dark:border-[#334155] py-2.5 text-[.9rem] text-[#0f172a] dark:text-[#f8fafc] outline-none focus:border-[#e8440a] dark:focus:border-[#ff5a1f] placeholder-[#cbd5e1]/80 dark:placeholder-[#334155] transition-colors"
+                                required />
+                        </div>
+                        <div class="mb-6">
+                            <label class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#475569] dark:text-[#94a3b8] block mb-2">Project Brief</label>
+                            <textarea rows="4" placeholder="Briefly describe your requirements..."
+                                class="w-full bg-transparent border-0 border-b border-[#cbd5e1] dark:border-[#334155] py-2.5 text-[.9rem] text-[#0f172a] dark:text-[#f8fafc] outline-none focus:border-[#e8440a] dark:focus:border-[#ff5a1f] placeholder-[#cbd5e1]/80 dark:placeholder-[#334155] transition-colors resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full md:w-auto">Send Request →</button>
+                    </form>
+                    <div id="fsuccess" class="hidden text-center py-10">
+                        <div class="text-[2rem] text-[#e8440a] dark:text-[#ff5a1f] mb-3">✓</div>
+                        <h3 class="text-[1.15rem] font-extrabold mb-1.5">Inquiry Received!</h3>
+                        <p class="text-[#475569] dark:text-[#94a3b8] text-[.85rem] leading-relaxed">
+                            Thank you. Our software engineering team will contact you within 1 business day.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- contact section end -->
+
+    <!-- footer start -->
+    <footer class="bg-[#13264d] border-t border-white/10 dark:border-white/10 w-full">
+        <div class="max-w-[1340px] mx-auto px-6 md:px-10">
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] border-l border-white/10 dark:border-white/10">
+                <div class="p-8 md:p-12 border-r border-white/10 dark:border-white/10">
+                    <div class="flex items-center gap-2 mb-4">
+                        <!-- logo -->
+                        <img src="img/logo.png" class="w-46 bg-white px-3 py-2 rounded-full" alt="Logo">
+                    </div>
+                    <p class="text-[.8rem] text-white/70 dark:text-white/70 line-height-[1.9] max-w-[240px]">Get Smart
+                        Solutions to all your problems. Empowering businesses through technology since 2014.</p>
+                </div>
+                <div class="p-8 md:p-12 border-r border-white/10 dark:border-white/10">
+                    <h5 class="text-[.72rem] font-bold text-white tracking-wider uppercase mb-5">// Services</h5>
+                    <ul class="list-none p-0 m-0 flex flex-col gap-2.5">
+                        <li><a href="custom-software.html"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-[#ff5a1f] transition-colors">Custom Software</a></li>
+                        <li><a href="web-application.html"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-[#ff5a1f] transition-colors">Web Application</a></li>
+                        <li><a href="ecommerce-dev.html"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-[#ff5a1f] transition-colors">eCommerce Dev</a></li>
+                        <li><a href="mobile-application.html"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-[#ff5a1f] transition-colors">Mobile Application</a></li>
+                        <li><a href="mvp-design.html"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-[#ff5a1f] transition-colors">MVP Design</a></li>
+                    </ul>
+                </div>
+                <div class="p-8 md:p-12 border-r border-white/10 dark:border-white/10">
+                    <h5 class="text-[.72rem] font-bold text-white tracking-wider uppercase mb-5">// Industries</h5>
+                    <ul class="list-none p-0 m-0 flex flex-col gap-2.5">
+                        <li><a href="healthcare.html"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-[#ff5a1f] transition-colors">Healthcare</a></li>
+                        <li><a href="logistics.html"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-[#ff5a1f] transition-colors">Logistics</a></li>
+                        <li><a href="retail-ecommerce.html"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-[#ff5a1f] transition-colors">Retail & eCommerce</a></li>
+                        <li><a href="tour-travel.html"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-[#ff5a1f] transition-colors">Tour & Travel</a></li>
+                        <li><a href="education.html"
+                                class="text-[.8rem] text-white/70 dark:text-white/70 no-underline hover:text-[#ff5a1f] transition-colors">Education</a></li>
+                    </ul>
+                </div>
+                <div class="p-8 md:p-12 border-r border-white/10 dark:border-white/10">
+                    <h5 class="text-[.72rem] font-bold text-white tracking-wider uppercase mb-5">// Offices</h5>
+                    <ul class="list-none p-0 m-0 flex flex-col gap-2.5">
+                        <li class="text-[.8rem] text-white/70 dark:text-white/70">🇧🇩 Dhaka, Bangladesh</li>
+                        <li class="text-[.8rem] text-white/70 dark:text-white/70">🇺🇸 Virginia, USA</li>
+                        <li class="text-[.8rem] text-white/70 dark:text-white/70">🗽 New York, USA</li>
+                        <li class="text-[.8rem] text-white/70 dark:text-white/70">🏙️ New Jersey, USA</li>
+                        <li class="text-[.8rem] text-white/70 dark:text-white/70">🇺🇸 Pennsylvania, USA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- copyright -->
+    <div class="bg-[#13264d] border-t border-white/10 dark:border-white/10">
+        <div class="max-w-[1340px] mx-auto px-6 md:px-10 ">
+            <div class="flex items-center justify-between flex-wrap gap-4 py-[1.1rem]">
+                <span class="text-[.68rem] text-white/70 dark:text-white/70 tracking-wider uppercase">© 2026
+                    PeopleNTech. ALL RIGHTS RESERVED.</span>
+                <div class="flex gap-8">
+                    <a href="#"
+                        class="text-[.68rem] text-white/70 dark:text-white/70 no-underline tracking-wider uppercase">Privacy
+                        Policy</a>
+                    <a href="#"
+                        class="text-[.68rem] text-white/70 dark:text-white/70 no-underline tracking-wider uppercase">Terms
+                        of Service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme variations switch btn -->
+    <div class="fixed top-1/2 -translate-y-1/2 right-4 flex flex-col gap-2 z-50">
+        <span class="text-[.68rem] text-[#475569] dark:text-[#94a3b8] tracking-wider uppercase">Theme
+            variations</span>
+        <a href="v1.html"
+            class="inline-flex items-center justify-center border border-[#e2e8f0] dark:border-[#334155] bg-white dark:bg-[#111827] text-blue-600 dark:text-blue-400 text-[.65rem] font-medium tracking-wider uppercase px-4 py-2 rounded-lg shadow-sm hover:bg-[#f1f5f9] dark:hover:bg-[#1e293b]">Version-1</a>
+        <a href="v2.html"
+            class="inline-flex items-center justify-center border border-[#e2e8f0] dark:border-[#334155] bg-white dark:bg-[#111827] text-orange-600 dark:text-orange-400 text-[.65rem] font-medium tracking-wider uppercase px-4 py-2 rounded-lg shadow-sm hover:bg-[#f1f5f9] dark:hover:bg-[#1e293b]">Version-2</a>
+        <a href="v3.html"
+            class="inline-flex items-center justify-center border border-[#e2e8f0] dark:border-[#334155] bg-white dark:bg-[#111827] text-emerald-600 dark:text-emerald-400 text-[.65rem] font-medium tracking-wider uppercase px-4 py-2 rounded-lg shadow-sm hover:bg-[#f1f5f9] dark:hover:bg-[#1e293b]">Version-3</a>
+        <a href="v4.html"
+            class="inline-flex items-center justify-center border border-[#e2e8f0] dark:border-[#334155] bg-white dark:bg-[#111827] text-purple-600 dark:text-purple-400 text-[.65rem] font-medium tracking-wider uppercase px-4 py-2 rounded-lg shadow-sm hover:bg-[#f1f5f9] dark:hover:bg-[#1e293b]">Version-4</a>
+    </div>
+
+    <script>
+        // Responsive nav
+        function setNav() {
+            const w = window.innerWidth;
+            document.getElementById('desktop-nav').style.display = w < 768 ? 'none' : 'flex';
+            document.getElementById('nav-cta').style.display = w < 768 ? 'none' : 'inline-flex';
+            document.getElementById('hbg').style.display = w < 768 ? 'flex' : 'none';
+        }
+        setNav(); window.addEventListener('resize', setNav);
+
+        // Mobile menu
+        document.getElementById('hbg').addEventListener('click', () => { document.getElementById('mmenu').classList.remove('hidden'); document.getElementById('mmenu').classList.add('flex'); });
+        document.getElementById('close-m').addEventListener('click', () => { document.getElementById('mmenu').classList.add('hidden'); document.getElementById('mmenu').classList.remove('flex'); });
+        document.querySelectorAll('.ml').forEach(l => l.addEventListener('click', () => { document.getElementById('mmenu').classList.add('hidden'); document.getElementById('mmenu').classList.remove('flex'); }));
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function (e) {
+                const t = document.querySelector(this.getAttribute('href'));
+                if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+            });
+        });
+
+        // Fade-up animation entry behavior
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('!opacity-100', '!translate-y-0'); });
+        }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.fu').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-7', 'transition-all', 'duration-[600ms]', 'ease-out');
+            io.observe(el);
+        });
+
+        // Contact Form
+        const cform = document.getElementById('cform');
+        if (cform) {
+            cform.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const btn = cform.querySelector('button[type="submit"]');
+                const prevText = btn.textContent;
+                btn.textContent = 'Sending...';
+                btn.disabled = true;
+                setTimeout(() => {
+                    cform.classList.add('hidden');
+                    document.getElementById('fsuccess').classList.remove('hidden');
+                }, 1200);
+            });
+        }
+
+        // Dark mode implementation handling state variations via attribute changes
+        const html = document.documentElement;
+        const toggle = document.getElementById('theme-toggle');
+        const iconSun = document.getElementById('icon-sun');
+        const iconMoon = document.getElementById('icon-moon');
+
+        function applyTheme(dark) {
+            if (dark) {
+                html.classList.add('dark');
+                iconSun.style.display = 'none';
+                iconMoon.style.display = 'block';
+            } else {
+                html.classList.remove('dark');
+                iconSun.style.display = 'block';
+                iconMoon.style.display = 'none';
+            }
+        }
+
+        const saved = localStorage.getItem('pt-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        applyTheme(saved ? saved === 'dark' : prefersDark);
+
+        toggle.addEventListener('click', () => {
+            const isDark = html.classList.contains('dark');
+            applyTheme(!isDark);
+            localStorage.setItem('pt-theme', !isDark ? 'dark' : 'light');
+        });
+    </script>
+</body>
+
+</html>
